@@ -19,11 +19,10 @@ OSの違い、Misskey本体や依存するソフトウェアのバージョン�
 なお、今回の記事にあたっては、AWSの無料利用枠でできる範囲で検証を行った。
 
 ## 環境と条件
-- EC2、RDS、ElastiCache、S3およびCloudFrontを利用する。
+- EC2、Elasticsearch Service、RDS、ElastiCache、S3およびCloudFrontを利用する。
 - 独自のドメインを購入する。
   * ドメインは[Google Domains](https://domains.google/intl/ja_jp/)などで予め用意しておくこと。
   * ここではドメインを`example.tld`として解説を進めるので、自分が買ったドメインに適宜置き換えて読むこと。
-- ElasticSearchは使用しない。
 
 ## nanoの使い方
 今回はテキストエディターにnanoを使う。次のように起動する。
@@ -86,28 +85,73 @@ AWSは標準ではIPv6に対応しないので、IPv6を設定する。
 
 <small>https://docs.aws.amazon.com/ja_jp/vpc/latest/userguide/vpc-migrate-ipv6.html#vpc-migrate-ipv6-cidr</small>
 
-## RDSインスタンスの作成
-[RDSコンソール（https://console.aws.amazon.com/rds/）](https://console.aws.amazon.com/rds/)を開き、RDSインスタンスを作成しよう。  
+## Elasticsearchドメインの作成
+[Elasticsearchドメインの作成ウィザード](https://console.aws.amazon.com/es/home#create-domain)を開始する。  
+
+### 1: デプロイタイプの選択
+`カスタム`を選択し、[次へ]を選択。
+
+### 2: クラスターの設定
 以下の設定で進める。
 
 | 説明 | 値 |
 |:--|:--|
-|DB 識別子|pg|
-|エンジン|PostgreSQL 11.5以上 *2|
+|Elasticsearch ドメイン名|misskey|
+|アベイラビリティーゾーン|1-AZ|
+|インスタンスタイプ|t2.small.elasticsearch|
+|ノードの数|1|
+|専用マスターノード|チェックを外す|
+
+[次へ]を選択。
+
+### 3: アクセスの設定
+以下の設定で進める。
+
+| 説明 | 値 |
+|:--|:--|
+|VPC|（プルダウンから選択）|
+|サブネット|（どれでもいいのでプルダウンから選択）|
+|セキュリティグループ|local|
+|ドメインアクセスポリシーの設定<br>[テンプレートの選択]で|IAM認証情報を使用した署名リクエストを要求しない|
+
+[次へ]を選択。
+
+### 4: 確認
+[確認]を選択。
+
+### VPCエンドポイントを確認
+10分ほど待ち（その間に他の作業をしよう）、ドメインのステータスが`アクティブ`になったら**VPC エンドポイント**をメモする。  
+ここでは`vpc-misskey-xxxxxxxxxx.ap-northeast-1.es.amazonaws.com`として説明する。
+
+## RDSインスタンスの作成
+[RDSコンソール（https://console.aws.amazon.com/rds/）](https://console.aws.amazon.com/rds/)を開き、[データベースの作成]を選択。  
+以下の設定で進める。
+
+| 説明 | 値 |
+|:--|:--|
+|エンジン|PostgreSQL *2|
+|バージョン|11.5以上 *2|
+|テンプレート|無料利用枠|
+|DB インスタンス識別子|pg|
 |マスターユーザー名|postgres|
-|マスターパスワード|password *3|
+|マスターパスワード<br>パスワードを確認|password *3|
+|ストレージの自動スケーリングを有効にする|チェックを外す|
 |最初のデータベース名（追加設定）|mk1|
 
 *1: Aurora PostgreSQLでの動作は確認していないが、11.4以上であれば恐らく動くと思われる  
 *2: 無料利用枠で利用したい場合、エンジンをPostgreSQLにすると無料利用枠を選択できる  
 *3: 当然ながら自分で考えて設定すること
 
-ここでできたデータベースのエンドポイントは、ここでは`pg.xxxxxxxx.ap-northeast-1.rds.amazonaws.com`として説明する。
+[データベースの作成]を選択。
+
+`pg`を選択し、データベースを起動するまで待つ。
+
+起動したら、エンドポイントをメモする。ここでは`pg.xxxxxxxx.ap-northeast-1.rds.amazonaws.com`として説明する。
 
 ## ElastiCacheインスタンスの作成
-[ElastiCacheコンソール（https://console.aws.amazon.com/elasticache/）](https://console.aws.amazon.com/elasticache/)を開き、ElastiCacheインスタンスを作成しよう。
+[ElastiCacheコンソール（https://console.aws.amazon.com/elasticache/）](https://console.aws.amazon.com/elasticache/)を開き、[作成]を選択。
 
-以下のように値を設定する。ここで明示ていない値の変更は自己責任で。
+以下のように値を設定する。
 
 | 説明 | 値 |
 |:--|:--|
@@ -127,7 +171,7 @@ AWSは標準ではIPv6に対応しないので、IPv6を設定する。
 
 [作成]を選択。
 
-▶を選択し、プライマリエンドポイントを確認。ここでは`redis.xxxxxx.0001.apne0.cache.amazonaws.com:6379`であったものとして説明する。
+`▶ redis`を選択し、`プライマリエンドポイント`を確認。ここでは`redis.xxxxxx.0001.apne0.cache.amazonaws.com:6379`であったものとして説明する。
 
 ## S3バケットの準備
 ### IAMユーザーの作成
@@ -212,7 +256,7 @@ EC2インスタンスを作成しよう。
 6. [キーペアのダウンロード]を選択。`key.pem`がダウンロードされるので確認する。
 7. [インスタンスの作成]を選択。
 8. `key.pem`を`%USERPROFILE%\.ssh`内に移動。
-9. ブラウザに戻り、次のインスタンスの作成が開始されました: に続くリンクを選択。
+9. ブラウザに戻り、`次のインスタンスの作成が開始されました: `に続くリンクを選択。
 
 ### IPv6に対応させる
 1. [アクション]を選択し、[ネットワーキング]-[IP アドレスの管理]を選択。  
@@ -370,6 +414,14 @@ redis:
   host: redis.xxxxxx.0001.apne0.cache.amazonaws.com
   port: 6379
 
+# ● Elastisearchの設定。
+elasticsearch:
+  # ●: ElastiCacheのVPCエンドポイント
+  host: vpc-misskey-xxxxxxxxxx.ap-northeast-1.es.amazonaws.com
+  ssl: true
+  port: 443
+  pass: null
+
 # 　 IDタイプの設定。
 id: 'aid'
 
@@ -416,12 +468,12 @@ sftp> bye
 sudo cp -rf built /home/misskey/misskey/
 ```
 
-## データベースの初期化
+### データベースの初期化
 ```bash
 npm run init
 ```
 
-## Misskeyを起動する
+### Misskeyを起動する
 ```bash
 NODE_ENV=production npm start
 ```
@@ -432,7 +484,7 @@ Misskeyのウェルカムページが表示されるはずだ。
 
 アカウントの作成、ノートの作成やファイルのアップロードといった一通りの操作が正しく行えるか確認しよう。
 
-## S3を設定する
+### S3を設定する
 `管理画面/インスタンスの設定`（/admin/instance）のドライブの設定で、[オブジェクトストレージ]のトグルをオンにする。
 
 以下の設定を行う。
@@ -452,7 +504,7 @@ Misskeyのウェルカムページが表示されるはずだ。
 
 [保存]を選択し、設定を保存する。
 
-## Misskeyのデーモンを作成
+### Misskeyのデーモンを作成
 いったん<kbd>Ctrl+C</kbd>でプロセスをキルし、Misskeyをデーモンで起動する設定をしよう。
 
 ```bash
