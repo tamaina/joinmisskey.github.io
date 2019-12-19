@@ -13,6 +13,7 @@ rank: 99
 
 ## ブログ・活用
 - [【misskey】情強向け超上位互換Twitterを紹介する](https://kotodu.tumblr.com/post/172146962776/misskey%E6%83%85%E5%BC%B7%E5%90%91%E3%81%91%E8%B6%85%E4%B8%8A%E4%BD%8D%E4%BA%92%E6%8F%9Btwitter%E3%82%92%E7%B4%B9%E4%BB%8B%E3%81%99%E3%82%8B)
+- [misskeyを導入したときの手順](https://www.bluecore.net/2019/07/02/tech-misskey%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E6%89%8B%E9%A0%86/)
 
 ## 報道
 - [国産SNS「Misskey」がマストドンとの連携に対応](https://masto.news/2018/04/15/misskey/?utm_campaign=twitter&utm_medium=twitter&utm_source=twitter) - マストドン速報（BETA）
