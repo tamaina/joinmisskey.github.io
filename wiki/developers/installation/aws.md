@@ -18,7 +18,11 @@ OSの違い、Misskey本体や依存するソフトウェアのバージョン�
 
 なお、今回の記事にあたっては、AWSの無料利用枠でできる範囲で検証を行った。
 
-## 環境と条件
+## 構成と条件
+この記事では、次の図に示すような構成で動作させる。
+
+![今回の構成](/files/images/imports/2019/12/datauri.png)
+
 - EC2、Elasticsearch Service、RDS、ElastiCache、S3およびCloudFrontを利用する。
 - 独自のドメインを購入する。
   * ドメインは[Google Domains](https://domains.google/intl/ja_jp/)などで予め用意しておくこと。
@@ -158,7 +162,7 @@ AWSは標準ではIPv6に対応しないので、IPv6を設定する。
 |クラスターエンジン|Redis<br>クラスターモード無効|
 |名前|redis|
 |ポート|6379|
-|ノードのタイプ|cache.t2.micro|
+|ノードのタイプ|cache.t3.micro|
 |レプリケーション数|0|
 
 #### サブネットグループ
@@ -172,6 +176,9 @@ AWSは標準ではIPv6に対応しないので、IPv6を設定する。
 [作成]を選択。
 
 `▶ redis`を選択し、`プライマリエンドポイント`を確認。ここでは`redis.xxxxxx.0001.apne0.cache.amazonaws.com:6379`であったものとして説明する。
+
+#### セキュリティグループ
+✏を選択し、`local`にする。
 
 ## S3バケットの準備
 ### IAMユーザーの作成
