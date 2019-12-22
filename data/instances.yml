@@ -209,6 +209,12 @@
   langs: ['ja']
 - url: vspace.me
   langs: ['ja']
+- url: c2.a9z.dev
+  langs: ['ja']
+- url: misskey2.juggler.jp
+  langs: ['ja']
+- url: misskey.boon.chat
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -319,6 +325,8 @@
 - url: ms.neko.bar
   langs: ['en']
 - url: cuteposting.institute
+  langs: ['en']
+- url: misskey.kusoneko.moe
   langs: ['en']
 #
 ##
