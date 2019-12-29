@@ -369,6 +369,15 @@ sudo yum install -y git
 sudo yum groupinstall "Development Tools"
 ```
 
+### ffmpeg
+シェルスクリプトを用意したので、それを実行する。  
+この作業には**だいぶ時間がかかる**ので、この間に[ローカルでMisskeyのビルド](#Misskeyのビルド)をしておこう。
+
+```bash
+wget https://gist.githubusercontent.com/tamaina/05c9119260e55ceed36a87c6415935d3/raw/ecdb4862f4ad1426cf317baba508ce6cdf43e87f/installFFmpegIntoAmazonLinux.sh
+sh installFFmpegIntoAmazonLinux.sh
+```
+
 ## Misskeyのインストール
 引き続きMisskeyのインストールを行う。
 
