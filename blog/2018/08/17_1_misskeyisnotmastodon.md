@@ -13,7 +13,7 @@ author:
 category: 
 amp: true
 ---
-[MisskeyはMastodonではありません。](https://misskey.xyz/notes/5b75b1f9f4291b56abd8afa9)
+MisskeyはMastodonではありません。
 
 ## なぜMisskeyはMastodonではないのか
 MisskeyがMastodonではないからです。これは運命です。これは自然の理です。そして、これは常識にならなければなりません。
