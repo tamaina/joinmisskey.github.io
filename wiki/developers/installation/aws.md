@@ -330,7 +330,7 @@ EC2インスタンスを作成しよう。
 ### SSHで接続する
 ナビゲーションペインで[インスタンス]を選択し、作成したインスタンスの状態がrunningかつステータスチェックが「チェックに合格しました」となっていることを確認。なっていなければ待つ。
 
-インスタンスのパブリック DNS （IPv4）をメモしよう。ここでは`ec2-13-xxx-xxx-xxx.ap-northeast-1.compute.amazonaws.com`とする。
+インスタンスのパブリックDNS（IPv4）をメモしよう。ここでは`ec2-13-xxx-xxx-xxx.ap-northeast-1.compute.amazonaws.com`とする。
 
 sshでEC2インスタンスに接続する。
 
