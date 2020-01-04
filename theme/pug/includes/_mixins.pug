@@ -205,12 +205,6 @@ mixin instancesList(o, colors, sctrollts)
                 | #{(instance.description.slice(0, 70) || '')}#{instance.description.length > 70 ? '…' : ''}
 
             .instance-infos.d-flex.flex-wrap.small(class=c2)
-              if(!iregi)
-                abbr(title=i18n('instance_registrationDisabled'))
-                  +fa_fw('lock')
-              else
-                abbr(title=i18n('instance_registrationEnabled'))
-                  +fa_fw('lock-open')
               if(instance.meta.features)
                 if( !instance.meta.features.localTimeLine )
                   abbr(title=i18n('instance_localTimeLineDisabled')).opacity-050

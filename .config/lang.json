@@ -66,16 +66,6 @@
             "en": "Updated at %0",
             "fr": "Mise à jour à %0"
         },
-        "instance_registrationDisabled": {
-            "ja": "新規登録拒否",
-            "en": "Registration is disabled.",
-            "fr": "Les inscriptions sont désactivées."
-        },
-        "instance_registrationEnabled": {
-            "ja": "新規登録可",
-            "en": "Registration is enabled.",
-            "fr": "Les inscriptions sont désactivées."
-        },
         "instance_localTimeLineDisabled": {
             "ja": "ローカルタイムライン無効",
             "en": "Local time line is disabled.",
