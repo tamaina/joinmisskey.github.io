@@ -4,6 +4,7 @@ description: Misskeyのモデレーション機能について、admin/モデレ
 layout: wiki
 rank: 3
 prev: /wiki/developers/relationships
+next: /wiki/developers/modifying-code-and-license
 ---
 Misskeyのモデレーション機能について、admin/モデレーター目線で簡単に説明する。
 
