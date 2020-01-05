@@ -11,7 +11,7 @@ Misskeyは、[syuilo](culture/users/syuilo)が現在も開発を継続してい�
 
 さあ、まずはどこかのインスタンスに登録し、始めてみよう。
 
-Misskeyはオープンソースソフトウェアで、[ソースコード](https://github.com/syuilo/misskey)はAGPLv3ライセンスの下でほぼ自由に利用できる。  
+Misskeyはオープンソースソフトウェアで、[ソースコード](https://github.com/syuilo/misskey)は[AGPLv3ライセンスの下でほぼ自由に利用](developers/modifying-code-and-license)できる。  
 そのため、自分でインスタンスを建てて運営することができる。
 
 Misskeyという名前はMay'nの楽曲「Brain Diver」の歌詞から採られている（syuiloが名前を考えていたときにたまたま聴いていた）。
