@@ -6,7 +6,7 @@ rank: 3.1
 prev: /wiki/developers/moderation
 ---
 Misskeyはソースコードが公開されているため改造を自由にできる。  
-ただし、ソースコードを編集したMisskeyでインスタンスを運営する場合には、**Misskeyのライセンスである[AGPL v3](https://github.com/syuilo/misskey/blob/develop/LICENSE)に基づき、改造後のソースコードを公開する義務がある**。
+ただし、ソースコードを編集したMisskeyでインスタンスを運営する場合には、**Misskeyのライセンスである[GNU Affero General Public License v3.0 (AGPL v3)](https://github.com/syuilo/misskey/blob/develop/LICENSE)に基づき、改造後のソースコードを公開する義務がある**。
 
 ソースコードを即時に公開する必要はないが、要求されたら公開に応じる必要がある。
 
