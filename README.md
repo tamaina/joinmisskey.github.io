@@ -10,8 +10,7 @@ The introduction site of [Misskey](https://github.com/syuilo/misskey)
 4. `git remote add origin https://github.com/joinmisskey/joinmisskey.github.io.git`
 5. `git fetch`
 5. `git checkout src`
-6. `npm install`
-7. `npm install gulp -g`
+6. `npx yarn install`
 8. `git worktree add docs master; git worktree add pages/ja pages/ja; git worktree add pages/en pages/en; git worktree add pages/fr pages/fr;`
 
 ### Build
@@ -22,13 +21,13 @@ The introduction site of [Misskey](https://github.com/syuilo/misskey)
     campaign: xxxxxxx
     bearer: _.........
   ```
-1. `gulp prebuild-files`  
+1. `npx gulp prebuild-files`  
    Run whenever you append images.  
    If you work on a forked repository, you never have to run this command, probably.
-2. `gulp`
+2. `npx gulp`
 
 ### Test
-`gulp local-server`
+`npx gulp local-server`
 
 ### Compress images
 #### Add Images
