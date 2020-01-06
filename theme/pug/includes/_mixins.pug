@@ -254,23 +254,23 @@ mixin instancesList(o, colors, sctrollts)
                 - const users = instance.stats.originalUsersCount
                 .instance-infos-item.mr-2
                   abbr(title=i18n('instance_users'))
-                    +fa_fw('users')
+                    +fa('users')
                   |  #{numeral(users).format(users >= 10000 ? '0.0a' : '0,0')}
               if(instance.stats.originalNotesCount)
                 - const notes = instance.stats.originalNotesCount
                 .instance-infos-item.mr-2
                   abbr(title=i18n('instance_notes'))
-                    +fa_fw('pencil-alt')
+                    +fa('pencil-alt')
                   |  #{numeral(notes).format(notes >= 10000 ? '0.0a' : '0,0')}
               if(instance.meta.maxNoteTextLength)
                 .instance-infos-item.mr-2
                   abbr(title=i18n('instance_maxNoteTextLength'))
-                    +fa_fw('i-cursor')
+                    +fa('i-cursor')
                   |  #{instance.meta.maxNoteTextLength}
               if(instance.meta.driveCapacityPerLocalUserMb)
                 .instance-infos-item.mr-2
                   abbr(title=i18n('instance_driveCapacityPerLocalUser'))
-                    +fa_fw('hdd')
+                    +fa('hdd')
                   |  #{numeral(instance.meta.driveCapacityPerLocalUserMb + 'MB').format('0.0b')}
               if(instance.meta.version)
                 .instance-infos-item.mr-2 v#{instance.meta.version}
