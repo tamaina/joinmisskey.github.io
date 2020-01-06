@@ -4,13 +4,14 @@ description: Misskeyのモデレーション機能について、admin/モデレ
 layout: wiki
 rank: 3
 prev: /wiki/developers/relationships
+next: /wiki/developers/modifying-code-and-license
 ---
 Misskeyのモデレーション機能について、admin/モデレーター目線で簡単に説明する。
 
 ## インスタンス全般のモデレーション
 ### 新規登録の停止
 ユーザーの新規登録を停止できる。  
-しかし、招待コードを発行することで管理者が許可した上で新規登録させることができる。  
+招待コードを発行することで管理者が許可した上で新規登録させることができる。  
 （【インスタンス】タブ）
 
 ### LTL/GTLの廃止
