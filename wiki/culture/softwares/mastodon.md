@@ -24,6 +24,21 @@ layout: wiki
 - **[mastodon.social](https://mastodon.social)**
   Mastodon開発者であるEugen Rochko（Gargron）氏によって2016年3月に開設された、世界初のMastodonインスタンス。本家に近いインスタンスであるためユーザー数が多く、世界二位である。[*](https://ja.mstdn.wiki/Mastodon.social)
 
+## MisskeyとMastodonとの差異
+MisskeyとMastodonでは機能や名前が異なる場合がある。
+
+### 機能名・用語の差異
+|Misskey|Mastodon|備考|
+|:--|:--|:--|
+|ノート|トゥート||
+|リノート|ブースト||
+|引用RN|引用
+|リアクション|お気に入り|リアクションは様々な絵文字を利用できる一方、お気に入りは一種類のみ。|
+|お気に入り|Bookmark|MastodonのBookmarkについては、執筆時点で[日本語訳が議論されています](https://crowdin.com/translate/mastodon/28/en-ja#3623)。|
+|グローバル|連合||
+|見つける|ディレクトリ||
+|ホーム（公開範囲）|未収載||
+
 ## 外部リンク
 - [tootsuite/mastodon on GitHub](https://github.com/tootsuite/mastodon)
 - https://joinmastodon.org/ - Mastodonの公式サイト。インスタンスリストやドキュメントを提供している。

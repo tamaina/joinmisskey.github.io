@@ -15,6 +15,8 @@ amp: true
 ---
 MisskeyはMastodonではありません。
 
+[**MisskeyとMastodonの差異**](../../../wiki/culture/softwares/mastodon)
+
 ## なぜMisskeyはMastodonではないのか
 MisskeyがMastodonではないからです。これは運命です。これは自然の理です。そして、これは常識にならなければなりません。
 
