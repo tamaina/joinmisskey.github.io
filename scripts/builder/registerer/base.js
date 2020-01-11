@@ -112,7 +112,7 @@ async function getInstancesInfos(instances) {
     const stat = stats[i] ? stats[i].body : false
     const usersChart = usersCharts[i] ? usersCharts[i].body : false
     const notesChart = notesCharts[i] ? notesCharts[i].body : false
-    if (metas[i] && stats[i]) {
+    if (meta && stat) {
       /*   インスタンスバリューの算出   */
       let value = 0
       // 1. セマンティックバージョニングをもとに並び替え (独自拡張の枝番は除去)
