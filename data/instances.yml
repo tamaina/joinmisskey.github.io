@@ -336,6 +336,10 @@
   langs: ['en']
 - url: misskey.kusoneko.moe
   langs: ['en']
+- url: misskey.jumanji.co
+  langs: ['en']
+- url: ping.the-planet.space
+  langs: ['en']
 #
 ##
 #########################################
@@ -350,6 +354,8 @@
 - url: murmur.red
   langs: ['fr']
 - url: social.56k.es
+  langs: ['fr']
+- url: meow.zarchbox.fr
   langs: ['fr']
 #
 ##
