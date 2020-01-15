@@ -340,6 +340,8 @@
   langs: ['en']
 - url: ping.the-planet.space
   langs: ['en']
+- url: cliq.social
+  langs: ['en']
 #
 ##
 #########################################
@@ -356,6 +358,8 @@
 - url: social.56k.es
   langs: ['fr']
 - url: meow.zarchbox.fr
+  langs: ['fr']
+- url: hostux.rocks
   langs: ['fr']
 #
 ##
