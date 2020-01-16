@@ -342,6 +342,10 @@
   langs: ['en']
 - url: cliq.social
   langs: ['en']
+- url: misskey.world
+  langs: ['en']
+- url: misskey.art
+  langs: ['en']
 #
 ##
 #########################################
@@ -360,6 +364,8 @@
 - url: meow.zarchbox.fr
   langs: ['fr']
 - url: hostux.rocks
+  langs: ['fr']
+- url: purr.drycat.fr
   langs: ['fr']
 #
 ##
