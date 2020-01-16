@@ -291,7 +291,7 @@ mixin instancesList(o, colors, sctrollts)
               .instance-infos.d-flex.flex-wrap.small(class=c2)
                 +i18n('instance_notSuspended')
 
-        if(!colors && r % 9 === 3 && o !== "suspended")
+        if(!colors && r % 10 === 3 && o !== "suspended")
           .list-group-item.p-0
             +ad({ class: "aitaso", slot: "3082977035", format: "horizontal", allowFullWidth: "false" })
 
