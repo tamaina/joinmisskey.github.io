@@ -201,7 +201,7 @@ mixin instancesList(o, colors, sctrollts)
               else
                 = punycode.toUnicode(instance.url)
             if(instance.description)
-              p.my-1.lh-12.small.text-muted
+              p.my-1.lh-12.small(class=c2)
                 | #{(instance.description.slice(0, 120) || '')}#{instance.description.length > 120 ? '…' : ''}
 
             .instance-infos.d-flex.flex-wrap.small(class=c2)
