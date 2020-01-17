@@ -1,11 +1,12 @@
 #nav
-  @extend .raise-1
   position: fixed
   top: 0
   left: 0
   width: 100%
   z-index: 100
-  background-color: #fff
+  background-color: #fffd
+  backdrop-filter: blur(32px)
+  box-shadow: 0 4px 16px rgba(0,0,0,.1)
   border: none
 
   nav
@@ -60,8 +61,8 @@
 
   &.padding
     @media (min-width: map-get($grid-breakpoints, sm))
-      margin-top: calc(81px + 1rem)
+      margin-top: calc(81px + 1.5rem)
       min-height: calc(100vh - 2rem - 136.53px)
 
 #footer
-  box-shadow: rgba(0,0,0,0.2) 0 0 8px
+  box-shadow: 0 4px 16px rgba(0,0,0,.1)

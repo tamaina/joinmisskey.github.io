@@ -150,7 +150,7 @@ mixin blog_badges(targetpage)
       +i18n('null')
 
 mixin instancesList(o, colors, sctrollts)
-  .instances-list.list-group(class=(scrollts ? `scrollts scrollts-${scrollts}` : ''))
+  .instances-list(class=(scrollts ? `scrollts scrollts-${scrollts}` : ''))
     -
       let c = colors ? `text-${colors[0]} bg-${colors[2]}` : 'text-dark'
       let c2 = colors ? `text-${colors[1]}` : 'text-muted'
@@ -193,16 +193,16 @@ mixin instancesList(o, colors, sctrollts)
           `background: linear-gradient(rgb(${lgrgb}, .76), rgba(${lgrgb}, .9)), url('/files/images/instance-banners/${instance.url}.jpeg?${update.getTime().toString(36)}'); background-size: cover; background-clip: padding-box; background-position: center; text-shadow: 0 0 1.2px rgb(${lgrgb}), 0 0 1.2px rgb(${lgrgb});` :
           ``
         if(instance.isAlive)
-          a(href=`https://${instance.url}` target="_blank" rel="noopener" class=c style=s data-instance-value=instance.value).instance.list-group-item.list-group-item-action.flex-column.align-items-start.py-3
-            h4.noindex
+          a(href=`https://${instance.url}` target="_blank" rel="noopener" class=c style=s data-instance-value=instance.value).instance.card.d-flex.flex-column.align-items-start.mx-2.mt-3.p-4
+            h4.noindex.mb-1
               if(instance.name || (instance.meta.name && instance.meta.name !== 'Misskey' && instance.meta.name !== punycode.toUnicode(instance.url)))
                 | #{instance.name || instance.meta.name}
                 small.font-weight-light(class=c2)  - #{instance.url}
               else
                 = punycode.toUnicode(instance.url)
             if(instance.description)
-              p.my-1.lh-12
-                | #{(instance.description.slice(0, 70) || '')}#{instance.description.length > 70 ? '…' : ''}
+              p.my-1.lh-12.small.text-muted
+                | #{(instance.description.slice(0, 120) || '')}#{instance.description.length > 120 ? '…' : ''}
 
             .instance-infos.d-flex.flex-wrap.small(class=c2)
               if(instance.meta.features)
@@ -277,10 +277,10 @@ mixin instancesList(o, colors, sctrollts)
               if(instance.meta.maintainer)
                 .instance-infos-item
                   abbr(title=i18n('instance_maintainer'))
-                    +fa_fw('user-cog')
+                    +fa('user-cog')
                   |  #{instance.meta.maintainer.name}
         else
-          .instance(class=c style=s data-instance-value=instance.value).list-group-item.list-group-item-action.flex-column.align-items-start.py-3
+          .instance(class=c style=s data-instance-value=instance.value).card.flex.flex-column.align-items-start.mx-2.mt-3.p-4
             h4.noindex
               if(instance.name)
                 | #{instance.name || instance.meta.name}<span class="${c2}"> - #{instance.url}</span>
@@ -292,7 +292,7 @@ mixin instancesList(o, colors, sctrollts)
                 +i18n('instance_notSuspended')
 
         if(!colors && r % 10 === 3 && o !== "suspended")
-          .list-group-item.p-0
+          .p-0.mx-2.mt-4.mb-1
             +ad({ class: "aitaso", slot: "3082977035", format: "horizontal", allowFullWidth: "false" })
 
     else

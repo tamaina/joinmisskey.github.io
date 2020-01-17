@@ -9,6 +9,8 @@
       text-decoration: none !important
 
     article
+      @extend .card
+      overflow: hidden
       width: 100%
       height: 100%
       background-color: #fff
@@ -25,7 +27,10 @@
       .card-title
         @extend .mb-2
         @extend .mt-3
-        @extend .px-3
+        @extend .px-4
+
+      .card-text
+        @extend .px-4
 
       .card-footer
         @extend .small

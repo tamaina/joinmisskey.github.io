@@ -99,11 +99,11 @@ block contents
   #blog_index.d-flex.flex-row.row.m-0
     each thispage, p in qpages
       a.blog-index-item(href=`${site.url.path}${thispage.meta.permalink}` style="display: none;")
-        article.card
+        article
           if ( thispage.attributes.thumbnail )
             +picture({ src: thispage.attributes.thumbnail, alt: "サムネイル", loading: "lazy", class: "card-img-top", sizes: "calc(100vw - 30px - 1rem), (min-width: 576px) 494px, (min-width: 768px) 329px, (min-width: 992px) 449px, (min-width: 1200px) 354px" })
           h4.card-title #{thispage.attributes.title}
-          p.card-text.px-3 #{thispage.attributes.description}
+          p.card-text.px-4 #{thispage.attributes.description}
           - let birthtime = new Date(thispage.meta.birthtime)
           - let mtime = new Date(thispage.meta.mtime)
           footer.card-footer
