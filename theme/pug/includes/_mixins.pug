@@ -194,10 +194,10 @@ mixin instancesList(o, colors, sctrollts)
           ``
         if(instance.isAlive)
           a(href=`https://${instance.url}` target="_blank" rel="noopener" class=c style=s data-instance-value=instance.value).instance.card.d-flex.flex-column.align-items-start.mx-2.mt-3.p-4
-            h4.noindex.mb-1
+            h3.noindex.mb-1
               if(instance.name || (instance.meta.name && instance.meta.name !== 'Misskey' && instance.meta.name !== punycode.toUnicode(instance.url)))
-                | #{instance.name || instance.meta.name}
-                small.font-weight-light(class=c2)  - #{instance.url}
+                div= (instance.name || instance.meta.name)
+                div.small.font-weight-light(class=c2)= instance.url
               else
                 = punycode.toUnicode(instance.url)
             if(instance.description)
