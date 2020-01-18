@@ -13,13 +13,19 @@ nav#mainnav.navbar.navbar-expand-md.navbar-light.flex-row.p-0
             span.d-inline.d-md-none.d-lg-inline
               | &ensp;
               +i18n("home")
+        li.nav-item.px-md-3(class=( page.meta.permalink.indexOf(`/${locale || 'ja'}/wiki/instances/`) == 0 ? "active" : "" ))
+          a.nav-link(href=`/${locale || 'ja'}/wiki/instances/`)
+            +fa_fw("server")
+            span.d-inline.d-md-none.d-lg-inline
+              | &ensp;
+              +i18n("instances")
         li.nav-item.px-md-3(class=( page.meta.permalink.indexOf(`/${locale || 'ja'}/blog/`) == 0 ? "active" : "" ))
           a.nav-link(href=`/${locale || 'ja'}/blog/`)
             +fa_fw("broadcast-tower")
             span.d-inline.d-md-none.d-lg-inline
               | &ensp;
               +i18n("blog")
-        li.nav-item.px-md-3(class=( page.meta.permalink.indexOf(`/${locale || 'ja'}/wiki/`) == 0 ? "active" : "" ))
+        li.nav-item.px-md-3(class=( page.meta.permalink.indexOf(`/${locale || 'ja'}/wiki/`) == 0 && page.meta.permalink.indexOf(`/${locale || 'ja'}/wiki/instances/`) != 0 ? "active" : "" ))
           a.nav-link(href=`/${locale || 'ja'}/wiki/`)
             +fa_fw("book")
             span.d-inline.d-md-none.d-lg-inline

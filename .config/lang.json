@@ -66,6 +66,11 @@
             "en": "Updated at %0",
             "fr": "Mise à jour à %0"
         },
+        "instances": {
+            "ja": "インスタンス",
+            "en": "Instances",
+            "fr": "Instances"
+        },
         "instance_localTimeLineDisabled": {
             "ja": "ローカルタイムライン無効",
             "en": "Local time line is disabled.",

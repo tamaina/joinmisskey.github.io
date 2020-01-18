@@ -8,10 +8,10 @@ import { detectOldBrowser } from "./lib/old-browsers"
 import onReady from "./lib/onReady"
 import { scrolltoshow } from "./lib/scrolltoshow"
 import { twemojiinit } from "./lib/twemojiinit"
-
 import { LoadToShow } from "./lib/loadtoshow"
 import { searchinit } from "./lib/searchinit"
 import { setLocale } from "./lib/set-locale"
+import { gaInstanceEvent } from "./lib/ga-instance-event"
 
 detectOldBrowser()
 gainit()
@@ -27,4 +27,5 @@ onReady(() => {
   setLocale()
   new LoadToShow()
   gad()
+  gaInstanceEvent()
 })
