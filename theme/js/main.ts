@@ -17,9 +17,9 @@ detectOldBrowser()
 gainit()
 localeMove()
 twemojiinit()
+importCss()
 
 onReady(() => {
-  importCss()
   fainit()
   scrolltoshow()
   searchinit()
