@@ -32,7 +32,7 @@ module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
   })
   $("body > *").each(i => {
     const $els = $("body > *")
-    if ($els.length - (i + 1) >= 12 && i % 18 === 3) {
+    if ($els.length - (i + 1) >= 5 && i % 15 === 2) {
       // eslint-disable-next-line quotes
       $els.eq(i).before(`<ins class="adsbygoogle my-4" style="display:block; text-align:left;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1736621122676736" data-ad-slot="9247410221"></ins>`)
     }

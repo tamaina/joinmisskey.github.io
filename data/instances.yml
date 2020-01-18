@@ -223,6 +223,8 @@
   langs: ['ja']
 - url: nijimiss.moe
   langs: ['ja']
+- url: xe.akirin.xyz
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -336,6 +338,16 @@
   langs: ['en']
 - url: misskey.kusoneko.moe
   langs: ['en']
+- url: misskey.jumanji.co
+  langs: ['en']
+- url: ping.the-planet.space
+  langs: ['en']
+- url: cliq.social
+  langs: ['en']
+- url: misskey.world
+  langs: ['en']
+- url: misskey.art
+  langs: ['en']
 #
 ##
 #########################################
@@ -350,6 +362,12 @@
 - url: murmur.red
   langs: ['fr']
 - url: social.56k.es
+  langs: ['fr']
+- url: meow.zarchbox.fr
+  langs: ['fr']
+- url: hostux.rocks
+  langs: ['fr']
+- url: purr.drycat.fr
   langs: ['fr']
 #
 ##
@@ -385,4 +403,6 @@
 ##
 #
 - url: k.kajalinifi.de
+  langs: ['de', 'en']
+- url: misskey.luciferi.st
   langs: ['de', 'en']
