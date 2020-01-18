@@ -223,6 +223,8 @@
   langs: ['ja']
 - url: nijimiss.moe
   langs: ['ja']
+- url: xe.akirin.xyz
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -401,4 +403,6 @@
 ##
 #
 - url: k.kajalinifi.de
+  langs: ['de', 'en']
+- url: misskey.luciferi.st
   langs: ['de', 'en']
