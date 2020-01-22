@@ -92,8 +92,9 @@ html(lang=locale)
       block main
         #main
           != mainHtml
-          .text-center.py-3
-            +ad({ class: "container p-0", slot: "4446014841", allowFullWidth: "true" })
+          if(page.meta.permalink !== "/")
+            .text-center.py-3
+              +ad({ class: "container p-0", slot: "4446014841", allowFullWidth: "true" })
 
     block footer
       #footer.bg-white.mt-2
