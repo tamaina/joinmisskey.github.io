@@ -216,7 +216,6 @@ DNSの登録画面でサーバーのIPアドレスを入力しておくとよい
 ### Certbot (Let's Encrypt) の設定
 HTTPS･WSS通信に使用する証明書をCloudFlareを使う方式でLet's Encryptから取得する。
 
-### Certbot (Let's Encrypt) の設定
 certbotとCloudFlareプラグインをインストール
 
 ```bash
