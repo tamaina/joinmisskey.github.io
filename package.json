@@ -91,7 +91,7 @@
     "load-gulp-tasks": "^0.1.0",
     "marked": "^0.7.0",
     "minimist": "^1.2.0",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.3",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
     "npm": "^6.13.4",
