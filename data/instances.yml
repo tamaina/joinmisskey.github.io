@@ -225,6 +225,10 @@
   langs: ['ja']
 - url: xe.akirin.xyz
   langs: ['ja']
+- url: social.gakusei.space
+  langs: ['ja']
+- url: misskey.azunyan.jp
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
