@@ -175,7 +175,7 @@ async function getInstancesInfos(instances) {
 module.exports = async (site, keys, tempDir, instances) => {
   const creditIconsPromises = []
 
-  await promisify(mkdirp)(`${tempDir}github/`)
+  await mkdirp(`${tempDir}github/`)
 
   /* get contrbutors from GitHub API */
   const contributors = await getContributors()
@@ -189,7 +189,7 @@ module.exports = async (site, keys, tempDir, instances) => {
 
   /* get patrons from Patreon API */
 
-  await promisify(mkdirp)(`${tempDir}patreon/`)
+  await mkdirp(`${tempDir}patreon/`)
 
   let patrons = null
   if (keys != null && keys.patreon) {
@@ -258,7 +258,7 @@ module.exports = async (site, keys, tempDir, instances) => {
     }
   }
 
-  await promisify(mkdirp)(`${tempDir}instance-banners/`)
+  await mkdirp(`${tempDir}instance-banners/`)
   const instancesInfos = await getInstancesInfos(instances)
 
   const instancesBannersPromises = instancesInfos

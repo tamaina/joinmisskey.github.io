@@ -32,7 +32,7 @@ const loadyaml = require("./scripts/builder/loadyaml")
 const makeRss = require("./scripts/builder/registerer/rss")
 
 const writeFile = async (pathe, ...args) => {
-  await promisify(mkdirp)(path.dirname(pathe))
+  await mkdirp(path.dirname(pathe))
   return promisify(fs.writeFile)(pathe, ...args)
 }
 const readFile = promisify(fs.readFile)
