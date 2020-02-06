@@ -23,9 +23,9 @@
     "page_namingrule": "name",
     "theme_color": {
         "primary": "#ffffff",
-        "secondary": "#105779"
+        "secondary": "#86b300"
     },
-    "_theme_color": "#105779",
+    "_theme_color": "#86b300",
     "default": {
         "template": "default"
     },

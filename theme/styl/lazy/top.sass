@@ -2,9 +2,6 @@
 @import "../../../node_modules/bootstrap/scss/functions"
 @import "../../../node_modules/bootstrap/scss/variables"
 
-$toppage-scnshts-1: translateX(37vw) translateY(42vh)
-$toppage-scnshts-1-sm: translateX(37vw) translateY(50vh)
-
 $toppage-scnshts-2: translateX(5vw) translateY(33vh)
 $toppage-scnshts-2-sm: translateX(5vw) translateY(45vh)
 
@@ -24,10 +21,10 @@ $toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
     position: relative
     height: 62vh
     overflow: hidden
-    background: $misskey-ai
+    background: $misskey-green
 
     &.show
-      background: linear-gradient(rgba($misskey-ai, .13), rgba($misskey-ai, .05))
+      background: linear-gradient(rgba($misskey-green, .13), rgba($misskey-green, .05))
 
     .texts
       position: absolute
@@ -58,12 +55,30 @@ $toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
       position: absolute
       z-index: 1
 
-      *
+      > *
         position: absolute
         color: rgba(0,0,0,0)
 
+        // Home
+        &:nth-child(1)
+          z-index: 1
+          img
+            width: 60vw
+            transform: $toppage-scnshts-2
+            background-color: #ececec
+            display: none
+            z-index: 1
+            &.show
+              display: block !important
+              animation-name: toppage-scnshts-2
+
+            @media (max-width: map-get($grid-breakpoints, sm))
+              transform: $toppage-scnshts-2-sm
+              &.show
+                animation-name: toppage-scnshts-2-sm
+
         // Mobile
-        &:nth-child(3)
+        &:nth-child(2)
           z-index: 3
           img
             width: 20vw
@@ -80,43 +95,8 @@ $toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
               &.show
                 animation-name: toppage-scnshts-3-sm
 
-        // Home
-        &:nth-child(2)
-          z-index: 0
-          img
-            width: 58vw
-            transform: $toppage-scnshts-2
-            display: none
-            z-index: 0
-            &.show
-              display: block !important
-              animation-name: toppage-scnshts-2
-
-            @media (max-width: map-get($grid-breakpoints, sm))
-              transform: $toppage-scnshts-2-sm
-              &.show
-                animation-name: toppage-scnshts-2-sm
-
-        // Deck
-        &:nth-child(1)
-          z-index: 1
-          img
-            width: 60vw
-            transform: $toppage-scnshts-1
-            background-color: #ececec
-            display: none
-            z-index: 1
-            &.show
-              display: block !important
-              animation-name: toppage-scnshts-1
-
-            @media (max-width: map-get($grid-breakpoints, sm))
-              transform: $toppage-scnshts-1-sm
-              &.show
-                animation-name: toppage-scnshts-1-sm
-
         // Ai
-        &:nth-child(4)
+        &:nth-child(3)
           height: 70vh
           width: 52.320569902vh
           transform: translateX(63vw)
@@ -126,7 +106,7 @@ $toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
           @media (max-width: map-get($grid-breakpoints, sm))
             transform: translateX(45vw)
 
-        &:nth-child(5)
+        &:nth-child(4)
           transform: translateX(67vw) translateY(calc(62vh - 1.6em))
           transform-origin: bottom
           z-index: 5
@@ -210,15 +190,3 @@ $toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
     transform: translateX(5vw) translateY(95vh)
   to
     transform: $toppage-scnshts-2-sm
-
-
-@keyframes toppage-scnshts-1
-  from
-    transform: translateX(37vw) translateY(90vh)
-  to
-    transform: $toppage-scnshts-1
-@keyframes toppage-scnshts-1-sm
-  from
-    transform: translateX(37vw) translateY(100vh)
-  to
-    transform: $toppage-scnshts-1-sm
