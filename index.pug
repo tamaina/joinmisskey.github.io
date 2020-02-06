@@ -10,9 +10,8 @@ styleRequires: ["top"]
       h1.font-weight-normal.loadts.scrollts-fadeInLeftBig.scrollts-e-2.scrollts-u-5.scrollts-nomargin Misskeyを<wbr>はじめよう
       p.loadts.scrollts-fadeInLeftBig.scrollts-e-4.scrollts-u-5.scrollts-nomargin いつまでも進化する、<wbr>洗練されたマイクロブログSNS <wbr>Misskey（ミスキー）
     .scnshts
-      +picture({src:"/files/images/imports/2019/11/top-deck.png", alt:"Deck(Desktop)", class:"loadts scrollts-e-1 scrollts-nomargin", sizes: "60vw"})
-      +picture({src:"/files/images/imports/2019/12/home-long.png", alt:"Home(Desktop)", class:"loadts scrollts-e-1 scrollts-nomargin", sizes: "58vw"})
-      +picture({src:"/files/images/imports/2019/03/top-mobile-1403march19.png", alt:"Mobile", class:"loadts scrollts-e-1 scrollts-nomargin", sizes: "20vw"})
+      +picture({src:"/files/images/imports/2020/02/scnsht-v12-desktop.png", alt:"Desktop", class:"loadts scrollts-e-1 scrollts-nomargin raise-1", sizes: "58vw"})
+      +picture({src:"/files/images/imports/2020/02/scnsht-v12-mobile.png", alt:"Mobile", class:"loadts scrollts-e-1 scrollts-nomargin raise-1", sizes: "20vw"})
       img(src="/files/images/imports/2019/03/ai_svg.svg" alt="Ai").loadts.scrollts-fadeIn.scrollts-e-3.scrollts-nomargin
       div.small.loadts.scrollts-fadeIn.scrollts-e-3.scrollts-nomargin Ai est la mascotte de Misskey
   section#section_1.bg-primary.text-white: .container
@@ -142,23 +141,15 @@ styleRequires: ["top"]
       p.text-center Le client Web de Misskey peut être configuré librement afin de s'adapter à vos préférences.
 
       .row
-        article.col-12.col-md-6.col-xl-4
-          .card.scrollts.scrollts-fadeInLeftSmall
-            .s2-card-grid
-              .s2-card-icon.fa-2x: +fa_fw('th-large', 'fas')
-              .s2-card-text
-                h4 L'accueil et le Deck
-                p.mb-0 大きいタイムラインが中央に1つある「ホーム」か、カラムを配置し複数のタイムラインを見られる「デッキ」のどちらかを選んで利用できます。
-            img(src="/files/images/imports/2019/11/home-and-deck.svg")
-        article.col-12.col-md-6.col-xl-4
+        article.col-12.col-md-6
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('calculator', 'fas')
               .s2-card-text
                 h4 Widgets
                 p.mb-0 Des petits widgets personnalisés affichant diverses informations et déplaçables facilement.
-            img(src="/files/images/imports/2019/03/widgets.svg")
-        article.col-12.col-md-12.col-xl-4
+            //- img(src="/files/images/imports/2019/03/widgets.svg")
+        article.col-12.col-md-12
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('palette', 'fas')
