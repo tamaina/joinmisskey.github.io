@@ -32,7 +32,7 @@ styleRequires: ["credit"]
       else
         +i18n('nobody')
 
-    if(patrons || patrons.length != 0)
+    if(patrons && patrons.length != 0)
       .container.py-5
         hr.my-5.bg-primary
       h2#contributors.text-center.pb-2 Patrons
