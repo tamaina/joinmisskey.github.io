@@ -490,6 +490,7 @@ sftp> bye
 ```bash
 # SSH
 sudo cp -rf built /home/misskey/misskey/
+sudo chown -R misskey /home/misskey/misskey/built
 ```
 
 ### データベースの初期化
