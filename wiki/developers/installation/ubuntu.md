@@ -51,17 +51,6 @@ Misskeyはrootで実行しない方がよいため、専用のユーザーを作
 adduser --disabled-password --disabled-login misskey
 ```
 
-また、作業用のユーザーとして`user`というユーザーを使用するものとする。  
-misskeyの他にユーザーがあれば`user`をそれに置き換えること。  
-なければ、以下のようにして作業用ユーザーを作成する。
-
-```bash
-adduser user
-# パスワードを設定（覚えておくこと）
-
-usermod -aG sudo user
-```
-
 ## 基本的なソフトウェアのインストールと設定
 基本的なソフトウェアのインストールを行う。
 
