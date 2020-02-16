@@ -352,6 +352,10 @@
   langs: ['en']
 - url: misskey.art
   langs: ['en']
+- url: mk.nfgworld.com
+  langs: ['en']
+- url: floofy.club
+  langs: ['en']
 #
 ##
 #########################################
@@ -382,8 +386,6 @@
   langs: ['zh', 'en']
 - url: sns.moka-rin.moe
   langs: ['zh', 'en']
-- url: msky.naru.cafe
-  langs: ['ko', 'en']
 - url: m.con.sh
   langs: ['zh', 'en']
 - url: misskey.gothloli.club
@@ -392,6 +394,15 @@
   langs: ['zh', 'en']
 - url: mk.veryamt.com
   langs: ['zh', 'en']
+- url: makoto.yurisora.com
+  langs: ['zh', 'en']
+#
+##
+#########################################
+##
+#
+- url: msky.naru.cafe
+  langs: ['ko', 'en']
 - url: madost.one
   langs: ['ko', 'en']
 #
