@@ -51,17 +51,6 @@ Misskeyはrootで実行しない方がよいため、専用のユーザーを作
 adduser --disabled-password --disabled-login misskey
 ```
 
-また、作業用のユーザーとして`user`というユーザーを使用するものとする。  
-misskeyの他にユーザーがあれば`user`をそれに置き換えること。  
-なければ、以下のようにして作業用ユーザーを作成する。
-
-```bash
-adduser user
-# パスワードを設定（覚えておくこと）
-
-usermod -aG sudo user
-```
-
 ## 基本的なソフトウェアのインストールと設定
 基本的なソフトウェアのインストールを行う。
 
@@ -338,12 +327,7 @@ nginxの設定を行う。
 ルート権限で行う。
 
 ```bash
-# いったん作業用ユーザーに切り替え
-su - user
-# パスワードを求められる
-
-sudo su -
-# パスワードを求められる
+exit
 ```
 
 Misskey付属の設定ファイル[`docs/examples/misskey.nginx`](https://github.com/syuilo/misskey/blob/master/docs/examples/misskey.nginx)を`/etc/nginx/sites-available/misskey.conf`として保存し、nanoで開く。
@@ -434,12 +418,7 @@ CloudFlareのDNS設定が正しいIPアドレスになっているかもう一�
 ルート権限で行う。
 
 ```bash
-# いったん作業用ユーザーに切り替え
-su - user
-# パスワードを求められる
-
-sudo su -
-# パスワードを求められる
+exit
 ```
 
 `/etc/systemd/system/misskey.service`を作成する。
