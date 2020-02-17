@@ -72,7 +72,7 @@ axios.post("https://misskey.io/api/auth/session/generate", {appSecret: "fAb12cD3
 2が終わったことが確認できたら、`auth/session/userkey`エンドポイントに`appSecret`と先ほどの`token`をPOSTする。
 
 ```javascript
-axios.post("https://mk.a9z.dev/api/auth/session/userkey", {
+axios.post("https://misskey.io/api/auth/session/userkey", {
   appSecret: "fAb12cD34Ef56gH78Ij16kL32Mn64oPf",
   token: "798b9f6e-248d-43a7-a919-fabc664027f1"
 }).then(({data}) => console.log(data.accessToken))
