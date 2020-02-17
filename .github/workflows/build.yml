@@ -21,7 +21,7 @@ jobs:
     steps:
     - name: Post Starting
       run: |
-        curl -X POST -H "Content-Type: application/json" -d '{"i":"${{secrets.MK_I}}", "text":"[🆕 Build Starting (${{github.event_name}})](https://github.com/joinmisskey/joinmisskey.github.io/commit/${{ github.sha }}/checks)"}' https://mk.a9z.dev/api/notes/create
+        curl -X POST -H "Content-Type: application/json" -d '{"i":"${{secrets.MK_I}}", "text":"[🆕 Build Starting (${{github.event_name}})](https://github.com/joinmisskey/joinmisskey.github.io/commit/${{ github.sha }}/checks)"}' https://c2.a9z.dev/api/notes/create
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -60,12 +60,12 @@ jobs:
     - name: Post Success
       if: success()
       run: |
-        curl -X POST -H "Content-Type: application/json" -d '{"i":"${{secrets.MK_I}}", "text":"[☑ Build Successed](https://github.com/joinmisskey/joinmisskey.github.io/commit/${{ github.sha }}/checks)"}' https://mk.a9z.dev/api/notes/create
+        curl -X POST -H "Content-Type: application/json" -d '{"i":"${{secrets.MK_I}}", "text":"[☑ Build Successed](https://github.com/joinmisskey/joinmisskey.github.io/commit/${{ github.sha }}/checks)"}' https://c2.a9z.dev/api/notes/create
     - name: Post Failure
       if: failure()
       run: |
-        curl -X POST -H "Content-Type: application/json" -d '{"i":"${{secrets.MK_I}}", "text":"[🚨 **Build Failure** 🚨](https://github.com/joinmisskey/joinmisskey.github.io/commit/${{ github.sha }}/checks)"}' https://mk.a9z.dev/api/notes/create
+        curl -X POST -H "Content-Type: application/json" -d '{"i":"${{secrets.MK_I}}", "text":"[🚨 **Build Failure** 🚨](https://github.com/joinmisskey/joinmisskey.github.io/commit/${{ github.sha }}/checks)"}' https://c2.a9z.dev/api/notes/create
     - name: Post Cancelled
       if: cancelled()
       run: |
-        curl -X POST -H "Content-Type: application/json" -d '{"i":"${{secrets.MK_I}}", "text":"[✋ Build Cancelled](https://github.com/joinmisskey/joinmisskey.github.io/commit/${{ github.sha }}/checks)"}' https://mk.a9z.dev/api/notes/create
+        curl -X POST -H "Content-Type: application/json" -d '{"i":"${{secrets.MK_I}}", "text":"[✋ Build Cancelled](https://github.com/joinmisskey/joinmisskey.github.io/commit/${{ github.sha }}/checks)"}' https://c2.a9z.dev/api/notes/create
