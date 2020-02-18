@@ -209,7 +209,7 @@
   langs: ['ja']
 - url: vspace.me
   langs: ['ja']
-- url: c2.a9z.dev
+- url: mk.a9z.dev
   langs: ['ja']
 - url: misskey2.juggler.jp
   langs: ['ja']
@@ -229,6 +229,19 @@
   langs: ['ja']
 - url: misskey.azunyan.jp
   langs: ['ja']
+- url: ridixy.com
+  langs: ['ja']
+- url: ik1-409-36974.vs.sakura.ne.jp
+  langs: ['ja']
+- url: mi.ne-moni.work
+  langs: ['ja']
+- url: mk12.juggler.jp
+  langs: ['ja']
+- url: meisskey.one
+  langs: ['ja']
+- url: edge.misskey.io
+  langs: ['ja']
+- 
 #
 - url: msky.cafe
   langs: ['ja']
@@ -355,6 +368,8 @@
 - url: mk.nfgworld.com
   langs: ['en']
 - url: floofy.club
+  langs: ['en']
+- url: slippy.xyz
   langs: ['en']
 #
 ##
