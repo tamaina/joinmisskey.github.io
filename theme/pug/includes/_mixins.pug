@@ -212,12 +212,6 @@ mixin instancesList(o, colors, sctrollts)
                 else
                   abbr(title=i18n('instance_localTimeLineEnabled'))
                     +fa_fw('comments')
-                if( instance.meta.features.elasticsearch )
-                  abbr(title=i18n('instance_elasticsearchEnabled'))
-                    +fa_fw('search')
-                else
-                  abbr(title=i18n('instance_elasticsearchDisabled')).opacity-050
-                    +fa_fw('search')
                 if( instance.meta.features.recaptcha )
                   abbr(title=i18n('instance_recaptchaEnabled'))
                     +fa_fw('shield-alt')
