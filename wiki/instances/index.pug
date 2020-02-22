@@ -17,17 +17,17 @@ details
 
   ul.fa-ul
     li #[span.fa-li: +fa_fw('comments')]: ローカルタイムラインが有効
-    li #[span.fa-li: +fa_fw('search')]: 検索が有効
+    li #[span.fa-li: +fa_fw('search')]: Search enabled
     li #[span.fa-li: +fa_fw('shield-alt')]: reCAPTCHAによるボット防御が有効
     li #[span.fa-li: +fa_fw('cube')]: ドライブのファイルはオブジェクトストレージで管理されている
     each service in mkConnectServices
-      li #[span.fa-li: +fa_fw(service.toLowerCase(), 'fab')]: #{service}連携を利用可能
+      li #[span.fa-li: +fa_fw(service.toLowerCase(), 'fab')]: #{service} integration available
     li #[span.fa-li: +fa_fw('bell')]: 通知を常時配信可能 (iOSなど、利用環境によっては利用不可)
-    li #[span.fa-li: +fa_fw('envelope-square')]: Eメール連携を利用可能
+    li #[span.fa-li: +fa_fw('envelope-square')]: E-mail integration available
   ul.fa-ul
     li #[span.fa-li: +fa_fw('users')]: インスタンスに登録されたユーザー数
     li #[span.fa-li: +fa_fw('pencil-alt')]: インスタンス内のユーザーのノートの総数
-    li #[span.fa-li: +fa_fw('i-cursor')]: 文字数制限
+    li #[span.fa-li: +fa_fw('i-cursor')]: Character limit
     li #[span.fa-li: +fa_fw('hdd')]: 1ユーザーが利用できるドライブ容量
     li #[span.fa-li: +fa_fw('user-cog')]: インスタンス管理者名
 
