@@ -9,7 +9,7 @@ MisskeyのWebSocket通信によるストリーミングAPIでは、リアルタ�
 
 WebSocket通信のテストには、Google Chrome拡張機能の[Browser WebSocket Client](https://chrome.google.com/webstore/detail/browser-websocket-client/mdmlhchldhfnfnkfmljgeinlffmdgkjo)が便利である。
 
-<small>https://misskey.io/docs/ja-JP/stream</small>
+<small>https://misskey.io/docs/stream</small>
 
 ## ストリームに接続する
 WebSocket通信のエンドポイントは、misskey.ioなら次のとおりである。
@@ -117,6 +117,7 @@ wss://misskey.io/streaming
   - `follow`（フォローした）
   - `unfollow`（フォロー解除された）
   - `followed`（フォローされた）
+  - `messagingMessage`（チャットにメッセージが来た）
 - `body.body`が内容である。上の例の場合はノートの内容である。
 
 ### チャンネルから切断する
