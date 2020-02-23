@@ -117,6 +117,7 @@ wss://misskey.io/streaming
   - `follow`（フォローした）
   - `unfollow`（フォロー解除された）
   - `followed`（フォローされた）
+  - `messagingMessage`（チャットにメッセージが来た）
 - `body.body`が内容である。上の例の場合はノートの内容である。
 
 ### チャンネルから切断する
