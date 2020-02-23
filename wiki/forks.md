@@ -32,7 +32,7 @@ Misskeyのソースコードは、ライセンスがAGPLv3.0で、GitHubで公�
 **[346design/twista.283.cloud on GitHub](https://github.com/346design/twista.283.cloud)** ･ **[twista Help](https://twista-docs.283.cloud)**
 
 ##### 主な追加機能
-- 名前のトークン
+- 名前のチャットン
 - `@everyone`、`@info`
 - MFMの構文追加 (Mochimochi Fuwafuwa Markup)
   * アバター絵文字
