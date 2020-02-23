@@ -241,6 +241,10 @@
   langs: ['ja']
 - url: edge.misskey.io
   langs: ['ja']
+- url: misskey.xianon.net
+  langs: ['ja']
+- url: sakura-jk.tokyo
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -370,6 +374,10 @@
   langs: ['en']
 - url: slippy.xyz
   langs: ['en']
+- url: jaeger.website
+  langs: ['en']
+- url: wombats.club
+  langs: ['en']
 #
 ##
 #########################################
@@ -410,6 +418,8 @@
   langs: ['zh', 'en']
 - url: makoto.yurisora.com
   langs: ['zh', 'en']
+- url: misskey.idollar.moe
+  langs: ['zh', 'en']
 #
 ##
 #########################################
@@ -418,6 +428,8 @@
 - url: msky.naru.cafe
   langs: ['ko', 'en']
 - url: madost.one
+  langs: ['ko', 'en']
+- url: k.lapy.link
   langs: ['ko', 'en']
 #
 ##
