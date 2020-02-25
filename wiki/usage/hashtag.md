@@ -4,7 +4,7 @@ description: ノートと自己紹介にハッシュタグを記入し、見つ�
 layout: wiki
 rank: 3.1
 prev: /wiki/usage/list
-next: /wiki/usage/anntena
+next: /wiki/usage/antenna
 ---
 ハッシュタグを付加すると、簡単にノートやユーザーを見つけてもらうことができる。  
 `#Misskey `のように、先頭に`#`を付加し、末尾を半角空白または改行にすることで、単語や文をハッシュタグにできる。
