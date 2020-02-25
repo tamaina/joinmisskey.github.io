@@ -36,16 +36,16 @@ module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
 
   $("body > *").each(i => {
     const $els = $("body > *")
-    insertAdFlag += 1
+    insertAdNumber += 1
 
-    if ($els.length - (i + 1) >= 6 && insertAdFlag > 10) {
+    if ($els.length - (i + 1) >= 6 && insertAdNumber > 10) {
       const tagName = $els.eq(i).get(0).tagName
       if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr'].includes(tagName)) {
         $els.eq(i).before(adTag)
-        insertAdFlag = 0
+        insertAdNumber = 0
       } else if (['table', 'ol', 'ul'].includes(tagName)) {
         $els.eq(i).after(adTag)
-        insertAdFlag = 1
+        insertAdNumber = 1
       }
     }
   })
