@@ -38,7 +38,7 @@ module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
     const $els = $("body > *")
     insertAdNumber += 1
 
-    if ($els.length - (i + 1) >= 6 && insertAdNumber > 10) {
+    if ($els.length - (i + 1) >= 6 && insertAdNumber > 13) {
       const tagName = $els.eq(i).get(0).tagName
       if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr'].includes(tagName)) {
         $els.eq(i).before(adTag)
