@@ -30,13 +30,26 @@ module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
     const $els = $("h2, h3, h4, h5, h6")
     $els.eq(i).attr("id", hs[i])
   })
+
+  let insertAdNumber = 6
+  const adTag = `<ins class="adsbygoogle my-4" style="display:block; text-align:left;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1736621122676736" data-ad-slot="9247410221"></ins>`
+
   $("body > *").each(i => {
     const $els = $("body > *")
-    if ($els.length - (i + 1) >= 6 && i % 15 === 2) {
-      // eslint-disable-next-line quotes
-      $els.eq(i).before(`<ins class="adsbygoogle my-4" style="display:block; text-align:left;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1736621122676736" data-ad-slot="9247410221"></ins>`)
+    insertAdFlag += 1
+
+    if ($els.length - (i + 1) >= 6 && insertAdFlag > 10) {
+      const tagName = $els.eq(i).get(0).tagName
+      if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr'].includes(tagName)) {
+        $els.eq(i).before(adTag)
+        insertAdFlag = 0
+      } else if (['table', 'ol', 'ul'].includes(tagName)) {
+        $els.eq(i).after(adTag)
+        insertAdFlag = 1
+      }
     }
   })
+
   $("img").attr("loading", "lazy")
   $("img:not(.notblogstyle)").each((i, el) => {
     const img = (() => {
