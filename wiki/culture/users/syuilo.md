@@ -3,7 +3,7 @@ title: syuilo
 description: syuilo（しゅいろ）は、Misskeyの開発者（Owner）、また作曲家。
 layout: wiki
 ---
-syuilo（しゅいろ）は、[Repro株式会社](https://repro.io/)所属[*](https://misskey.io/notes/83mfj3nh8u)のプログラマかつ[Misskey](../softwares/misskey)の開発者（Owner）、作曲家。Twitterのフォロワー数は1.4万を超えている（2020年2月26日現在）。  
+**syuilo**（しゅいろ）は、[Repro株式会社](https://repro.io/)所属[*](https://misskey.io/notes/83mfj3nh8u)のプログラマかつ[Misskey](../softwares/misskey)の開発者（Owner）、作曲家。Twitterのフォロワー数は1.4万を超えている（2020年2月26日現在）。  
 1997年12月06日生まれ。川崎市宮前区に在住。
 
 ## 概要
