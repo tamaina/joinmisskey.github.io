@@ -24,8 +24,8 @@ aqzの読み方は「アキウス」を推奨している。
 - [c2.a9z.dev](https://c2.a9z.dev)
 
 ## アカウント
-- [c2.a9z.dev@aqz](https://c2.a9z.dev/@aqz)
-- [yuzulia.xyz@aqz](https://yuzulia.xyz/@aqz)
+- [@aqz@c2.a9z.dev](https://c2.a9z.dev/@aqz)
+- [@aqz@yuzulia.xyz](https://yuzulia.xyz/@aqz)
 - [Twitter @t_ma1n](https://twitter.com/t_ma1n)
 - [Twitter @aqzvy](https://twitter.com/aqzvy)
 - [GitHub @tamaina](https://github.com/tamaina)

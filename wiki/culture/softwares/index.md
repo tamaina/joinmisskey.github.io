@@ -1,8 +1,8 @@
 ---
-title: ソフトウェア
-description: 様々なソフトウェアについての個別記事。
+title: ソフトウェア・サービス
+description: 様々なソフトウェア・サービスについての解説記事。
 layout: index
 has_child: false
 rank: 4
 ---
-様々なソフトウェアについての個別記事。
+様々なソフトウェア・サービスについての解説記事。
