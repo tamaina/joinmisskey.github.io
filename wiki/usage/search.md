@@ -8,7 +8,7 @@ prev: /wiki/usage/security
 #next: /wiki/usage/widgets
 next: /wiki/usage/pages
 ---
-![検索窓](/files/images/imports/2019/03/kensakumado.png)
+![検索窓](/files/images/imports/2020/02/search-form.png)
 
 ## ノートの検索
 ### 文字列
