@@ -11,5 +11,5 @@ layout: wiki
 <small>この節の加筆が望まれています。（2019年11月）</small>
 
 ## アカウント
-- [misskey.io/@noizenecio](https://misskey.io/@noizenecio)
+- [@noizenecio@misskey.io](https://misskey.io/@noizenecio)
 - [Twitter @noizenecio](https://twitter.com/noizenecio)
