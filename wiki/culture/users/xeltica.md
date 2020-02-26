@@ -3,7 +3,7 @@ title: Xeltica
 description: Xeltica（ゼルチカ）は、Web開発者、また作曲家。
 layout: wiki
 ---
-Xeltica（ゼルチカ）は、プログラマ、作曲家。[Misskeyのフォーク](../../forks)「グランポリス」を開発している。  
+**Xeltica**（ゼルチカ）は、プログラマ、作曲家。[Misskeyのフォーク](../../forks)「グランポリス」を開発している。  
 生年月日は不明だが、大学生。
 
 [**Xelticaの個人サイト** xeltica.work](https://xeltica.work)
