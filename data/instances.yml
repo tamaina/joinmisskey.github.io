@@ -245,6 +245,8 @@
   langs: ['ja']
 - url: sakura-jk.tokyo
   langs: ['ja']
+- url: co.misskey.io
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
