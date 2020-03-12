@@ -247,6 +247,8 @@
   langs: ['ja']
 - url: co.misskey.io
   langs: ['ja']
+- url: dev.mis.b-shock.org
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -379,6 +381,10 @@
 - url: jaeger.website
   langs: ['en']
 - url: wombats.club
+  langs: ['en']
+- url: miss.jaekr.sh
+  langs: ['en']
+- url: misskey.icodeinht.ml
   langs: ['en']
 #
 ##

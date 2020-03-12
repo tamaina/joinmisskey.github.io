@@ -116,6 +116,9 @@ $toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
           white-space: nowrap
           text-shadow: 1px 1px 0 #f7f7f7, 1px -1px 0 #f7f7f7,-1px 1px 0 #f7f7f7,-1px -1px 0 #f7f7f7,0px 1px 0 #f7f7f7, 0px -1px 0 #f7f7f7,-1px 0px 0 #f7f7f7,1px 0px 0 #f7f7f7
 
+          @media (max-width: map-get($grid-breakpoints, sm))
+            transform: translateX(57vw) translateY(calc(62vh - 1.6em))
+
   #section_2
     > .container
       > .s2-item
