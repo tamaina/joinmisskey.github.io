@@ -34,7 +34,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/free-regular-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "@types/jsdom": "^12.2.4",
+    "@types/jsdom": "^16.1.1",
     "@types/katex": "^0.10.1",
     "@types/twemoji": "^12.1.0",
     "@types/ua-parser-js": "^0.7.33",
