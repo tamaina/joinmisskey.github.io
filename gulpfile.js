@@ -582,7 +582,7 @@ gulp.task("make-browserconfig", cb => {
 })
 
 
-gulp.task("make-sitemap", cb => {
+gulp.task("make-sitemap", async cb => {
   const urls = pages.filter(e => !e.canonical && e.meta.locale).map(e => ({
     url: e.meta.permalink,
     links: site.locales.map(lang => ({ lang, url: `/${lang}/${e.meta.dirs.slice(2).join("/")}` }))
@@ -593,14 +593,14 @@ gulp.task("make-sitemap", cb => {
     urls
   })
 
-  streamToPromise(stream).then(map => {
-    glog("あ")
-    fs.writeFile("dist/docs/sitemap.xml", map.toString(), (err) => {
-      glog(colors.green("✔ sitemap.xml"));
-      cb()
-    })
-  })
+  stream.end()
 
+  const pr = await streamToPromise(stream)
+
+  fs.writeFile("dist/docs/sitemap.xml", pr, (err) => {
+    glog(colors.green("✔ sitemap.xml"));
+    cb()
+  })
 })
 
 gulp.task("make-image_compressing_strategy_version_file", cb => {
