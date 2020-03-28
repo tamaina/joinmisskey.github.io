@@ -15,7 +15,7 @@ const colors = require("colors")
 const mkdirp = require("mkdirp")
 const webpackStream = require("webpack-stream")
 const webpack = require("webpack")
-const Sitemap = require("sitemap")
+const { SitemapStream, streamToPromise } = require("sitemap")
 const postcssSorting = require("postcss-sorting")
 const autoprefixer = require("autoprefixer")
 const cssnano = require("cssnano")
@@ -588,14 +588,17 @@ gulp.task("make-sitemap", cb => {
     links: site.locales.map(lang => ({ lang, url: `/${lang}/${e.meta.dirs.slice(2).join("/")}` }))
   }))
 
-  const sitemap = Sitemap.createSitemap({
+  const stream = new SitemapStream({
     hostname: urlPrefix,
     urls
   })
 
-  fs.writeFile("dist/docs/sitemap.xml", sitemap.toString(), () => {
-    glog(colors.green("✔ sitemap.xml")); cb()
+  streamToPromise(stream).then(map => {
+    fs.writeFile("dist/docs/sitemap.xml", map, () => {
+      glog(colors.green("✔ sitemap.xml")); cb()
+    })
   })
+
 })
 
 gulp.task("make-image_compressing_strategy_version_file", cb => {
