@@ -594,8 +594,9 @@ gulp.task("make-sitemap", cb => {
   })
 
   streamToPromise(stream).then(map => {
-    fs.writeFile("dist/docs/sitemap.xml", map, () => {
-      glog(colors.green("✔ sitemap.xml")); cb()
+    fs.writeFile("dist/docs/sitemap.xml", map.toString(), (err) => {
+      glog(colors.green("✔ sitemap.xml"));
+      cb()
     })
   })
 
