@@ -702,7 +702,7 @@ gulp.task("watcher",
   ))
 
 gulp.task("watch", () => {
-  gulp.watch(["theme/**/*", "!theme/js/**/*", `!${tempDir}**/*`, "pages/**/*", "./.config/**/*", "./scripts/**/*"], gulp.series("watcher", "server", cb => { cb() }))
+  gulp.watch(["theme/**/*", "!theme/js/**/*", `!${tempDir}**/*`, "pages/**/*", "./.config/**/*", "./scripts/**/*"], gulp.series("server", cb => { cb() }))
   gulp.watch(["files/**/*", "./.config/**/*"], gulp.series("watcher", cb => { cb() }))
 })
 

@@ -3,10 +3,39 @@
 @import "../../../node_modules/bootstrap/scss/variables"
 
 $toppage-scnshts-2: translateX(5vw) translateY(33vh)
-$toppage-scnshts-2-sm: translateX(5vw) translateY(45vh)
+@keyframes toppage-scnshts-2
+  from
+    transform: translateX(5vw) translateY(95vh)
+  to
+    transform: $toppage-scnshts-2
+
+$toppage-scnshts-2-sm: translateX(3vw) translateY(40vh)
+@keyframes toppage-scnshts-2-sm
+  from
+    transform: translateX(3vw) translateY(105vh)
+  to
+    transform: $toppage-scnshts-2-sm
 
 $toppage-scnshts-3: translateX(32vw) translateY(45vh)
-$toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
+@keyframes toppage-scnshts-3
+  from
+    transform: translateX(32vw) translateY(105vh)
+  to
+    transform: $toppage-scnshts-3
+
+$toppage-scnshts-3-xl: translateX(20vw) translateY(45vh)
+@keyframes toppage-scnshts-3-xl
+  from
+    transform: translateX(20vw) translateY(105vh)
+  to
+    transform: $toppage-scnshts-3-xl
+
+$toppage-scnshts-3-sm: translateX(6vw) translateY(50vh)
+@keyframes toppage-scnshts-3-sm
+  from
+    transform: translateX(6vw) translateY(115vh)
+  to
+    transform: $toppage-scnshts-3-sm
 
 #toppage
   > section:not(#top)
@@ -19,7 +48,8 @@ $toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
 
   #top
     position: relative
-    height: 62vh
+    height: 80vh
+    max-height: 50rem
     overflow: hidden
     background: $misskey-green
 
@@ -29,11 +59,14 @@ $toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
     .texts
       position: absolute
       max-width: 67vw
-      transform: translateX(6vw) translateY(7vh)
+      transform: translateX(6vw) translateY(8vh)
       z-index: 2
       white-space: normal
       word-break: keep-all
       text-shadow: #f7f7f7 2px 0px, #f7f7f7 -2px 0px, #f7f7f7 0px -2px, #f7f7f7 0px 2px, #f7f7f7 2px 2px , #f7f7f7 -2px 2px, #f7f7f7 2px -2px, #f7f7f7 -2px -2px, #f7f7f7 1px 2px, #f7f7f7 -1px 2px, #f7f7f7 1px -2px, #f7f7f7 -1px -2px, #f7f7f7 2px 1px, #f7f7f7 -2px 1px, #f7f7f7 2px -1px, #f7f7f7 -2px -1px
+
+      @media (max-width: map-get($grid-breakpoints, md))
+        transform: translateX(6vw) translateY(6vh)
 
       > .slogan
         font-size: calc(1.2rem + 1vw)
@@ -54,6 +87,8 @@ $toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
     .scnshts
       position: absolute
       z-index: 1
+      width: 100%
+      height: 100%
 
       > *
         position: absolute
@@ -72,7 +107,11 @@ $toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
               display: block !important
               animation-name: toppage-scnshts-2
 
+            @media (max-width: map-get($grid-breakpoints, xl))
+              width: 80vw
+
             @media (max-width: map-get($grid-breakpoints, sm))
+              width: 120vw
               transform: $toppage-scnshts-2-sm
               &.show
                 animation-name: toppage-scnshts-2-sm
@@ -90,34 +129,44 @@ $toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
               display: block !important
               animation-name: toppage-scnshts-3
 
+            @media (max-width: map-get($grid-breakpoints, xl))
+              transform: $toppage-scnshts-3-xl
+              &.show
+                animation-name: toppage-scnshts-3-xl
+
             @media (max-width: map-get($grid-breakpoints, sm))
+              width: 60vw
               transform: $toppage-scnshts-3-sm
               &.show
                 animation-name: toppage-scnshts-3-sm
 
         // Ai
         &:nth-child(3)
-          height: 70vh
-          width: 52.320569902vh
-          transform: translateX(63vw)
+          height: 80vh
+          max-height: 45rem
+          right: -4vw
+          bottom: 0
+          position: absolute
           z-index: 4
           filter: drop-shadow(0px 0px 1.5px rgba(0,0,0,.25))
 
+          @media (max-width: map-get($grid-breakpoints, md))
+            right: -20vw
+
           @media (max-width: map-get($grid-breakpoints, sm))
-            transform: translateX(45vw)
+            height: 60vh
+            bottom: 0
 
         &:nth-child(4)
-          transform: translateX(67vw) translateY(calc(62vh - 1.6em))
-          transform-origin: bottom
+          position: absolute
           z-index: 5
+          right: .5rem
+          bottom: .5rem
           filter: none
           color: #000000
           word-break: keep-all
           white-space: nowrap
           text-shadow: 1px 1px 0 #f7f7f7, 1px -1px 0 #f7f7f7,-1px 1px 0 #f7f7f7,-1px -1px 0 #f7f7f7,0px 1px 0 #f7f7f7, 0px -1px 0 #f7f7f7,-1px 0px 0 #f7f7f7,1px 0px 0 #f7f7f7
-
-          @media (max-width: map-get($grid-breakpoints, sm))
-            transform: translateX(57vw) translateY(calc(62vh - 1.6em))
 
   #section_2
     > .container
@@ -171,25 +220,3 @@ $toppage-scnshts-3-sm: translateX(35vw) translateY(55vh)
 
       > span
         overflow-wrap: break-word
-
-@keyframes toppage-scnshts-3
-  from
-    transform: translateX(32vw) translateY(95vh)
-  to
-    transform: $toppage-scnshts-3
-@keyframes toppage-scnshts-3-sm
-  from
-    transform: translateX(35vw) translateY(105vh)
-  to
-    transform: $toppage-scnshts-3-sm
-
-@keyframes toppage-scnshts-2
-  from
-    transform: translateX(5vw) translateY(85vh)
-  to
-    transform: $toppage-scnshts-2
-@keyframes toppage-scnshts-2-sm
-  from
-    transform: translateX(5vw) translateY(95vh)
-  to
-    transform: $toppage-scnshts-2-sm
