@@ -68,10 +68,18 @@ $toppage-scnshts-3-sm: translateX(6vw) translateY(50vh)
       @media (max-width: map-get($grid-breakpoints, md))
         transform: translateX(6vw) translateY(6vh)
 
+      @media (max-width: map-get($grid-breakpoints, sm))
+        max-width: 88vw
+        transform: translateX(6vw) translateY(4.5vh)
+
+        > p
+          max-width: 70%
+
       > .slogan
         font-size: calc(1.2rem + 1vw)
-        margin-bottom: .3rem
-        line-height: 1
+        margin-bottom: .2rem
+        line-height: 1.2
+        letter-spacing: .1em
 
       > h1
         font-size: calc(2.2rem + 3vw)
