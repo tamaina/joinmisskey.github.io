@@ -159,7 +159,7 @@ mixin instancesList(o, colors, sctrollts)
 
     -
       const filteredInstances = instancesInfos.filter((instance, i) => {
-        const versionOk = instance.isAlive ? !semver.satisfies(instance.meta.version, ">= 10.46.0 < 10.102.4 || >= 11.0.0-alpha.1 < 11.20.2") : true
+        const versionOk = instance.isAlive ? !semver.satisfies(instance.meta.version, ">= 10.46.0 < 10.102.4 || >= 11.0.0-alpha.1 < 11.20.2 || >= 12.0.0 < 12.28.0") : true
         if (!versionOk) return false
         const ilang = instance.langs ? instance.langs.some(e => e == locale) : true
         if (!ilang) return false

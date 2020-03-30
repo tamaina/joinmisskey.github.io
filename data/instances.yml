@@ -258,6 +258,8 @@
   langs: ['ja']
 - url: dev.mis.b-shock.org
   langs: ['ja']
+- url: misskey.void.gift
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
