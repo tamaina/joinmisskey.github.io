@@ -61,5 +61,6 @@
         "display": "standalone"
     },
     "sw": "js|css",
-    "metaPages": ["404", "offline"]
+    "metaPages": ["404", "offline"],
+    "insecureMisskeyVersions": ">= 10.46.0 < 10.102.4 || >= 11.0.0-alpha.1 < 11.20.2 || >= 12.0.0 <= 12.28.0"
 }
