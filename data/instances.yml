@@ -2,6 +2,15 @@
 ###### インスタンスリスト        #######
 ###### The List of Instances     #######
 ########################################
+# joinmisskeyのインスタンスリストは現状手動更新です。
+#
+# url: インスタンスのドメインを指定します。
+# langs: インスタンスの言語を文字列の配列で指定します。
+# suspended: bool. インスタンスの存在自体を隠蔽します。
+# notSuspended: bool. たとえエラーがあっても常に稼働中インスタンスとして表示します。
+# description: 説明を上書きします。通常は指定しません。
+# name: インスタンス名を上書きします。通常は指定しません。
+#
 - url: misskey.io
   langs: ['ja']
   notSuspended: true
@@ -248,6 +257,8 @@
 - url: co.misskey.io
   langs: ['ja']
 - url: dev.mis.b-shock.org
+  langs: ['ja']
+- url: misskey.void.gift
   langs: ['ja']
 #
 - url: msky.cafe

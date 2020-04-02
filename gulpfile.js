@@ -15,7 +15,7 @@ const colors = require("colors")
 const mkdirp = require("mkdirp")
 const webpackStream = require("webpack-stream")
 const webpack = require("webpack")
-const Sitemap = require("sitemap")
+const { SitemapStream, streamToPromise } = require("sitemap")
 const postcssSorting = require("postcss-sorting")
 const autoprefixer = require("autoprefixer")
 const cssnano = require("cssnano")
@@ -582,19 +582,24 @@ gulp.task("make-browserconfig", cb => {
 })
 
 
-gulp.task("make-sitemap", cb => {
+gulp.task("make-sitemap", async cb => {
   const urls = pages.filter(e => !e.canonical && e.meta.locale).map(e => ({
     url: e.meta.permalink,
     links: site.locales.map(lang => ({ lang, url: `/${lang}/${e.meta.dirs.slice(2).join("/")}` }))
   }))
 
-  const sitemap = Sitemap.createSitemap({
+  const stream = new SitemapStream({
     hostname: urlPrefix,
     urls
   })
 
-  fs.writeFile("dist/docs/sitemap.xml", sitemap.toString(), () => {
-    glog(colors.green("✔ sitemap.xml")); cb()
+  stream.end()
+
+  const pr = await streamToPromise(stream)
+
+  fs.writeFile("dist/docs/sitemap.xml", pr, (err) => {
+    glog(colors.green("✔ sitemap.xml"));
+    cb()
   })
 })
 
@@ -697,7 +702,7 @@ gulp.task("watcher",
   ))
 
 gulp.task("watch", () => {
-  gulp.watch(["theme/**/*", "!theme/js/**/*", `!${tempDir}**/*`, "pages/**/*", "./.config/**/*", "./scripts/**/*"], gulp.series("watcher", "server", cb => { cb() }))
+  gulp.watch(["theme/**/*", "!theme/js/**/*", `!${tempDir}**/*`, "pages/**/*", "./.config/**/*", "./scripts/**/*"], gulp.series("server", cb => { cb() }))
   gulp.watch(["files/**/*", "./.config/**/*"], gulp.series("watcher", cb => { cb() }))
 })
 
