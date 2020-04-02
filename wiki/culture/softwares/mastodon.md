@@ -27,17 +27,20 @@ layout: wiki
 ## MisskeyとMastodonとの差異
 MisskeyとMastodonでは機能や名前が異なる場合がある。
 
-### 機能名・用語の差異
+### 機能名・用語の差異や対応する機能の比較
 |Misskey|Mastodon|備考|
 |:--|:--|:--|
 |ノート|トゥート||
 |リノート|ブースト||
 |引用RN|引用
 |リアクション|お気に入り|リアクションは様々な絵文字を利用できる一方、お気に入りは一種類のみ。|
-|お気に入り|Bookmark|MastodonのBookmarkについては、執筆時点で[日本語訳が議論されています](https://crowdin.com/translate/mastodon/28/en-ja#3623)。|
-|グローバル|連合||
+|お気に入り|ブックマーク||
+|グローバルタイムライン|連合タイムライン||
+|ソーシャルタイムライン|（対応なし）|ソーシャル = ホーム ∪ ローカル|
 |見つける|ディレクトリ||
 |ホーム（公開範囲）|未収載||
+|チャット|ダイレクトメッセージ|Misskey v11まではトーク。|
+|みつける|ディレクトリ||
 
 ## 外部リンク
 - [tootsuite/mastodon on GitHub](https://github.com/tootsuite/mastodon)
