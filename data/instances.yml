@@ -260,6 +260,8 @@
   langs: ['ja']
 - url: misskey.void.gift
   langs: ['ja']
+- url: edge.groundpolis.app
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']

@@ -540,6 +540,12 @@ gulp.task("make-manifest", () => writeFile("dist/docs/manifest.json", JSON.strin
     err => { glog(colors.red("✖ manifest.json")); glog(err) }
   ))
 
+gulp.task("make-instances-json", () => writeFile("dist/docs/instances.json", JSON.stringify(site.instancesInfos))
+  .then(
+    () => { glog(colors.green("✔ instances.json")) },
+    err => { glog(colors.red("✖ instances.json")); glog(err) }
+  ))
+
 gulp.task("make-rss", () => {
   const feed = makeRss(base, pages, "ja")
   return Promise.all([
