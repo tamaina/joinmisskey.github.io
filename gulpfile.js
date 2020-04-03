@@ -665,7 +665,8 @@ gulp.task("make-subfiles",
       "make-manifest",
       "make-rss",
       "make-browserconfig",
-      "make-sitemap"
+      "make-sitemap",
+      "make-instances-json"
     ),
     cb => { cb() }
   ))
