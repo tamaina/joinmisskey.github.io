@@ -28,79 +28,65 @@ axios.post("https://misskey.io/api/notes/create", {i: "1248aBCDeFGH1632", text: 
 
 自分のアカウントから「Hello Misskey API World!」という文章が投稿されたはずだ。
 
-### アプリケーションとしてiを取得する
-上の方法で取得したiをアプリケーションで使用するのは大変危険なため、アプリケーションからAPIを利用する際には、アプリケーションとユーザーが結び付けられた専用のAPIキーを発行する。
+### MiAuthでiを取得する
+**上の方法で取得したiをアプリケーションで使用するのは大変危険**なため、アプリケーションからAPIを利用する際には、アプリケーションとユーザーが結び付けられた専用のアクセストークンを発行する。
 
-**v12.27.0よりAPIの利用方法が変更された。**  
-変更版の記事が完成するまで待ってほしい。
-<!--
-#### 1. アプリケーションの作成
-まず、各インスタンスでアプリケーションを登録し、シークレットキー`appSecret`を取得する。
+12.27.0以降で利用できる方式はMiAuthと呼ばれ、今後はこの方式を使うことが推奨される。  
+MiAuthに対応しているかどうかは`api/meta`の`features.miauth`が存在するかどうかで判定できる。  
+[12.27.0未満のバージョンのアクセストークン取得方法はこちら](old-api)
 
-アプリケーションの登録時にはパーミッションの設定が必要なので、まずは各インスタンスの`/api-doc`（例: https://misskey.io/api-doc ）で必要なパーミッションを確認しよう。
+#### 1: セッションIDの生成
+UUIDを生成する。
+以後これをセッションIDと呼ぶ。
 
-`appSecret`は、次の2つの方法で取得できる。  
-ここでは仮に`fAb12cD34Ef56gH78Ij16kL32Mn64oPf`というappSecretを取得したものとして進める。
-
-##### 開発者センターから作成
-各インスタンスのデベロッパーセンター`/dev`（例: https://misskey.io/dev ）でアプリケーションを作成し`appSecret`を取得する。
-
-##### APIで取得
-`app/create`エンドポイントを利用することでもアプリケーションを作成できる。
+このセッションIDは毎回生成し、使いまわさないように。
 
 ```javascript
-axios.post("https://misskey.io/api/app/create", {
-    // アプリの名前
-    name: "test",
-    // アプリの説明
-    description: "my test application",
-    // アプリのパーミッション
-    permission: ["write:notes"]
-}).then(({data}) => console.log(data.secret))
+const { v4 } = require("uuid")
+
+console.log(v4())
+
+// ここでは 19bbf45d-5ae7-4c87-b33e-2933b3eec683 が生成されたものとして進める。
+// 実際のインスタンスで試すときは絶対に他のuuidを使うこと。  
+```
+リンク: [UUID生成ツール](https://www.wellhat.co.jp/tools/uuid.html)
+
+#### 2: ユーザーを`/miauth/:sessionId`にアクセスさせる
+
+`/miauth/19bbf45d-5ae7-4c87-b33e-2933b3eec683`（`19bbf...`は生成したセッションIDに置き換える）をユーザーにブラウザでアクセスさせる。
+
+表示する際、URLにクエリパラメータとしていくつかのオプションを設定できる:
+
+- `name`: アプリケーション名
+	* 例: `MissDeck`
+- `icon`: アプリケーションのアイコン画像URL
+	* 例: `https://missdeck.example.com/icon.png`
+- `callback`: 認証が終わった後にリダイレクトするURL
+	* 例: `https://missdeck.example.com/callback`
+	* `https://missdeck.example.com/callback?session=19bbf45d-5ae7-4c87-b33e-2933b3eec683`というように、クエリパラメータで`session`にセッションIDが設定されてリダイレクトされる。
+- `permission` ... アプリケーションが要求する権限
+	* 例: `write:notes,write:following,read:drive`
+	* 要求する権限を`,`で区切って列挙する。
+	* どのような権限があるかは各インスタンスのAPIリファレンス(/api-doc)で確認できる。
+
+例:  
+インスタンス`misskey.example.com`で認証させるとき、以下のURLにユーザーを誘導すればよい。
+
+```
+https://misskey.example.com/miauth/19bbf45d-5ae7-4c87-b33e-2933b3eec683?name=MissDeck&icon=https%3A%2F%2Fmissdeck.example.com%2Ficon.png&callback=https%3A%2F%2Fmissdeck.example.com%2Fcallback&permission=write%3Anotes,write%3Afollowing,read%3Adrive
 ```
 
-この時、`callbackUrl`でお好きなURLを含めると、次のアクセス許可操作が終了したときに`token`をクエリ文字列に含めながらそこにコールバックするようになる。
+#### 3: アクセストークンを取得
+ユーザーが連携を許可した後、`/miauth/19bbf45d-5ae7-4c87-b33e-2933b3eec683/check`（`19bbf...`は自分のセッションIDに置き換える）に**POST**すると、レスポンスとしてアクセストークンを含むJSONが返る。
 
-#### 2. ユーザーに認証させる
-`auth/session/generate`エンドポイントに`appSecret`をPOSTする。
+レスポンスに含まれるプロパティ:
+- `token`: i（アクセストークン）
+- `user`: ユーザーの情報
 
 ```javascript
-axios.post("https://misskey.io/api/auth/session/generate", {appSecret: "fAb12cD34Ef56gH78Ij16kL32Mn64oPf"})
-  .then(({data}) => console.log(data))
+axios.post("https://misskey.example.com/miauth/19bbf45d-5ae7-4c87-b33e-2933b3eec683/check")
+  .then(({token}) => console.log(token))
 ```
 
-`token`（ここでは仮に`798b9f6e-248d-43a7-a919-fabc664027f1`）と`url`を返してくるので、まずはこのurlにウェブブラウザでアクセスし「アクセスを許可」を選択。
-
-#### 3. accessTokenを問い合わせる
-2が終わったことが確認できたら、`auth/session/userkey`エンドポイントに`appSecret`と先ほどの`token`をPOSTする。
-
-```javascript
-axios.post("https://misskey.io/api/auth/session/userkey", {
-  appSecret: "fAb12cD34Ef56gH78Ij16kL32Mn64oPf",
-  token: "798b9f6e-248d-43a7-a919-fabc664027f1"
-}).then(({data}) => console.log(data.accessToken))
-```
-
-ここで取得できる文字列は`accessToken`と呼ばれる。`accessToken`は一度限りしか取得できない。
-
-#### 3. iを生成
-`i`は、Node.jsであれば以下のようなコードで生成でき、設定画面で取得するものとは違って64桁の16進数である。
-
-```javascript
-const crypto = require("crypto")
-const i = crypto.createHash("sha256")
-    .update(accessToken + appSecret, "utf8")
-    .digest("hex")
-console.log(i)
-```
-
-#### 4. 実際にテストする
-```javascript
-axios.post("https://misskey.io/api/notes/create", {
-  i: "/* ここにiを入力 */",
-  text: "Hello Misskey API World with My Application!"
-})
-```
--->
 ## 様々なエンドポイントを利用する
 各インスタンスの`/api-doc`（例: https://misskey.io/api-doc ）にアクセスすることで、そのインスタンスで利用できるAPIの一覧と必要なパーミッションを見ることができる。
