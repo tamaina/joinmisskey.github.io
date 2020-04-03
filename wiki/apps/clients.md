@@ -15,7 +15,7 @@ Misskeyの機能をひととおり利用できる、いわゆる「クライア�
 
 **[MissCatをApp Storeでインストール](https://apps.apple.com/app/id1505059993)**
 
-**[MissCat公式サイト]**  
+**[MissCat公式サイト](https://yuiga.dev/misscat/)**  
 [YuigaWada/MissCat on GitHub](https://github.com/YuigaWada/MissCat)
 
 ## Android
