@@ -113,6 +113,8 @@ async function getInstancesInfos(instances) {
     const usersChart = usersCharts[i] ? usersCharts[i].body : false
     const notesChart = notesCharts[i] ? notesCharts[i].body : false
     if (meta && stat) {
+      delete meta.emojis
+
       /*   インスタンスバリューの算出   */
       let value = 0
       // 1. セマンティックバージョニングをもとに並び替え (独自拡張の枝番は除去)
