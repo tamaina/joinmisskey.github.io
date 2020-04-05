@@ -1,6 +1,6 @@
 {
   "name": "join.misskey.page",
-  "version": "1.0.62",
+  "version": "1.0.63",
   "main": "docs/index.html",
   "description": "join.misskey.page",
   "scripts": {
