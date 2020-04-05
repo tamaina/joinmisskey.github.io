@@ -262,6 +262,8 @@
   langs: ['ja']
 - url: misskey.open-w.net
   langs: ['ja']
+- url: edge.groundpolis.app
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']

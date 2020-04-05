@@ -165,11 +165,8 @@ gulp.task("register", async cb => {
 
 
 gulp.task("config", () => {
-  let resultObj = { options: "" }
-  resultObj.timestamp = (new Date()).toJSON()
-  resultObj = extend(true, resultObj, { pages })
   mkdirp.sync(path.parse(dests.info).dir)
-  return writeFile(dests.info, JSON.stringify(resultObj))
+  return writeFile(dests.info, JSON.stringify({ options: "", timestamp: new Date(), pages }))
     .then(
       () => { glog(colors.green("✔ info.json")) },
       err => { glog(colors.red("✖ info.json")); glog(err) }
@@ -540,6 +537,13 @@ gulp.task("make-manifest", () => writeFile("dist/docs/manifest.json", JSON.strin
     err => { glog(colors.red("✖ manifest.json")); glog(err) }
   ))
 
+gulp.task("make-instances-json", () => writeFile("dist/docs/instances.json", JSON.stringify({
+  timestamp: new Date(), instances: base.instancesInfos
+})).then(
+  () => { glog(colors.green("✔ instances.json")) },
+  err => { glog(colors.red("✖ instances.json")); glog(err) }
+))
+
 gulp.task("make-rss", () => {
   const feed = makeRss(base, pages, "ja")
   return Promise.all([
@@ -597,8 +601,8 @@ gulp.task("make-sitemap", async cb => {
 
   const pr = await streamToPromise(stream)
 
-  fs.writeFile("dist/docs/sitemap.xml", pr, (err) => {
-    glog(colors.green("✔ sitemap.xml"));
+  fs.writeFile("dist/docs/sitemap.xml", pr, () => {
+    glog(colors.green("✔ sitemap.xml"))
     cb()
   })
 })
@@ -659,7 +663,8 @@ gulp.task("make-subfiles",
       "make-manifest",
       "make-rss",
       "make-browserconfig",
-      "make-sitemap"
+      "make-sitemap",
+      "make-instances-json"
     ),
     cb => { cb() }
   ))
