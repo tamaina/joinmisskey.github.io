@@ -5,7 +5,7 @@ const { promisify } = require("util")
 const sass = require("sass")
 const CleanCss = require("clean-css")
 const htmlToText = require("html-to-text")
-const request = require("request")
+const fetch = require("node-fetch")
 const mkdirp = require("mkdirp")
 const extend = require("extend")
 const semver = require("semver")
@@ -18,21 +18,17 @@ const fontawesome = require("@fortawesome/fontawesome-svg-core")
 const downloadTemp = require("../../downloadTemp")
 fontawesome.library.add(require("@fortawesome/free-solid-svg-icons").fas, require("@fortawesome/free-regular-svg-icons").far, require("@fortawesome/free-brands-svg-icons").fab)
 
-const get = promisify(request.get)
-const post = promisify(request.post)
-
 async function getContributors() {
   try {
-    const res = await get(
+    const res = await fetch(
       "https://api.github.com/repos/syuilo/misskey/contributors",
       {
         headers: {
           "User-Agent": "LuckyBeast"
-        },
-        json: true
+        }
       }
     )
-    return res.body
+    return res.json()
   } catch (e) {
     glog("Cannot get GitHub contributors")
     glog(e)
@@ -42,9 +38,8 @@ async function getContributors() {
 
 async function getPatrons(patreonUrl, keys) {
   try {
-    const res = await get(patreonUrl, { headers: { Authorization: `Bearer ${keys.patreon.bearer}` } })
-    const parsed = JSON.parse(res.body)
-    return parsed
+    const res = await fetch(patreonUrl, { headers: { Authorization: `Bearer ${keys.patreon.bearer}` } })
+    return res.body()
   } catch (e) {
     glog("Cannot get Patreon patrons")
     glog(e)
@@ -71,8 +66,12 @@ async function getAmpCss() {
   return ampcss
 }
 
+function postJson(url, json) {
+  return safePost(url, json ? { body: JSON.stringify(json), headers: { 'Content-Type': 'application/json' } } : {}).then((res) => !res ? false : res.json())
+}
+
 function safePost(url, options) {
-  return post(url, options).then(
+  return fetch(url, Object.assign(options || {}, { method: 'POST' })).then(
     res => {
       if (res && res.statusCode === 200) return res
       return false
@@ -89,10 +88,10 @@ async function getInstancesInfos(instances) {
   // eslint-disable-next-line no-restricted-syntax
   for (let t = 0; t < instances.length; t += 1) {
     const instance = instances[t]
-    metasPromises.push(safePost(`https://${instance.url}/api/meta`, { json: true }))
-    statsPromises.push(safePost(`https://${instance.url}/api/stats`, { json: true }))
-    usersChartsPromises.push(safePost(`https://${instance.url}/api/charts/users`, { json: { span: "day" } }))
-    notesChartsPromises.push(safePost(`https://${instance.url}/api/charts/notes`, { json: { span: "day" } }))
+    metasPromises.push(postJson(`https://${instance.url}/api/meta`))
+    statsPromises.push(postJson(`https://${instance.url}/api/stats`))
+    usersChartsPromises.push(postJson(`https://${instance.url}/api/charts/users`, { json: { span: "day" } }))
+    notesChartsPromises.push(postJson(`https://${instance.url}/api/charts/notes`, { json: { span: "day" } }))
   }
   const [
     metas,
