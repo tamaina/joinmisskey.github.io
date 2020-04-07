@@ -106,10 +106,10 @@ async function getInstancesInfos(instances) {
 
   for (let i = 0; i < instances.length; i += 1) {
     const instance = instances[i]
-    const meta = metas[i] ? metas[i].body : false
-    const stat = stats[i] ? stats[i].body : false
-    const usersChart = usersCharts[i] ? usersCharts[i].body : false
-    const notesChart = notesCharts[i] ? notesCharts[i].body : false
+    const meta = metas[i] || false
+    const stat = stats[i] || false
+    const usersChart = usersCharts[i] || false
+    const notesChart = notesCharts[i] || false
     if (meta && stat) {
       delete meta.emojis
 
