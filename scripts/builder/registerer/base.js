@@ -66,14 +66,13 @@ async function getAmpCss() {
 }
 
 function postJson(url, json) {
-  return safePost(url, json ? { body: JSON.stringify(json), headers: { 'Content-Type': 'application/json' } } : null).then(res => res === false ? false : res.json())
+  return safePost(url, json ? { body: JSON.stringify(json), headers: { 'Content-Type': 'application/json' } } : null).then(res => !res ? false : res.json())
 }
 
 function safePost(url, options) {
   return fetch(url, Object.assign(options || {}, { method: 'POST' })).then(
     res => {
-      console.log(res.status)
-      if (res && res.ok) return res
+      if (res && res.status === 200) return res
       return false
     }
   ).catch(() => false)
