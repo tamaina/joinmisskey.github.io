@@ -72,7 +72,7 @@ function postJson(url, json) {
 function safePost(url, options) {
   return fetch(url, Object.assign(options || {}, { method: 'POST' })).then(
     res => {
-      if (res && res.statusCode === 200) return res
+      if (res && res.status === 200) return res
       return false
     }
   ).catch(() => false)
