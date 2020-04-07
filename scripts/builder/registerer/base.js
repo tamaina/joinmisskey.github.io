@@ -72,7 +72,8 @@ function postJson(url, json) {
 function safePost(url, options) {
   return fetch(url, Object.assign(options || {}, { method: 'POST' })).then(
     res => {
-      if (res && res.status === 200) return res
+      console.log(res.status)
+      if (res && res.ok) return res
       return false
     }
   ).catch(() => false)
