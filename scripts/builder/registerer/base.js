@@ -89,8 +89,8 @@ async function getInstancesInfos(instances) {
     const instance = instances[t]
     metasPromises.push(postJson(`https://${instance.url}/api/meta`))
     statsPromises.push(postJson(`https://${instance.url}/api/stats`))
-    usersChartsPromises.push(postJson(`https://${instance.url}/api/charts/users`, { json: { span: "day" } }))
-    notesChartsPromises.push(postJson(`https://${instance.url}/api/charts/notes`, { json: { span: "day" } }))
+    usersChartsPromises.push(postJson(`https://${instance.url}/api/charts/users`, { span: "day" }))
+    notesChartsPromises.push(postJson(`https://${instance.url}/api/charts/notes`, { span: "day" }))
   }
   const [
     metas,
