@@ -38,8 +38,7 @@ async function getContributors() {
 
 async function getPatrons(patreonUrl, keys) {
   try {
-    const res = await fetch(patreonUrl, { headers: { Authorization: `Bearer ${keys.patreon.bearer}` } })
-    return res.body()
+    return fetch(patreonUrl, { headers: { Authorization: `Bearer ${keys.patreon.bearer}` } }).then(res => res.json())
   } catch (e) {
     glog("Cannot get Patreon patrons")
     glog(e)
@@ -67,7 +66,7 @@ async function getAmpCss() {
 }
 
 function postJson(url, json) {
-  return safePost(url, json ? { body: JSON.stringify(json), headers: { 'Content-Type': 'application/json' } } : {}).then((res) => !res ? false : res.json())
+  return safePost(url, json ? { body: JSON.stringify(json), headers: { 'Content-Type': 'application/json' } } : {}).then(res => res === false ? false : res.json())
 }
 
 function safePost(url, options) {
