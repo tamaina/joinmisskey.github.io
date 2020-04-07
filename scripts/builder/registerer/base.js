@@ -156,7 +156,7 @@ async function getInstancesInfos(instances) {
         value,
         meta,
         stats: stat,
-        description: metas[i].body.description ? htmlToText.fromString(metas[i].body.description).replace(/\n/g, "<br>") : (instance.description || false),
+        description: meta.description ? htmlToText.fromString(meta.description).replace(/\n/g, "<br>") : (instance.description || false),
         isAlive: true
       }))
     } else {
