@@ -272,7 +272,7 @@ mixin instancesList(o, colors, sctrollts)
                 .instance-infos-item
                   abbr(title=i18n('instance_maintainer'))
                     +fa('user-cog')
-                  |  #{instance.meta.maintainer.name}
+                  |  #{instance.meta.maintainerName || instance.meta.maintainer.name}
         else
           .instance(class=c style=s data-instance-value=instance.value).card.flex.flex-column.align-items-start.mx-2.mt-3.p-4
             h4.noindex
