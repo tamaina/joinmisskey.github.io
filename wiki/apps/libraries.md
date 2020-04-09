@@ -4,7 +4,7 @@ description: Misskey API等を利用したアプリ・サービスを簡単に�
 layout: wiki
 rank: 3
 ---
-### JavaScript / TypeScript / Node.js
+### Node.js
 #### corekey
 **npm: corekey** ･ **[marihachi/corekey on GitHub](https://github.com/marihachi/corekey)**
 
@@ -14,7 +14,11 @@ rank: 3
 
 ### .NET
 #### Misq
-**nuget: Misq** ･ **[syuilo/Misq on GitHub](https://github.com/syuilo/Misq/)**
+**nuget: Misq** ･ **[syuilo/Misq on GitHub](https://github.com/syuilo/Misq)**
 
 #### Disboard
-**nuget: Disboard.Misskey** ･ **[disboard.mochizuki.moe](https://disboard.mochizuki.moe)** ･ [OrionDevelop/Disboard on GitHub](https://github.com/OrionDevelop/Disboard)
+**nuget: Disboard.Misskey** ･ **[OrionDevelop/Disboard on GitHub](https://github.com/OrionDevelop/Disboard)**
+
+#### Java
+#### Misskey4J
+**JitPack: `com.github.uakihir0:misskey4j:Tag`** ･ **[uakihir0/misskey4j on GitHub](https://github.com/uakihir0/misskey4j)**

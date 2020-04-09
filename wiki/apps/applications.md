@@ -29,14 +29,6 @@ GitHubを監視して通知してくれるBot。
 
 **[syuilo/misskey-github-notifier on GitHub](https://github.com/syuilo/misskey-github-notifier)**
 
-### その他
-#### Better Misskey
-MisskeyのUIを拡張する**Chrome拡張機能**。
-
-**[Chromeウェブストアから Better Misskey をインストール](https://chrome.google.com/webstore/detail/better-misskey/bkmgmcphjfddgejhddnhjdbaebblecpe)**
-
-
-
 ## Webサービス
 ### 質問箱
 #### Quesdon (quesdon.toot.app)
@@ -45,19 +37,8 @@ QuesdonはもともとMastodon向けに開発された質問箱サービスだ�
 **[Quesdon (quesdon.toot.app)](https://quesdon.toot.app)**
 
 ### ツール
-#### Cropper for Misskey
-アイコン作成補助ツール。
-
-**[Cropper for Misskey](https://tools.botchsoft.com/cropper)**
-
 ### Misskey API
 Misskey APIを簡単に利用できるサービス。
-
-#### Misskey Hook
-MisskeyにWebhookで投稿できるサービス。
-指定されたURLにjsonをPOSTすることで、登録したアカウントに投稿することができる。
-
-**[Misskey Hook](https://misskey-hook.firebaseapp.com/)**
 
 ### テーマ
 #### Misskey Assets Store (MiAS)
@@ -68,12 +49,7 @@ Misskeyで使えるテーマを共有するサービス。
 ### ActivityPub / Fediverse
 [ActivityPub](../culture/words/activitypub)等を利用し、Fediverseを横断的に利用できるサービス。
 
-#### distdn.org ユーザーマッチング
-Fediverseのなかからあなたと似た人を探すことができる。
-
-**[distdn.org ユーザーマッチング](https://vinayaka.distsn.org/)**
-
 #### notestock
-ActivityPubを利用して、登録したユーザーの投稿を蓄積するサービス。
+ActivityPubを利用して、登録したユーザーの投稿を蓄積して検索できるようにするサービス。
 
 **[notestock](https://notestock.osa-p.net/)**
