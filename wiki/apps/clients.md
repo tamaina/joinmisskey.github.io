@@ -10,8 +10,7 @@ Misskeyの機能をひととおり利用できる、いわゆる「クライア�
 
 ## iOS
 ### MissCat
-[wada](https://misskey.io/@wada)氏が開発している無料のiPhone・iPad向けクライアント。2020年4月3日にβ版がリリースされた[*](https://misskey.io/notes/85nl8qgjsf)。  
-なお、
+[wada](https://misskey.io/@wada)氏が開発している無料のiPhone・iPad向けクライアント。2020年4月3日にβ版がリリースされた[*](https://misskey.io/notes/85nl8qgjsf)。
 
 **[MissCatをApp Storeでインストール](https://apps.apple.com/app/id1505059993)**
 
