@@ -90,3 +90,7 @@ axios.post("https://misskey.example.com/miauth/19bbf45d-5ae7-4c87-b33e-2933b3eec
 
 ## 様々なエンドポイントを利用する
 各インスタンスの`/api-doc`（例: https://misskey.io/api-doc ）にアクセスすることで、そのインスタンスで利用できるAPIの一覧と必要なパーミッションを見ることができる。
+
+## ラッパーライブラリを利用する
+有志の方々がAPIをより簡単に利用できるようにするラッパーライブラリを各言語・実行環境向けに開発している。  
+**[ライブラリ](../apps/libraries)**

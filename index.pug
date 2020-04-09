@@ -228,7 +228,7 @@ styleRequires: ["top"]
     p.text-center.my-2
       a(href="./wiki/instances/").scrollts-nomargin.btn.btn-primary.btn-sm Découvrir plus ...
 
-    p.text-white-50.pt-2 Nous rajoutons continuellement de nouvelles instances. Si vous désirez lister votre propre instance, merci de contacter @aqz@yuzulia.xyz via la Fédiverse
+    p.text-white-50.pt-2 Nous rajoutons continuellement de nouvelles instances. Si vous désirez lister votre propre instance, merci de contacter @joinmisskey@misskey.io via la Fédiverse
   
   section#section_6.bg-white: .container.text-center.text-dark
     h2 Ils parlent de nous ! (en Japonais)
@@ -237,6 +237,20 @@ styleRequires: ["top"]
         img(src="/files/images/imports/2018/07/ITmediaNEWS.png" style="height: 33px" alt="ITmedia NEWS" loading="lazy")
       a(href="https://www.moongift.jp/2018/07/misskey-%e5%88%86%e6%95%a3%e5%9e%8b%e3%83%9e%e3%82%a4%e3%82%af%e3%83%ad%e3%83%96%e3%83%ad%e3%82%b0%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9/" target="_blank" rel="noopener" title="Misskey - 分散型マイクロブログサービス ―― MOONGIFT").p-1
         img(src="/files/images/imports/2018/07/MOONGIFT.png" style="height: 33px" alt="MOONGIFT" loading="lazy")
+
+  section#section_6_1.bg-white: .container.text-center.text-dark
+    h2 統計
+    .row.justify-content-center
+      .col-md-4.mt-2
+        .font-weight-bold 総ユーザー数
+        .h1=numeral(stats.usersCount).format('0,0')
+      .col-md-4.mt-2
+        .font-weight-bold 総ノート数
+        .h1=numeral(stats.notesCount).format('0,0')
+      .col-md-4.mt-2
+        .font-weight-bold 稼働インスタンス数
+        .h1=numeral(stats.instancesCount).format('0,0')
+    p.mb-0.mt-3.text-muted.small #{updateMoment.tz('Asia/Tokyo').format('lll z')} 頃に各インスタンスから取得した統計を合算した数値です。
 
   section#section_7: .container
     h2.text-center Soutenir le projet
