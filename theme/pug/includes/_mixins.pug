@@ -268,7 +268,7 @@ mixin instancesList(o, colors, sctrollts)
                   |  #{numeral(instance.meta.driveCapacityPerLocalUserMb + 'MB').format('0.0b')}
               if(instance.meta.version)
                 .instance-infos-item.mr-2 v#{instance.meta.version}
-              if(instance.meta.maintainer)
+              if(instance.meta.maintainerName || instance.meta.maintainer)
                 .instance-infos-item
                   abbr(title=i18n('instance_maintainer'))
                     +fa('user-cog')

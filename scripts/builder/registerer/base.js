@@ -264,6 +264,16 @@ module.exports = async (site, keys, tempDir, instances) => {
     .filter(instance => instance.isAlive && instance.meta.bannerUrl)
     .map(instance => downloadTemp(`${instance.url}`, instance.meta.bannerUrl, `${tempDir}instance-banners/`, true))
 
+  const stats = instancesInfos.reduce((prev, v) => {
+    if (!v.isAlive) return prev
+
+    return {
+      notesCount: v.stats.originalNotesCount + prev.notesCount,
+      usersCount: v.stats.originalUsersCount + prev.usersCount,
+      instancesCount: 1 + prev.instancesCount
+    }
+  }, { notesCount: 0, usersCount: 0, instancesCount: 0 })
+
   const [creditIcons, instancesBanners, ampcss] = await Promise.all([
     Promise.all(creditIconsPromises),
     Promise.all(instancesBannersPromises),
@@ -278,6 +288,7 @@ module.exports = async (site, keys, tempDir, instances) => {
     creditIcons,
     mkConnectServices,
     instancesBanners,
+    stats,
     baseStyles: (await promisify(glob)("theme/styl/*.s[ac]ss")).map(p => path.parse(p).name),
     lazyStyles: (await promisify(glob)("theme/styl/lazy/*.s[ac]ss")).map(p => path.parse(p).name)
   }
