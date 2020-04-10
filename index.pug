@@ -85,7 +85,7 @@ styleRequires: ["top"]
                 p.mb-0 ファイルを保存して何回も共有しよう。添付したファイルをドライブで管理したり、ドライブにあらかじめファイルをアップロードしたりできます。
             +picture({src: "/files/images/imports/2019/11/drive.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
             a(href="wiki/usage/drive").s2-card-link.font-weight-bold ドライブの詳細
-        article.col-12.col-md-6.col-xl-4
+        //- article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('gamepad', 'fas')
@@ -108,7 +108,7 @@ styleRequires: ["top"]
                   | ノートとは別の専用画面で、一対一もしくはグループでチャットができます。
             +picture({src: "/files/images/imports/2019/10/talk.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
             a(href="wiki/usage/messaging").s2-card-link.font-weight-bold チャットの詳細
-        article.col-12.col-md-6.col-xl-4
+        article.col-12.col-md-6.col-xl-6
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('sticky-note', 'far')
@@ -120,7 +120,17 @@ styleRequires: ["top"]
                   | ページでは、テキストやセクションといったブロックを配置し、簡単なプログラムを組めます。
             +picture({src: "/files/images/imports/2019/10/page.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
             a(href="wiki/usage/pages").s2-card-link.font-weight-bold ページの詳細
-        article.col-12.col-md-6.col-xl-4
+        article.col-12.col-md-6.col-xl-6
+          .card.scrollts.scrollts-fadeInLeftSmall
+            .s2-card-grid
+              .s2-card-icon.fa-2x: +fa_fw('satellite')
+              .s2-card-text
+                h4 アンテナ
+                p.mb-0
+                  | エゴサしよう。
+                  br
+                  | アンテナ機能で設定した条件を含むノートを収集できます。
+        //- article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('door-open', 'fas')
