@@ -19,11 +19,7 @@ OSの違い、Misskey本体や依存するソフトウェアのバージョン�
 なお、今回の記事にあたっては、AWSの無料利用枠でできる範囲で検証を行った。
 
 ## 構成と条件
-この記事では、次の図に示すような構成で動作させる。
-
-![今回の構成](/files/images/imports/2019/12/datauri.png)
-
-- EC2、Elasticsearch Service、RDS、ElastiCache、S3およびCloudFrontを利用する。
+- EC2、RDS、ElastiCache、S3およびCloudFrontを利用する。
 - アベイラビリティゾーンは`ap-northeast-1a`とする。
 - 独自のドメインを購入する。
   * ドメインは[Google Domains](https://domains.google/intl/ja_jp/)などで予め用意しておくこと。
@@ -89,44 +85,6 @@ AWSは標準ではIPv6に対応しないので、IPv6を設定する。
 - [ルートの保存]を選択、さらに[閉じる]を選択。
 
 <small>https://docs.aws.amazon.com/ja_jp/vpc/latest/userguide/vpc-migrate-ipv6.html#vpc-migrate-ipv6-cidr</small>
-
-## Elasticsearchドメインの作成
-[Elasticsearchドメインの作成ウィザード](https://console.aws.amazon.com/es/home#create-domain)を開始する。  
-
-### 1: デプロイタイプの選択
-`カスタム`を選択し、[次へ]を選択。
-
-### 2: クラスターの設定
-以下の設定で進める。
-
-| 説明 | 値 |
-|:--|:--|
-|Elasticsearch ドメイン名|misskey|
-|アベイラビリティーゾーン|1-AZ|
-|インスタンスタイプ|t2.small.elasticsearch|
-|ノードの数|1|
-|専用マスターノード|チェックを外す|
-
-[次へ]を選択。
-
-### 3: アクセスの設定
-以下の設定で進める。
-
-| 説明 | 値 |
-|:--|:--|
-|VPC|（プルダウンから選択）|
-|サブネット|ap-northeast-1aのを選択|
-|セキュリティグループ|local|
-|ドメインアクセスポリシーの設定<br>[テンプレートの選択]で|IAM認証情報を使用した署名リクエストを要求しない|
-
-[次へ]を選択。
-
-### 4: 確認
-[確認]を選択。
-
-### VPCエンドポイントを確認
-10分ほど待ち（その間に他の作業をしよう）、ドメインのステータスが`アクティブ`になったら**VPC エンドポイント**をメモする。  
-ここでは`vpc-misskey-xxxxxxxxxx.ap-northeast-1.es.amazonaws.com`として説明する。
 
 ## RDSインスタンスの作成
 [RDSコンソール（https://console.aws.amazon.com/rds/）](https://console.aws.amazon.com/rds/)を開き、[データベースの作成]を選択。  
@@ -438,21 +396,8 @@ redis:
   host: redis.xxxxxx.0001.apne0.cache.amazonaws.com
   port: 6379
 
-# ● Elastisearchの設定。
-elasticsearch:
-  # ●: ElastiCacheのVPCエンドポイント
-  host: vpc-misskey-xxxxxxxxxx.ap-northeast-1.es.amazonaws.com
-  ssl: true
-  port: 443
-  pass: null
-
 # 　 IDタイプの設定。
 id: 'aid'
-
-# 　 最初に登録したユーザーを自動的にadmin（管理者）とするかどうか。
-# 　 するなら true , しないなら false 。
-autoAdmin: true
-
 ```
 
 指定できたら保存する。
@@ -462,10 +407,13 @@ t2.microではMisskeyはビルドできないため、**ローカルで**ビル�
 Node.jsなので、Windowsでビルドしたものを適用できる。
 
 1. サーバーと同じバージョンのNode.jsをインストール
-2. Git clone（`git clone -b master git://github.com/syuilo/misskey.git`）、もしくはGitHubからMisskeyのソースをダウンロードする
+2. Gitでclone（`git clone -b master git://github.com/syuilo/misskey.git`）、もしくはGitHubからMisskeyのソースをダウンロードする
 3. サーバーと同様の`.config/default.yml`を作成
 4. `npx yarn install`
-5. `NODE_ENV=production npx yarn build`
+5. `NODE_ENV=production npx yarn build`  
+  * PowerShellでは変数指定がこの方法でできないので、以下のようにする:  
+    `$env:NODE_ENV="production"`  
+    `npx yarn build`
 6. sftpでコピーする。
 
 builtディレクトリを準備
@@ -476,7 +424,7 @@ exit
 mkdir built
 ```
 
-sftpで転送
+ローカル環境からsftpでビルドしたファイルを転送
 
 ```bash
 # ローカル
@@ -485,7 +433,7 @@ sftp> put -rf path/to/built
 sftp> bye
 ```
 
-サーバー内でコピー（爆速で終わりますが、きちんとできています）
+サーバー内でコピー（一瞬で終わるが問題ない）
 
 ```bash
 # SSH
@@ -495,6 +443,8 @@ sudo chown -R misskey /home/misskey/misskey/built
 
 ### データベースの初期化
 ```bash
+sudo su - misskey
+cd misskey
 npm run init
 ```
 
@@ -570,7 +520,7 @@ sudo systemctl start misskey
 systemctlでデーモンの状態を確認。
 
 ```bash
-systemctl status misskey
+sudo systemctl status misskey
 ```
 
 activeならOK。
