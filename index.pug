@@ -85,7 +85,7 @@ styleRequires: ["top"]
                 p.mb-0 ファイルを保存して何回も共有しよう。添付したファイルをドライブで管理したり、ドライブにあらかじめファイルをアップロードしたりできます。
             +picture({src: "/files/images/imports/2019/11/drive.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
             a(href="wiki/usage/drive").s2-card-link.font-weight-bold ドライブの詳細
-        article.col-12.col-md-6.col-xl-4
+        //- article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('gamepad', 'fas')
@@ -108,7 +108,7 @@ styleRequires: ["top"]
                   | ノートとは別の専用画面で、一対一もしくはグループでチャットができます。
             +picture({src: "/files/images/imports/2019/10/talk.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
             a(href="wiki/usage/messaging").s2-card-link.font-weight-bold チャットの詳細
-        article.col-12.col-md-6.col-xl-4
+        article.col-12.col-md-6.col-xl-6
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('sticky-note', 'far')
@@ -120,7 +120,17 @@ styleRequires: ["top"]
                   | ページでは、テキストやセクションといったブロックを配置し、簡単なプログラムを組めます。
             +picture({src: "/files/images/imports/2019/10/page.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
             a(href="wiki/usage/pages").s2-card-link.font-weight-bold ページの詳細
-        article.col-12.col-md-6.col-xl-4
+        article.col-12.col-md-6.col-xl-6
+          .card.scrollts.scrollts-fadeInLeftSmall
+            .s2-card-grid
+              .s2-card-icon.fa-2x: +fa_fw('satellite')
+              .s2-card-text
+                h4 アンテナ
+                p.mb-0
+                  | エゴサしよう。
+                  br
+                  | アンテナ機能で設定した条件を含むノートを収集できます。
+        //- article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('door-open', 'fas')
@@ -228,8 +238,8 @@ styleRequires: ["top"]
     p.text-center.my-2
       a(href="./wiki/instances/").scrollts-nomargin.btn.btn-primary.btn-sm インスタンスをもっと見る
 
-    p.text-white-50.pt-2.text-center インスタンスは順次掲載します。リストに載せてほしいインスタンスがありましたら、@aqz@yuzulia.xyzまでお知らせください。
-  
+    p.text-white-50.pt-2.text-center インスタンスは順次掲載します。リストに載せてほしいインスタンスがありましたら、@joinmisskey@misskey.ioまでお知らせください。
+
   section#section_6.bg-white: .container.text-center.text-dark
     h2 記事になりました
     p.m-0.text-center
@@ -237,6 +247,20 @@ styleRequires: ["top"]
         img(src="/files/images/imports/2018/07/ITmediaNEWS.png" style="height: 33px" alt="ITmedia NEWS" loading="lazy")
       a(href="https://www.moongift.jp/2018/07/misskey-%e5%88%86%e6%95%a3%e5%9e%8b%e3%83%9e%e3%82%a4%e3%82%af%e3%83%ad%e3%83%96%e3%83%ad%e3%82%b0%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9/" target="_blank" rel="noopener" title="Misskey - 分散型マイクロブログサービス ―― MOONGIFT").p-1
         img(src="/files/images/imports/2018/07/MOONGIFT.png" style="height: 33px" alt="MOONGIFT" loading="lazy")
+
+  section#section_6_1.bg-white: .container.text-center.text-dark
+    h2 統計
+    .row.justify-content-center
+      .col-md-4.mt-2
+        .font-weight-bold 総ユーザー数
+        .h1=numeral(stats.usersCount).format('0,0')
+      .col-md-4.mt-2
+        .font-weight-bold 総ノート数
+        .h1=numeral(stats.notesCount).format('0,0')
+      .col-md-4.mt-2
+        .font-weight-bold 稼働インスタンス数
+        .h1=numeral(stats.instancesCount).format('0,0')
+    p.mb-0.mt-3.text-muted.small #{updateMoment.tz('Asia/Tokyo').format('lll z')} 頃に各インスタンスから取得した統計を合算した数値です。
 
   section#section_7: .container
     h2.text-center 支援
