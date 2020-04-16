@@ -312,11 +312,6 @@ redis:
 
 # 　 IDタイプの設定。
 id: 'aid'
-
-# 　 最初に登録したユーザーを自動的にadmin（管理者）とするかどうか。
-# 　 するなら true , しないなら false 。
-autoAdmin: true
-
 ```
 
 指定できたら保存する。
@@ -386,7 +381,10 @@ NODE_ENV=production npx yarn build
 2. Git clone、もしくはGitHubからMisskeyのソースをダウンロードする
 3. サーバーと同様の`.config/default.yml`を作成
 4. `npx yarn install`
-5. `NODE_ENV=production npx yarn build`
+5. `NODE_ENV=production npx yarn build`  
+  * PowerShellでは変数指定がこの方法でできないので、以下のようにする:  
+    `$env:NODE_ENV="production"`  
+    `npx yarn build`
 6. 生成されたbuiltフォルダーをサーバーにコピー
 
 ## データベースの初期化
