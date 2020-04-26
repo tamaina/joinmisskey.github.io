@@ -266,6 +266,12 @@
   langs: ['ja']
 - url: miwkey.miwpayou0808.info
   langs: ['ja']
+- url: mi.ebisu.me
+  langs: ['ja']
+- url: misskey.tech
+  langs: ['ja']
+- url: i.misskey.love
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -403,6 +409,8 @@
   langs: ['en']
 - url: misskey.icodeinht.ml
   langs: ['en']
+- url: snootbooping.date
+  langs: ['en']
 #
 ##
 #########################################
@@ -423,6 +431,8 @@
 - url: hostux.rocks
   langs: ['fr']
 - url: purr.drycat.fr
+  langs: ['fr']
+- url: social.darks.fr
   langs: ['fr']
 #
 ##

@@ -538,7 +538,11 @@ gulp.task("make-manifest", () => writeFile("dist/docs/manifest.json", JSON.strin
   ))
 
 gulp.task("make-instances-json", () => writeFile("dist/docs/instances.json", JSON.stringify({
-  timestamp: new Date(), instances: base.instancesInfos
+  timestamp: new Date(),
+  instances: base.instancesInfos.filter((e) => e.isAlive || e.notSuspended).map((e) => {
+    delete e.isAlive
+    return e
+  })
 })).then(
   () => { glog(colors.green("✔ instances.json")) },
   err => { glog(colors.red("✖ instances.json")); glog(err) }
