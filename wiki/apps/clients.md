@@ -6,11 +6,18 @@ rank: 1
 ---
 Misskeyの機能をひととおり利用できる、いわゆる「クライアント」と呼ばれるアプリ・ソフトウェアの一覧。  
 
-なお、Misskeyでは[公式Webクライアントをインストールする](#Misskey%20Web%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B)こともできる。
+AndroidやデスクトップOSではChromeの機能を利用して[Misskey標準のWebクライアントをアプリのようにインストールする](#Misskey%20Web%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B)こともできるので、こちらも検討されたい。
 
 ## iOS
+### SocialHub
+[akihiro（うるし）](https://misskey.io/@U_Akihir0)氏が開発している有料のiPhone向けマルチSNSクライアント。v1.5（2020年4月27日リリース）よりMisskeyに対応。  
+akihiro氏は、かつて人気を博したTwitterクライアント『TheWorld』の作者であり、SocialHubは、TheWorldの後継アプリとして開発されている。  
+複数のSNSをひとつのアプリで操作できることが最大の特徴であり、対応するサービスはTwitter, Mastodon, Slack, TumblrそしてMisskeyの5種である（記事執筆現在）。
+
+**[SocialHubをApp Storeでインストール](https://apps.apple.com/jp/app/id1474451582)**
+
 ### MissCat
-[wada](https://misskey.io/@wada)氏が開発している無料のiPhone・iPad向けクライアント。2020年4月3日にβ版がリリースされた[*](https://misskey.io/notes/85nl8qgjsf)。
+[wada](https://misskey.io/@wada)氏が開発している無料のiPhone・iPad向けMisskeyクライアント。2020年4月3日にβ版がリリースされた[*](https://misskey.io/notes/85nl8qgjsf)。
 
 **[MissCatをApp Storeでインストール](https://apps.apple.com/app/id1505059993)**
 
