@@ -1,6 +1,6 @@
 ---
-title: はじめに
-description: 基本的な用語 登録の仕方 メニュー表示方法
+title: Pour commencer
+description: Terminologie de base, Comment s'enregistrer, Comment afficher le menu.
 layout: wiki
 has_child: true
 rank: 0.9
@@ -8,41 +8,42 @@ prev: /wiki/about
 next: /wiki/questions
 improve: true
 ---
-h2 基本的な概念・用語
+h2 Terminologie de base
 
 dl
-  dt: a(href="./usage/post") ノート
+  dt: a(href="./usage/post") Note
   dd.
-    ユーザーの発言のこと。<br>
-    ノートには画像アンケートなどを添付できる。
-  dt: a(href="./usage/timelines") タイムライン
+    Un message communiqué par un utilisateur<br>
+    Il est possible d'y associer des images, un sondage, ...
+  dt: a(href="./usage/timelines") La timeline
   dd.
-    ノートが投稿時刻順で表示される。上に行くほど新しい投稿。<br>
-    基本的にはリアルタイムに更新される。
-  dt インスタンス
+    La liste des notes publiées classée par ordre chronologique, les plus récentes en premier.<br>
+    Cette liste est rafraichie en temps réel.
+  dt Instance
   dd.
-    Misskeyがインストールされたサーバーのこと。Misskeyのサービスの単位。Misskeyに限らず、ActivityPub（国際的な標準規格）のサーバー間通信機能を持ったソフトウェアがインストールされたサーバーのことも指す。<br>
-    インスタンス間は通信可能で、あるインスタンスのユーザーは他のインスタンスのユーザーをフォローし、ノートやトゥ―トをリアルタイムに取得したり反応を返したりすることができる。
-  dt Fediverse（フェディバース）
+    Un serveur sur lequel est installé Misskey. C'est la base du service Misskey. Ce terme est aussi utilisé pour parler d'autres serveurs prennant en charge le protocol ActivityPub.<br>
+    Les instances pouvant communiquer ensemble, vous pouvez suivre les utilisateurs d'autres instances, ainsi que vous échanger des notes, ou Toot.
+  dt Fédiverse（フェディバース）
   dd.
-    Federation（連合）とUniverse（銀河）とを組み合わせた造語。インスタンスが繋がりあって「連合」した状態を銀河に見立て、ActivityPub（やほかの連合規格）で形成されたSNSの世界のことを指す。
-  dt ローカル
-  dd 自分のインスタンスのこと。
-  dt リモート
-  dd ローカルの逆で、自分のインスタンスと接続されているFediverseの他のインスタンス（群）のこと。
-  dt ミスキスト（Misskist）
+    C'est la combinaison des mots anglais "Federation" et "Universe".
+    Cela représente l'univers où les instances ActivityPub communiquent ensemble, créant ainsi ce réseau social mondial décentralisé. 
+  dt Local
+  dd L'instance sur laquelle vous êtes.
+  dt Remote
+  dd Les autres instances connectées à votre instance.
+  dt Misskist
   dd.
-    ミスキストとは、Misskeyインスタンスにアカウントを持っている人を指す言葉だ。<br>
-    Misskeyを使いこなし、一人前のミスキストを目指そう。
+    Un utilisateur ayant un compte sur une instance Misskey.<br>
+    Apprenez à utiliser Misskey et devenez le meilleur Misskist !
 
-h2 登録する
+h2 S'enregistrer
 p.
-  Misskeyインスタンスへの登録にメールアドレスは不要だ。<br>
-  ユーザー名を決め、パスワードを設定し、登録ボタンを押す。<br>
-  インスタンスによっては、利用規約に同意するかどうかや、自分がコンピューターではないことをreCAPTCHAで証明することを要求される。
+  Nul besoin d'adresse email pour s'enregistrer à une instance Misskey.<br>
+  Il suffit juste d'indiquez un nom d'utilisateur, un mot de passe et de cliquer sur "S'enregistrer".<br>
+  Selon l'instance, il est possible que conditions d'utilisations particulières soient présentes, où que reCAPTCHA soit utilisé pour déterminer que vous n'êtes pas un robot.
 p.
-  ユーザー名には英数字および`_`を利用できる。
+  Le nom d'utilisateur peut être composé de caractères latins, ou bien être juste ' '.
 
-h2 メニュー
-p メニューからMisskeyの機能を開始・操作できる。
-p モバイルでは、画面左下の#[+fa_fw('bars')]#[span.sr-only 三本バー]をタップするとメニューが開く。
+h2 Menu
+p Vous pouvez démarrer et contrôler l'utilisation des fonctionnalités de Misskey depuis le Menu.
+p Sur les mobiles, vous pouvez ouvrir le menu en appuyant sur #[+fa_fw('bars')]#[span.sr-only le menu sandwich (trois barres) ], situé en bas à gauche de l'écran。
