@@ -1,83 +1,84 @@
 ---
-title: よくある質問
-description: Misskeyに関するよくある疑問・質問まとめ。
+title: Questions fréquentes
+description: Questions fréquemment posées, au sujet de Misskey.
 layout: wiki
 has_child: false
 rank: 1
 prev: /wiki/first
 next: /wiki/usage
 ---
-Misskeyに関するよくある疑問・質問まとめ  
-[用語の解説はこちら](first)
+Questions fréquemment posées, au sujet de Misskey. 
+[La terminologie est expliquée ici](first).
 
-## よくある質問
-### ホーム、ローカル、ソーシャル、グローバル タイムラインの違いは？
-それぞれ、表示されるユーザーが違う。
+## Questions fréquentes
+### Quelles sont les différences entre les fils d'actualité : "Principal", "Local", "Social", et "Global" ?
+Chaque partie affiche les utilisateurs différements.
 
-| タイムライン | 表示されるユーザー |
+| Fil d'actualité | Utilisateurs affichés |
 |--:|:--|
-| **ホーム** | 自分がフォローしたユーザー |
-| **ローカル** | インスタンス内のすべてのユーザー |
-| **ソーシャル** | ホーム ∪ ローカル |
-| **グローバル** | リモートも含め、インスタンスに認識されているすべてのユーザー |
+| **Principal** | Les utilisateurs que l'on suit |
+| **Local** | Tous les utilisateurs de l'instance |
+| **Social** | Principal et Local |
+| **Global** | Tous les utilisateurs reconnus par l'instance, utilisateurs distants inclus. |
 
-また、[公開範囲](usage/post#公開範囲を設定する)も影響する。  
-**[→ 使い方: タイムライン](usage/timelines)**
+Même chose pour les [paramètres de visibilité des messages](usage/post#公開範囲を設定する).
+**[→ Savoir utiliser: Le fil d'actualité](usage/timelines)**
 
-### 重い
-Misskey Webではアニメーションを多用しているが、これはそこそこのスペックがないと快適に動作しなかったり長時間タブを開いているとフリーズしたりすることが報告されている。  
-「UIの動きを減らす」を有効にするとそのような重いアニメーションが削減されるので、使ってみてほしい。
+### C'est lent.
+Misskey Web utilise beaucoup d'animations, ce qui peut provoquer des ralentissements, voire des blocages complets des onglets, sur de petites machines.
+Dans ce cas de figure, vous pouvez essayer d'activer "Réduire l'animation de l'interface", afin de retirer les animations assez lourdes.
 
-### 誰が運営しているの？規約は？
-misskey.ioに関しては、開発者である[しゅいろ](culture/users/syuilo)が管理し、サーバーは北海道の[村上さん](culture/users/AureoleArk)が提供している。利用規約はナビゲーションウィジェットリンクがあるためそちらから確認されたい。
+### Qui gère ça ? Quelles sont les conditions d'utilisation ?
+Pour ce qui est de misskey.io précisément, cette partie est administrée par le développeur syuilo, et les serveurs sont fournis par 村上 de Hokkaido. Les conditions d'utilisation de cette plateforme sont précisées dans les liens placés dans le panneau de widgets, et vous êtes priées de les lire.
 
-Misskeyはオープンソースであるため、十分な能力や資産があればすべての人や企業がインスタンスを運営できる。各インスタンスごとに規約も違うが、少なくとも各国の法規に基づいた運用がされているはずである。  
+Maintenant, Misskey étant un logiciel libre, toute personne, physique ou morale, ayant les compétences et ressources suffisantes, peut mettre en place et gérer sa propre instance. Ainsi, chaque instance a généralement des conditions d'utilisations différentes, ou du moins, chaque pays dans lesquels sont présents ces instances imposent des règles différentes. 
 
-あなたが利用しているインスタンスの管理者のアカウントには、赤いadminバッジが付いている。
+Dans l'instance que vous utilisez, le compte administrateur de l'instance a un badge rouge "Admin".
 
-### MisskeyはMastodonのインスタンスなの？
-**[否](../blog/2018/08/17_1_misskeyisnotmastodon)**。  
-Mastodonと中身が同じで操作部だけ新しく作成した、というわけでもない。MisskeyとMastodonは、ActivityPubで接続できる以外には完全に無関係なソフトだ。
+### Misskey, c'est une instance de Mastodon ?
+**[Non](../blog/2018/08/17_1_misskeyisnotmastodon)**。  
+Ce n'est pas non plus une interface différente avec le même moteur.
+Le seul lien entre Misskey et Mastodon est l'interconnexion via ActivityPub. C'est tout.
 
-### MisskeyはMastodonと連携できるの？
-連携とは少し違う。MastodonとMisskeyとで相互にユーザーをフォローしたりノートやトゥートを送受信したりできる。
+### On peut relier Misskey avec Mastodon ?
+Ça dépend de ce que vous entendez par "relier". Les utilisateurs d'instances Mastodon et Misskey peuvent s'échanger des notes, ou toot, et se suivre les uns les autres.
 
-MisskeyからMastodonのユーザーをフォローできるし、逆にMastodonからMisskeyユーザーもフォローできる。また、ノートにリアクションを付けたりリノート（=ブースト）も行える。
+Un utilisateur de Misskey peut suivre un utilisateur de Mastodon. Inversement, un utilisateur de Mastodon peut suivre un utilisateur de Misskey. Ils peuvent aussi rajouter des réactions, ou Booster, les notes de chacun.
 
-MisskeyやMastodonは、別のソフトウェアの他のインスタンスのユーザーとも、同じサービスであるかのように交流できる。
+Les utilisateurs de Misskey et Mastodon peuvent aussi communiquer avec des instances utilisant d'autres programmes, comme si ils utilisaient le même service.
 
-### 自分に関係のない通知が届く
-「ノートの自動ウォッチ」機能が有効になっているかもしれない。  
-不要であれば、`アカウント設定` > `全般` から`ノートの自動ウォッチ`をオフにしよう。
-**[→ 使い方: 投稿のウォッチ機能](usage/watch)**
+### Je reçois des alertes qui ne me concernent pas.
+Vous avez peut être activé la fonctionnalité "Surveillance automatique des notes"
+Si vous n'avez pas besoin de cette fonctionnalité, allez dans `Paramètres du compte` > `Général` puis désactivez "Surveiller automatique pour les notes".
+**[→ Savoir utiliser: La surveillance des envois](usage/watch)**
 
-### 文字装飾、検索窓や文字のアニメーションはどうやるのか？
-Misskey独自の構文「Misskey Flavored Markdown (MFM)」を使うことで表現できる。  
-**[→ 使い方: 文字装飾 (MFM)](usage/mfm)**
+### Comment fait-on pour mettre forme les caractères, animer les mots, faire des fenêtres de recherche, ... ?
+Utilisez la syntaxe propre à Misskey : "Misskey Flavored Markdown (MFM)" (Markdown parfumé au Misskey).  
+**[→ Savoir utiliser: La mise en forme des caractères (MFM)](usage/mfm)**
 
-### 猫耳生えてにゃって言ってるけどにゃに？　Catって？
-**Cat**はMisskeyの謎機能のひとつ。  
-アイコンに猫耳が生え、*な*が*にゃ*に変換される。
+### Pourquoi y'a des oreilles de chat qui me sont poussées, et je me mets à parler comme un chat ? C'est quoi le mode Chat ?
+**Le mode Chat** est l'une des fonctionnalités étrange de Misskey.
+Cela fait pousser des Nekomimi sur votre icône, et remplace chaque *な* par *にゃ*.
 
-Catは設定画面から設定でき、リモートのMisskeyインスタンスにも反映される。
+Le mode Chat est configurable dans les paramètres du compte, et se voit aussi dans les autres instances Misskey.
 
-### 動作が怪しい
-[「困ったときは」](troubles)にMisskeyの修正された不具合と解決方法等の一覧があるので、確認してみてほしい。  
-一覧から見つけられないときは、次の方法で質問してほしい。
+### Y'a un truc bizarre.
+Veuillez d'abord jeter un oeil à la page ["En cas de problèmes"](troubles), qui liste des problèmes connus avec Misskey ainsi que leurs solutions, ou palliatifs.
+Si vous ne trouvez pas de solution au problème que vous rencontrez, passez à la question suivante.
 
-### 不具合を見つけた。こんな機能がほしい。
-**GitHub**を使ったことがある方は*その内容のIssueが立っていないか確認してから*[Issue](https://github.com/syuilo/misskey/issues/new/choose)で報告をお願いしたい。  
-PullRequestももちろん歓迎している。
+### J'ai repéré une anomalie. Ça serait bien si il y avait telle fonctionnalité.
+Pour les utilisateurs de **Github**, veuillez d'abord vérifier dans la section "Issues", qu'un rapport contenant le même problème n'existe pas déjà. Si vous n'en avez pas trouvé, nous vous prions de créer un [nouveau rapport d'anomalie](https://github.com/syuilo/misskey/issues/new/choose). 
+Les PullRequest sont bien évidemment appréciées.
 
-英語が苦手だったりGitHubがよくわからなかったりする方は、`@joinmisskey@misskey.io`にリプライを送ってほしい。
+Pour les gens qui ont du mal avec l'anglais (NdT et ont un bon niveau de Japonais), ou pour ceux qui ne comprennent pas vraiment comment utiliser Github, vous pouvez envoyer un message à `@joinmisskey@misskey.io`.
 
-### Misskeyに寄付したい。
-Patreon（パトロンサービス）やAmazonほしいものリストのリンクは、**[こちら（トップページの下の方のセクション）](../#section_7)**を参照されたい。
+### Je voudrais soutenir le projet Misskey.
+Vous pouvez le faire via Patreon（service de mécénat）ou via la liste d'envies Amazon. Les liens étant présents **[ici (Section basse de haut de la page)](../#section_7)**.
 
-### パスワードを忘れた
-メールで連絡するか新しいアカウントを作成するなどして、インスタンスの管理者に相談してほしい。  
-インスタンスの管理者がそのアカウントがあなたのものであると確認できたら、管理者はパスワードを初期化して新しいパスワードをあなたに伝える。  
-新しいパスワードでログインしたら、すぐにパスワードを変更し、今度は忘れないように対策してほしい。
+### J'ai oublié le mot de passe de mon compte.
+Contactez l'administrateur de votre instance par email, ou en créant un autre compte.
+Une fois que l'administrateur aura vérifié que le compte dont vous parlez vous appartient bien, celui-ci en changera le mot de passe du compte et vous le communiquera.
+Une fois connecté avec le nouveau mot de passe, changez-le immédiatement et faites en sorte de ne plus le perdre.
 
-### ログアウトできない
-ブラウザのCookieおよびサイトデータを削除してみてほしい。
+### Je n'arrive pas à me déconnecter.
+Essayez de supprimer les cookies et les données de sites.

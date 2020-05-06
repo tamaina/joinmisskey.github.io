@@ -1,6 +1,6 @@
 ---
 title: Commençons avec Misskey
-description: Misskeyは、いつまでも進化する、洗練されたマイクロブログSNSです。暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。
+description:  Misskey est une plateforme de microblogage améliorée en constante évolution. Pourquoi ne quitteriez-vous pas un instant l'agitation urbaine pour vous plonger dans le nouveau réseau ?
 styleRequires: ["top"]
 ---
 #toppage
@@ -15,7 +15,7 @@ styleRequires: ["top"]
       img(src="/files/images/imports/2019/03/ai_svg.svg" alt="Ai").loadts.scrollts-fadeIn.scrollts-e-3.scrollts-nomargin
       div.small.loadts.scrollts-fadeIn.scrollts-e-3.scrollts-nomargin Ai est la mascotte de Misskey
   section#section_1.bg-primary.text-white: .container
-    p.text-center Merci d'avoir trouvé Misskey ! Misskey est une #[span.font-weight-bold plateforme de microblogage distribuée] sur toute la planète. Misskey et les autres réseaux sociaux se connectent ensemble parce qu'ils font partie de la Fédiverse (un univers composé de différents réseaux sociaux).
+    p.text-center Merci d'avoir trouvé Misskey ! Misskey est une #[span.font-weight-bold plateforme de microblogage distribuée] sur toute la planète. Misskey et les autres réseaux sociaux se connectent ensemble parce qu'ils font partie du Fédiverse (un univers composé de différents réseaux sociaux).
     p.text-center Pourquoi ne quitteriez-vous pas un instant l'agitation urbaine pour vous plonger dans le nouveau réseau ?
     p.mt-1.text-center
       a(href="#s3anc").btn.btn-lg.btn-outline-primary.bg-white.mr-2.scrollts.scrollts-flipInX.scrollts-nomargin Utiliser
@@ -94,7 +94,7 @@ styleRequires: ["top"]
                 p.mb-0
                   | Jouons ensemble. Vous pouvez jouer contre d'autres utilisateurs.
                   br
-                  | 「リバーシ」はユーザーのアイコンが石として表示されるほか#[a(href="https://github.com/syuilo/misskey/issues/1200" target="_blank" rel="noopener") 変則ルール]でも遊ぶことができます。
+                  | Vous pouvez jouer à 「Othello」, avec des régles standards ou des #[a(href="https://github.com/syuilo/misskey/issues/1200" target="_blank" rel="noopener")  règles spéciales]。Les pions étant représentés par l'icône de l'adversaire.
             +picture({src: "/files/images/imports/2019/03/reversi.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
         article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
@@ -125,23 +125,23 @@ styleRequires: ["top"]
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('satellite')
               .s2-card-text
-                h4 アンテナ
+                h4 Antenne
                 p.mb-0
-                  | エゴサしよう。
+                  | Recherchez vous sur Internet (Egosearch)。
                   br
-                  | アンテナ機能で設定した条件を含むノートを収集できます。
+                  | Configurez votre antenne pour récupérer toutes les notes diffusées répondant à certains critères.
         //- article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('door-open', 'fas')
               .s2-card-text
-                h4 ルーム
+                h4 Chambre
                 p.mb-0
-                  | いろいろな家具を配置して自分の部屋を作ろう。
+                  | Arrangez votre chambre comme vous le souhaitez, à l'aide de multiples fournitures.
                   br
-                  | 作成したルームはURLでみんなと共有できます。
+                  | Une fois prête, partagez son URL avec tout le monde.
             +picture({src: "/files/images/imports/2019/10/room.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
-            a(href="wiki/usage/rooms").s2-card-link.font-weight-bold ルームの詳細
+            a(href="wiki/usage/rooms").s2-card-link.font-weight-bold Détails sur les chambres
 
     hr#section_2_b
 
@@ -252,15 +252,15 @@ styleRequires: ["top"]
     h2 統計
     .row.justify-content-center
       .col-md-4.mt-2
-        .font-weight-bold 総ユーザー数
+        .font-weight-bold Nombre total d'utilisateurs
         .h1=numeral(stats.usersCount).format('0,0')
       .col-md-4.mt-2
-        .font-weight-bold 総ノート数
+        .font-weight-bold Nombre total de notes
         .h1=numeral(stats.notesCount).format('0,0')
       .col-md-4.mt-2
-        .font-weight-bold 稼働インスタンス数
+        .font-weight-bold Nombre d'instances opérationnelles
         .h1=numeral(stats.instancesCount).format('0,0')
-    p.mb-0.mt-3.text-muted.small #{updateMoment.tz('Asia/Tokyo').format('lll z')} 頃に各インスタンスから取得した統計を合算した数値です。
+    p.mb-0.mt-3.text-muted.small Calculé depuis les statistiques obtenues sur chaque instance depuis le #{updateMoment.tz('Europe/Paris').format('lll z')} .
 
   section#section_7: .container
     h2.text-center Soutenir le projet
@@ -273,7 +273,7 @@ styleRequires: ["top"]
     hr.my-4
     h3.text-center Soutenir Misskey
     p.text-center
-      | Aimez-ous aimez le projet ? Misskey est un projet libre et open source développé par des personnes comme vous.
+      | Vous aimez le projet ? Misskey est un projet libre et open source développé par des personnes comme vous.
       br
       | Misskey ne comporte pas de publicité afin de ne pas perturber vos relations sociales, mais le développement de ce projet coûte du temps et de l'argent.
       br
