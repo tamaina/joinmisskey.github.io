@@ -272,6 +272,16 @@
   langs: ['ja']
 - url: i.misskey.love
   langs: ['ja']
+- url: meisskey.blue
+  langs: ['ja']
+- url: m.jp-warrior.cf
+  langs: ['ja']
+- url: misskey.omhnc.net
+  langs: ['ja']
+- url: misskey.skk-plasma.tech
+  langs: ['ja']
+- url: meisskey.nokotaro.com
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
