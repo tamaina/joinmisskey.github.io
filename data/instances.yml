@@ -282,6 +282,8 @@
   langs: ['ja']
 - url: meisskey.nokotaro.com
   langs: ['ja']
+- url: newskey.cc
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
