@@ -286,6 +286,8 @@
   langs: ['ja']
 - url: misskey.xn--krsgw--n73t.com
   langs: ['ja']
+- url: misskey.lei202.com
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
