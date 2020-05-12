@@ -92,14 +92,14 @@
             "fr": "La fonctionalité de recherche est désactivée."
         },
         "instance_recaptchaEnabled": {
-            "ja": "reCAPTCHAが有効",
-            "en": "reCAPTCHA is enabled.",
-            "fr": "reCAPTCHA est activé."
+            "ja": "reCAPTCHA/hCaptchaが有効",
+            "en": "reCAPTCHA/hCaptcha is enabled.",
+            "fr": "reCAPTCHA/hCaptcha est activé."
         },
         "instance_recaptchaDisabled": {
-            "ja": "reCAPTCHAが無効",
-            "en": "reCAPTCHA is disabled.",
-            "fr": "reCAPTCHA est désactivé."
+            "ja": "reCAPTCHA/hCaptchaが無効",
+            "en": "reCAPTCHA/hCaptcha is disabled.",
+            "fr": "reCAPTCHA/hCaptcha est désactivé."
         },
         "instance_objectStorageEnabled": {
             "ja": "オブジェクトストレージを利用",

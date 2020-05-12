@@ -212,7 +212,7 @@ mixin instancesList(o, colors, sctrollts)
                 else
                   abbr(title=i18n('instance_localTimeLineEnabled'))
                     +fa_fw('comments')
-                if( instance.meta.features.recaptcha )
+                if( instance.meta.features.recaptcha || instance.meta.features.hcaptcha )
                   abbr(title=i18n('instance_recaptchaEnabled'))
                     +fa_fw('shield-alt')
                 else
