@@ -288,6 +288,8 @@
   langs: ['ja']
 - url: misskey.lei202.com
   langs: ['ja']
+- url: msky.h3z.jp
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
