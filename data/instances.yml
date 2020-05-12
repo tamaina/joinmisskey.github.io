@@ -290,6 +290,8 @@
   langs: ['ja']
 - url: msky.h3z.jp
   langs: ['ja']
+- url: misskey.akarinext.org
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
