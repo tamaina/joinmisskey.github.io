@@ -25,7 +25,7 @@ Misskeyをはじめ連合リレーに対応するインスタンスのソフト�
 - [Fedibird Relay Service](https://relay.fedibird.com/)
 
 ## 実装
-### 連合リレーの
+### 連合リレーの方式
 連合リレーは、その実装方法の差異によってMastodon方式とPleroma方式の2種類に分けられる。  
 MisskeyはMastodon方式で実装されている。
 
