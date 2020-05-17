@@ -292,6 +292,10 @@
   langs: ['ja']
 - url: misskey.akarinext.org
   langs: ['ja']
+- url: mk.iaia.moe
+  langs: ['ja']
+- url: mid.cryo.jp
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
