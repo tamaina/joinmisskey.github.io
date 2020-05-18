@@ -272,6 +272,30 @@
   langs: ['ja']
 - url: i.misskey.love
   langs: ['ja']
+- url: meisskey.blue
+  langs: ['ja']
+- url: m.jp-warrior.cf
+  langs: ['ja']
+- url: misskey.omhnc.net
+  langs: ['ja']
+- url: misskey.skk-plasma.tech
+  langs: ['ja']
+- url: meisskey.nokotaro.com
+  langs: ['ja']
+- url: newskey.cc
+  langs: ['ja']
+- url: misskey.xn--krsgw--n73t.com
+  langs: ['ja']
+- url: misskey.lei202.com
+  langs: ['ja']
+- url: msky.h3z.jp
+  langs: ['ja']
+- url: misskey.akarinext.org
+  langs: ['ja']
+- url: mk.iaia.moe
+  langs: ['ja']
+- url: mid.cryo.jp
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -410,6 +434,8 @@
 - url: misskey.icodeinht.ml
   langs: ['en']
 - url: snootbooping.date
+  langs: ['en']
+- url: animeisgay.com
   langs: ['en']
 #
 ##
