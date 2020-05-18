@@ -21,7 +21,7 @@ Misskeyはソースコードが公開されているため改造を自由にで�
   （ここではアカウント名を`you`とする）
 2. [syuilo/misskey](https://github.com/syuilo/misskey)にアクセスし、右上の`Fork`をクリック。  
   ページをリロードし、フォークが作成されたことを確認しよう。
-3. [about-misskey.vue](https://github.com/syuilo/misskey/blob/develop/src/client/pages/about-misskey.vue)および`package.json`の`syuilo/misskey`の部分を`自分のユーザー名/misskey`に置き換える。
+3. [about-misskey.vue](https://github.com/syuilo/misskey/blob/develop/src/client/pages/about-misskey.vue)、[app.vue](https://github.com/syuilo/misskey/blob/develop/src/client/app.vue#L85)および`package.json`の`syuilo/misskey`の部分を`自分のユーザー名/misskey`に置き換える。
 4. `package.json`の`version`をと変更し、Misskeyをビルドしてデプロイする。  
   バージョンは[セマンティックバージョニングのプレリリースバージョンの表し方](https://semver.org/lang/ja/#spec-item-9)で指定するとよい（例: `11.36.0-myedition.1`）。 
 5. 作業環境に移動し、  
