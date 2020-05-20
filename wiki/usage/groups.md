@@ -4,7 +4,7 @@ description: ユーザーグループを作成し、複数人でのチャット�
 layout: wiki
 rank: 17
 prev: /wiki/usage/pages
-#next: /wiki/usage/rooms
+next: /wiki/usage/rooms
 ---
 ユーザーグループを作成し、複数人での[チャット](messaging)を楽しもう。
 

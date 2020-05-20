@@ -3,7 +3,7 @@ title: メールサーバーを設定する
 description: MisskeyにはアカウントとEメールアドレスを紐づける機能がある。これには管理者側での設定が必要。
 layout: wiki
 rank: 2
-prev: /wiki/developers/installation
+prev: /wiki/developers/serviceworker
 next: /wiki/developers/relationships
 ---
 MisskeyのEメール連携を利用するには、`インスタンス` > `設定` > `メールサーバーの設定`で設定を行う。
