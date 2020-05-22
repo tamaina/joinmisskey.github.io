@@ -52,7 +52,7 @@ nav(aria-label="breadcrumb")#breadcrumb.bg-transparent
     ol.breadcrumb.bg-transparent.text-primary.my-0.mx-md-5.mx-1.py-1.px-0
       if( dirs.length > 3 || (dirs.length === 3 && dirs[2] !== ""))
         li.breadcrumb-item
-          a(href=`${site.url.path}/${locale ? locale : 'ja'}/`).py-1.text-primary
+          a(href=`${site.url.path}/${locale ? locale : 'ja'}/`).text-primary
             +fa_fw("home","fas")
             span.sr-only
               +i18n('home')
@@ -65,10 +65,10 @@ nav(aria-label="breadcrumb")#breadcrumb.bg-transparent
         -     const title = (indexPage.attributes['title-breadcrumb'] || indexPage.attributes.title) || dirs[i] || "index"
         -     if (!!title) {
           li.breadcrumb-item
-            a(href=`${site.url.path}${dirpl}`).py-1.text-primary #{title}
+            a(href=`${site.url.path}${dirpl}`).text-primary #{title}
         -     } else {
           li.breadcrumb-item
-            a(href=`${site.url.path}${dirpl}`).py-1.text-primary #{nowdir}
+            a(href=`${site.url.path}${dirpl}`).text-primary #{nowdir}
         -     }
         -   } else if( indexPage == undefined ){
           li.breadcrumb-item(aria-current="page").text-primary #{nowdir}
