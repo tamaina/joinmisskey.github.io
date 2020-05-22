@@ -3,7 +3,7 @@ title: 外部サービス連携・Eメール設定
 description: あなたのアカウントと他のサービスのアカウントやEメールアドレスを関連付けできる。
 layout: wiki
 rank: 11
-prev: /wiki/usage/profile
+prev: /wiki/usage/drive
 next: /wiki/usage/security
 ---
 <!--
