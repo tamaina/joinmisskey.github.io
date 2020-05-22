@@ -2,9 +2,9 @@
 title: 文字装飾
 description: MisskeyではMisskey Flavored Markdown (MFM)を使って文字を装飾できる。
 layout: wiki
-rank: 4.5
+rank: 1.995
 prev: /wiki/usage/post
-next: /wiki/usage/interactions
+next: /wiki/usage/follow
 improve: true
 ---
 Misskeyでは、独自の構文を使うことでノートの文章を装飾することができる。  
@@ -15,7 +15,7 @@ Misskeyでは、独自の構文を使うことでノートの文章を装飾す�
 
 MFMは、次の場所で利用できる。
 
-- [ノート](note)の本文
+- [ノート](post)の本文
   * [ノートメニュー](notemenu)で`内容をコピー`すると元のテキストがクリップボードにコピーされるため、メモ帳等にペーストすることでどのようなMFMが使われているかが確認できる。
 - [チャット](messaging)のメッセージ
 - [ページ](pages)のテキストブロック
