@@ -67,6 +67,7 @@ mixin toc( headings, n, tag, cl)
   }
 
 mixin lis_of_dir(pathf, $option)
+  -
     let bpages = pathMFilter(pathf)
     bpages.sort( (a, b) => { return ( a.meta.permalink > b.meta.permalink ) ? 1 : -1 } )
     bpages.sort( (a, b) => a.attributes.rank - b.attributes.rank )
