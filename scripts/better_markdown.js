@@ -42,7 +42,7 @@ module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
     if (!metH2) {
       if (tagName === "h2") {
         metH2 = true
-        $els.eq(i).before(adTag)
+        if ($els.length - (i + 1) >= 6) $els.eq(i).before(adTag)
       }
       return
     }
