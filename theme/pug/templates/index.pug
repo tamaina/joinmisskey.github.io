@@ -4,5 +4,7 @@ block contents
   h1= page.attributes.title
   !=mainHtml
   ul.simpleindex.list-unstyled
-    +ad({layoutKey: "-i5-6+1v-2p+a", slot: "9171166830", format: "fluid"})
+    if (pathMFilter(page.meta.permalink).length >= 5)
+      +ad({layoutKey: "-i5-6+1v-2p+a", slot: "9171166830", format: "fluid"})
     +lis_of_dir(page.meta.permalink, {s: false, unstyled: true})
+    +ad({layoutKey: "-i5-6+1v-2p+a", slot: "9171166830", format: "fluid"})

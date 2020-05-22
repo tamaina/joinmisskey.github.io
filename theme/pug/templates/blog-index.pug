@@ -91,10 +91,11 @@ block contents
   h1.pb-2 #[+i18n('blog')]: #{page.attributes.title}
   div
     != getTL(mainHtml)
-  h2.font-weight-light.h3= headline
 
-  .py-2.px-0
+  .py-3.px-0
     +ad({ class: "aitaso", slot: "1668303105", format: "horizontal", allowFullWidth: "false" })
+
+  h2.font-weight-light.h3= headline
 
   #blog_index.d-flex.flex-row.row.m-0
     each thispage, p in qpages

@@ -31,15 +31,25 @@ module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
     $els.eq(i).attr("id", hs[i])
   })
 
-  let insertAdNumber = 6
-  const adTag = "<ins class=\"adsbygoogle my-4\" style=\"display:block; text-align:left;\" data-ad-layout=\"in-article\" data-ad-format=\"fluid\" data-ad-client=\"ca-pub-1736621122676736\" data-ad-slot=\"9247410221\"></ins>"
+  let insertAdNumber = 1
+  let metH2 = false
+  const adTag = "<ins class=\"adsbygoogle my-5\" style=\"display:block; text-align:left;\" data-ad-layout=\"in-article\" data-ad-format=\"fluid\" data-ad-client=\"ca-pub-1736621122676736\" data-ad-slot=\"9247410221\"></ins>"
 
   $("body > *").each(i => {
     const $els = $("body > *")
+    const { tagName } = $els.eq(i).get(0)
+
+    if (!metH2) {
+      if (tagName === "h2") {
+        metH2 = true
+        $els.eq(i).before(adTag)
+      }
+      return
+    }
+
     insertAdNumber += 1
 
     if ($els.length - (i + 1) >= 6 && insertAdNumber > 17) {
-      const { tagName } = $els.eq(i).get(0)
       if (["h1", "h2", "h3", "h4", "h5", "h6", "hr"].includes(tagName)) {
         $els.eq(i).before(adTag)
         insertAdNumber = 0
