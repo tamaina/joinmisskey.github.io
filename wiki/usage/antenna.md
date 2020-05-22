@@ -4,7 +4,7 @@ description: アンテナを設置してエゴサーチしよう。
 layout: wiki
 rank: 3.2
 prev: /wiki/usage/hashtag
-next: /wiki/usage/post
+next: /wiki/usage/interactions
 ---
 アンテナを設置してエゴサーチしよう。
 
