@@ -106,7 +106,7 @@ wss://misskey.io/streaming
 }
 ````
 
-- `type`は`"channnel"`である。
+- `type`は`"channel"`である。
 - `body.id`は接続時に指定したidである。
 - `body.type`はイベントの種類で、タイムラインチャンネルならば`note`である。
   mainチャンネルでは、以下のタイプが流れてくる。
