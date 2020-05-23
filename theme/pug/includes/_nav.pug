@@ -49,37 +49,46 @@ nav#mainnav.navbar.navbar-expand-md.navbar-light.flex-row.p-0
 
 nav(aria-label="breadcrumb")#breadcrumb.bg-transparent
   .container-fulid.px-1.px-lg-5
-    ol.breadcrumb.bg-transparent.text-primary.my-0.mx-md-5.mx-1.py-1.px-0
+    ol.breadcrumb.bg-transparent.text-primary.my-0.mx-md-5.mx-1.py-1.px-0(vocab="https://schema.org/" typeof="BreadcrumbList")
       if( dirs.length > 3 || (dirs.length === 3 && dirs[2] !== ""))
-        li.breadcrumb-item
-          a(href=`${site.url.path}/${locale ? locale : 'ja'}/`).text-primary
+        li.breadcrumb-item(property="itemListElement" typeof="ListItem")
+          a.text-primary(href=`${site.url.path}/${locale ? locale : 'ja'}/` property="item" typeof="WebPage")
             +fa_fw("home","fas")
-            span.sr-only
+            span.sr-only(property="name")
               +i18n('home')
+          meta(property="position" content="1")
         - let dirpl = `/${locale ? locale : 'ja'}/`
-        - for( let i = 2; i < dirs.length - (dirs[dirs.length - 1] === "" ? 2 : 1); i++){                // i = 3 の場合
+        - const dirsmax = dirs.length - (dirs[dirs.length - 1] === "" ? 2 : 1)
+        - for( let i = 2; i < dirsmax; i++){                // i = 3 の場合
         -   let nowdir = dirs[i]                                    // "bar"
         -   dirpl = `${dirpl}${nowdir}/`                            // /foo/bar/
         -   let indexPage = pages.find(e => e.meta.permalink === dirpl && !e.canonical)
-        -   if( indexPage != undefined ){
+        -   if(indexPage){
         -     const title = (indexPage.attributes['title-breadcrumb'] || indexPage.attributes.title) || dirs[i] || "index"
         -     if (!!title) {
-          li.breadcrumb-item
-            a(href=`${site.url.path}${dirpl}`).text-primary #{title}
+          li.breadcrumb-item(property="itemListElement" typeof="ListItem")
+            a.text-primary(href=`${site.url.path}${dirpl}` property="item" typeof="WebPage")
+              span(property="name")= title
+            meta(property="position" content=i)
         -     } else {
-          li.breadcrumb-item
-            a(href=`${site.url.path}${dirpl}`).text-primary #{nowdir}
+          li.breadcrumb-item(property="itemListElement" typeof="ListItem")
+            a(href=`${site.url.path}${dirpl}` property="item" typeof="WebPage").text-primary
+              span(property="name")= nowdir
+            meta(property="position" content=i)
         -     }
-        -   } else if( indexPage == undefined ){
-          li.breadcrumb-item(aria-current="page").text-primary #{nowdir}
+        -   } else {
+          li.breadcrumb-item.text-primary #{nowdir}
         -   }
         - }
-        - const title = (page.attributes['title-breadcrumb'] || page.attributes.title) || dirs[dirs.length - 1] || "index"
-          li.breadcrumb-item.active
-            a(aria-current="page" href=`${urlPrefix}${page.meta.permalink}`).text-dark.font-weight-bold.trigger-gototop.button-like-anchor= title
+        - const title = (page.attributes['title-breadcrumb'] || page.attributes.title) || dirs[dirsmax] || "index"
+          li.breadcrumb-item.active(property="itemListElement" typeof="ListItem")
+            a(aria-current="page" href=`${urlPrefix}${page.meta.permalink}` property="item" typeof="WebPage").text-dark.font-weight-bold.trigger-gototop.button-like-anchor
+              span(property="name")= title
+            meta(property="position" content=dirsmax)
       else
-        li.breadcrumb-item.active
-          a(aria-current="page" href=`${urlPrefix}${page.meta.permalink}`).text-primary.font-weight-bold.trigger-gototop.button-like-anchor
+        li.breadcrumb-item.active(property="itemListElement" typeof="ListItem")
+          a(aria-current="page" href=`${urlPrefix}${page.meta.permalink}` property="item" typeof="WebPage").text-primary.font-weight-bold.trigger-gototop.button-like-anchor
             +fa_fw("home","fas")
-            span.sr-only
+            span.sr-only(property="name")
               +i18n('home')
+          meta(property="position" content="1")
