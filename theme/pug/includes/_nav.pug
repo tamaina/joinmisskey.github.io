@@ -52,10 +52,9 @@ nav(aria-label="breadcrumb")#breadcrumb.bg-transparent
     ol.breadcrumb.bg-transparent.text-primary.my-0.mx-md-5.mx-1.py-1.px-0(vocab="https://schema.org/" typeof="BreadcrumbList")
       if( dirs.length > 3 || (dirs.length === 3 && dirs[2] !== ""))
         li.breadcrumb-item(property="itemListElement" typeof="ListItem")
-          a.text-primary(href=`${site.url.path}/${locale ? locale : 'ja'}/` property="item" typeof="WebPage")
+          a.text-primary(href=`${site.url.path}/${locale || 'ja'}/` property="item" typeof="WebPage")
             +fa_fw("home","fas")
-            span.sr-only(property="name")
-              +i18n('home')
+            span.sr-only(property="name")= site.names[locale || 'ja'] || site.name
           meta(property="position" content="1")
         - let dirpl = `/${locale ? locale : 'ja'}/`
         - const dirsmax = dirs.length - (dirs[dirs.length - 1] === "" ? 2 : 1)
@@ -89,6 +88,5 @@ nav(aria-label="breadcrumb")#breadcrumb.bg-transparent
         li.breadcrumb-item.active(property="itemListElement" typeof="ListItem")
           a(aria-current="page" href=`${urlPrefix}${page.meta.permalink}` property="item" typeof="WebPage").text-primary.font-weight-bold.trigger-gototop.button-like-anchor
             +fa_fw("home","fas")
-            span.sr-only(property="name")
-              +i18n('home')
+            span.sr-only(property="name")= site.names[locale || 'ja'] || site.name
           meta(property="position" content="1")
