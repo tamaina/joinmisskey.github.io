@@ -15,8 +15,8 @@ microdata_pagetype: https://schema.org/FAQPage
 
 h2.blogstyle よくある質問
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
-  h3.blogstyle(itemprop="text") ホーム、ローカル、ソーシャル、グローバル タイムラインの違いは？
-  div(itemprop="text")
+  h3.blogstyle(itemprop="name") ホーム、ローカル、ソーシャル、グローバル タイムラインの違いは？
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text"): div(itemprop="text")
     :md
       それぞれ、表示されるユーザーが違う。
 
@@ -31,15 +31,15 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
       **[→ 使い方: タイムライン](usage/timelines)**
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
-  h3.blogstyle(itemprop="text") 重い
-  div(itemprop="text")
+  h3.blogstyle(itemprop="name") 重い
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
       Misskey Webではアニメーションを多用しているが、これはそこそこのスペックがないと快適に動作しなかったり長時間タブを開いているとフリーズしたりすることが報告されている。  
       クライアント設定の「UIの動きを減らす」を有効にするとそのような重いアニメーションが削減されるので、使ってみてほしい。
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
-  h3.blogstyle(itemprop="text") 誰が運営しているの？
-  div(itemprop="text")
+  h3.blogstyle(itemprop="name") 誰が運営しているの？
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
       misskey.ioに関しては、開発者である[しゅいろ](culture/users/syuilo)が管理し、サーバーは北海道の[村上さん](culture/users/AureoleArk)が提供している。
 
@@ -49,15 +49,15 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
       あなたが利用しているインスタンスの管理者のアカウントには、青い#{+fa_fw('bookmark', 'fas')}が付いている。
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
-  h3.blogstyle(itemprop="text") MisskeyはMastodonのインスタンスであるか？
-  div(itemprop="text")
+  h3.blogstyle(itemprop="name") MisskeyはMastodonのインスタンスであるか？
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
       **[否](../blog/2018/08/17_1_misskeyisnotmastodon)**。  
       Mastodonと中身が同じで操作部だけ新しく作成した、というわけでもない。MisskeyとMastodonは、ActivityPubで接続できる以外には完全に無関係なソフトだ。
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
-  h3.blogstyle(itemprop="text") MisskeyはMastodonと連携できるの？
-  div(itemprop="text")
+  h3.blogstyle(itemprop="name") MisskeyはMastodonと連携できるの？
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
       連携とは少し違う。  
       MastodonとMisskeyとで相互にユーザーをフォローしたりノートやトゥートを送受信したりできる。
@@ -67,23 +67,23 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
       MisskeyやMastodonは、別のソフトウェアの他のインスタンスのユーザーと同士で、同じサービスであるかのように交流できる。
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
-  h3.blogstyle(itemprop="text") 自分に関係のない通知が届く
-  div(itemprop="text")
+  h3.blogstyle(itemprop="name") 自分に関係のない通知が届く
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
       「ノートの自動ウォッチ」機能が有効になっているかもしれない。  
       不要であれば、`アカウント設定` > `全般` から`ノートの自動ウォッチ`をオフにしよう。
       **[→ 使い方: 投稿のウォッチ機能](usage/watch)**
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
-  h3.blogstyle(itemprop="text") ノート内の太字などの文字装飾、検索窓やアニメーションはどうやるのか？
-  div(itemprop="text")
+  h3.blogstyle(itemprop="name") ノート内の太字などの文字装飾、検索窓やアニメーションはどうやるのか？
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
       Misskey独自の構文「Misskey Flavored Markdown (MFM)」を使うことで表現できる。  
       **[→ 使い方: 文字装飾 (MFM)](usage/mfm)**
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
-  h3.blogstyle(itemprop="text") 猫耳生えて「にゃ」って言ってるけどにゃに？ Catって？
-  div(itemprop="text")
+  h3.blogstyle(itemprop="name") 猫耳生えて「にゃ」って言ってるけどにゃに？ Catって？
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
       **Cat**はMisskeyの謎機能のひとつである。  
       アイコンに猫耳が生え、*な*が*にゃ*に変換される（この変換は"Nyaize"と呼ばれる）。
@@ -93,8 +93,8 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
       Nyaizeはサーバーで強制的に行われるため、回避するのは不可能である。
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
-  h3.blogstyle(itemprop="text") 動作が怪しい
-  div(itemprop="text")
+  h3.blogstyle(itemprop="name") 動作が怪しい
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
       `（あなたのインスタンスのドメイン）/flush`にアクセスすると直る場合が多い。
 
@@ -105,8 +105,8 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
       一覧から見つけられないときは、バグかもしれないので、次の方法で質問してほしい。
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
-  h3.blogstyle(itemprop="text") 不具合を見つけた。こんな機能がほしい。
-  div(itemprop="text")
+  h3.blogstyle(itemprop="name") 不具合を見つけた。こんな機能がほしい。
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
       **GitHub**を使ったことがある方は*その内容のIssueが立っていないか確認してから*[Issue](https://github.com/syuilo/misskey/issues/new/choose)で報告をお願いしたい。  
       PullRequestももちろん歓迎している。
@@ -114,15 +114,15 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
       英語が苦手だったりGitHubがよくわからなかったりする方は、`@joinmisskey@misskey.io`にリプライを送ってほしい。
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
-  h3.blogstyle(itemprop="text") Misskeyに寄付したい。
-  div(itemprop="text")
+  h3.blogstyle(itemprop="name") Misskeyに寄付したい。
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
       Patreon（パトロンサービス）やAmazonほしいものリストのリンクがあるため、そこから支援していただけると嬉しい。  
       各種リンクについては**[こちら（トップページの下の方のセクション）](../#section_7)**を参照されたい。
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
-  h3.blogstyle(itemprop="text") パスワードを忘れた
-  div(itemprop="text")
+  h3.blogstyle(itemprop="name") パスワードを忘れた
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
       新しいアカウントを作成するなどして、インスタンスの管理者に相談してほしい。
 
