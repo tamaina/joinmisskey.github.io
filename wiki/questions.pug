@@ -1,0 +1,131 @@
+---
+title: よくある質問
+description: Misskeyに関するよくある疑問・質問まとめ。
+layout: wiki
+has_child: false
+rank: 1
+prev: /wiki/first
+next: /wiki/usage
+improve: true
+microdata_pagetype: https://schema.org/FAQPage
+---
+:md
+  Misskeyに関するよくある疑問・質問をまとめた。  
+  [用語の解説はこちら](first)
+
+h2.blogstyle よくある質問
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="text") ホーム、ローカル、ソーシャル、グローバル タイムラインの違いは？
+  div(itemprop="text")
+    :md
+      それぞれ、表示されるユーザーが違う。
+
+      | タイムライン | 表示されるユーザー |
+      |--:|:--|
+      | **ホーム** | 自分がフォローしたユーザー |
+      | **ローカル** | インスタンス内のすべてのユーザー |
+      | **ソーシャル** | ホーム ∪ ローカル |
+      | **グローバル** | リモートも含め、インスタンスに認識されているすべてのユーザー |
+
+      また、[公開範囲](usage/post#公開範囲を設定する)も影響する。  
+      **[→ 使い方: タイムライン](usage/timelines)**
+
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="text") 重い
+  div(itemprop="text")
+    :md
+      Misskey Webではアニメーションを多用しているが、これはそこそこのスペックがないと快適に動作しなかったり長時間タブを開いているとフリーズしたりすることが報告されている。  
+      クライアント設定の「UIの動きを減らす」を有効にするとそのような重いアニメーションが削減されるので、使ってみてほしい。
+
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="text") 誰が運営しているの？
+  div(itemprop="text")
+    :md
+      misskey.ioに関しては、開発者である[しゅいろ](culture/users/syuilo)が管理し、サーバーは北海道の[村上さん](culture/users/AureoleArk)が提供している。
+
+      Misskeyはオープンソースであるため、十分な能力や資産があればすべての人や企業がインスタンスを運営できる。  
+      各インスタンスごとに規約も違うが、少なくとも各国の法規に基づいた運用がされているはずである。  
+
+      あなたが利用しているインスタンスの管理者のアカウントには、青い#{+fa_fw('bookmark', 'fas')}が付いている。
+
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="text") MisskeyはMastodonのインスタンスであるか？
+  div(itemprop="text")
+    :md
+      **[否](../blog/2018/08/17_1_misskeyisnotmastodon)**。  
+      Mastodonと中身が同じで操作部だけ新しく作成した、というわけでもない。MisskeyとMastodonは、ActivityPubで接続できる以外には完全に無関係なソフトだ。
+
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="text") MisskeyはMastodonと連携できるの？
+  div(itemprop="text")
+    :md
+      連携とは少し違う。  
+      MastodonとMisskeyとで相互にユーザーをフォローしたりノートやトゥートを送受信したりできる。
+
+      MisskeyからMastodonのユーザーをフォローできるし、逆にMastodonからMisskeyユーザーもフォローできる。また、ノートにリアクションを付けたりリノート（=ブースト）も行える。
+
+      MisskeyやMastodonは、別のソフトウェアの他のインスタンスのユーザーと同士で、同じサービスであるかのように交流できる。
+
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="text") 自分に関係のない通知が届く
+  div(itemprop="text")
+    :md
+      「ノートの自動ウォッチ」機能が有効になっているかもしれない。  
+      不要であれば、`アカウント設定` > `全般` から`ノートの自動ウォッチ`をオフにしよう。
+      **[→ 使い方: 投稿のウォッチ機能](usage/watch)**
+
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="text") ノート内の太字などの文字装飾、検索窓やアニメーションはどうやるのか？
+  div(itemprop="text")
+    :md
+      Misskey独自の構文「Misskey Flavored Markdown (MFM)」を使うことで表現できる。  
+      **[→ 使い方: 文字装飾 (MFM)](usage/mfm)**
+
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="text") 猫耳生えて「にゃ」って言ってるけどにゃに？ Catって？
+  div(itemprop="text")
+    :md
+      **Cat**はMisskeyの謎機能のひとつである。  
+      アイコンに猫耳が生え、*な*が*にゃ*に変換される（この変換は"Nyaize"と呼ばれる）。
+
+      Catはアカウント設定から設定でき、リモートのMisskeyインスタンスにも反映される。
+
+      Nyaizeはサーバーで強制的に行われるため、回避するのは不可能である。
+
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="text") 動作が怪しい
+  div(itemprop="text")
+    :md
+      `（あなたのインスタンスのドメイン）/flush`にアクセスすると直る場合が多い。
+
+      また、アドブロッカーを試用している場合は
+
+      [「困ったときは」](troubles)にMisskeyの修正された不具合と解決方法等の一覧があるので、こちらも確認してみてほしい。
+
+      一覧から見つけられないときは、バグかもしれないので、次の方法で質問してほしい。
+
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="text") 不具合を見つけた。こんな機能がほしい。
+  div(itemprop="text")
+    :md
+      **GitHub**を使ったことがある方は*その内容のIssueが立っていないか確認してから*[Issue](https://github.com/syuilo/misskey/issues/new/choose)で報告をお願いしたい。  
+      PullRequestももちろん歓迎している。
+
+      英語が苦手だったりGitHubがよくわからなかったりする方は、`@joinmisskey@misskey.io`にリプライを送ってほしい。
+
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="text") Misskeyに寄付したい。
+  div(itemprop="text")
+    :md
+      Patreon（パトロンサービス）やAmazonほしいものリストのリンクがあるため、そこから支援していただけると嬉しい。  
+      各種リンクについては**[こちら（トップページの下の方のセクション）](../#section_7)**を参照されたい。
+
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="text") パスワードを忘れた
+  div(itemprop="text")
+    :md
+      新しいアカウントを作成するなどして、インスタンスの管理者に相談してほしい。
+
+      インスタンスの管理者がそのアカウントがあなたのものであると確認できたら、管理者はパスワードを初期化して新しいパスワードをあなたに伝える。
+
+      新しいパスワードでログインしたら、すぐにパスワードを変更し、今度は忘れないように対策してほしい。
