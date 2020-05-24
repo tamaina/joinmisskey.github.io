@@ -2,13 +2,15 @@
     "name": "joinmisskey",
     "names" : {
         "en": "Let's start Misskey",
-        "ja": "Misskeyをはじめよう"
+        "ja": "Misskeyをはじめよう",
+        "fr": "Commençons avec Misskey"
     },
     "short_name": "joinmisskey",
-    "description": "A forever evolving, sophisticated microblogging platform \"Misskey\"",
+    "description": "いつまでも進化する、洗練されたマイクロブログSNS Misskey（ミスキー）",
     "descriptions": {
-        "en": "A forever evolving, sophisticated microblogging platform \"Misskey\"",
-        "ja": "いつまでも進化する、洗練されたマイクロブログSNS Misskey（ミスキー）"
+        "en": "Misskey, A forever evolving, sophisticated microblogging platform.",
+        "ja": "いつまでも進化する、洗練されたマイクロブログSNS Misskey（ミスキー）",
+        "fr": "Misskey est une plateforme de microblogage en constante évolution et amélioration."
     },
     "author": "Misskey",
     "url": {

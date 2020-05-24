@@ -584,31 +584,29 @@ const browserconfigXml = () => `<?xml version="1.0" encoding="utf-8"?>
     </browserconfig>`
 
 gulp.task("make-browserconfig", cb => {
-  fs.writeFile("dist/docs/browserconfig.xml", browserconfigXml, () => {
+  fs.writeFile("dist/docs/browserconfig.xml", "" /* browserconfigXml() */, () => {
     glog(colors.green("✔ browserconfig.xml")); cb()
   })
 })
 
 
 gulp.task("make-sitemap", async cb => {
-  const urls = pages.filter(e => !e.canonical && e.meta.locale).map(e => ({
+
+  const stream = new SitemapStream({
+    hostname: urlPrefix
+  })
+  const write = fs.createWriteStream("dist/docs/sitemap.xml")
+  stream.pipe(write)
+
+  pages.filter(e => !e.canonical && e.meta.locale).map(e => stream.write({
     url: e.meta.permalink,
     links: site.locales.map(lang => ({ lang, url: `/${lang}/${e.meta.dirs.slice(2).join("/")}` }))
   }))
 
-  const stream = new SitemapStream({
-    hostname: urlPrefix,
-    urls
-  })
-
   stream.end()
 
-  const pr = await streamToPromise(stream)
-
-  fs.writeFile("dist/docs/sitemap.xml", pr, () => {
-    glog(colors.green("✔ sitemap.xml"))
-    cb()
-  })
+  glog(colors.green("✔ sitemap.xml"))
+  cb()
 })
 
 gulp.task("make-image_compressing_strategy_version_file", cb => {

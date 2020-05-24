@@ -1,8 +1,18 @@
 extends ./article-base.pug
 
 block contents
-  h1= page.attributes.title
-  !=mainHtml
-  ul.simpleindex.list-unstyled
-    +ad({layoutKey: "-i5-6+1v-2p+a", slot: "9171166830", format: "fluid"})
-    +lis_of_dir(page.meta.permalink, {s: false, unstyled: true})
+  article#article_maincontent.bg-white
+    header.w-100
+      h1= page.attributes.title
+    if(headings.length > 2)
+      #article_sidenav.my-2.p-3.bg-light
+        details
+          summary.font-weight-bold 目次
+          +toc( headings, 2, "ul", "list-unstyled ml-3 page-index")
+    section.pt-2.pb-4!= mainHtml
+
+    ul.simpleindex.list-unstyled
+      if (pathMFilter(page.meta.permalink).length >= 5)
+        +ad({layoutKey: "-i5-6+1v-2p+a", slot: "9171166830", format: "fluid"})
+      +lis_of_dir(page.meta.permalink, {s: false, unstyled: true})
+      +ad({layoutKey: "-i5-6+1v-2p+a", slot: "9171166830", format: "fluid"})

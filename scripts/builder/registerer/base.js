@@ -129,12 +129,14 @@ async function getInstancesInfos(instances) {
       if (usersChart) {
         // 2.
         const arr = usersChart.local.total.filter(e => e !== 0)
-        value += ((arr[0] - arr[arr.length - 1]) / arr.length) * 15
+        const diff = arr[0] - arr[arr.length - 1]
+        if (diff) value += (diff / arr.length) * 15
       }
       if (notesChart) {
         // 3.
         const arr = notesChart.local.total.filter(e => e !== 0)
-        value += ((arr[0] - arr[arr.length - 1]) / arr.length) * 0.6
+        const diff = arr[0] - arr[arr.length - 1]
+        if (diff) value += (diff / arr.length) * 0.6
       }
 
       // 4.
