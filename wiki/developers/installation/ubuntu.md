@@ -369,7 +369,7 @@ su - misskey
 ビルドをする。yes we can...
 
 ```bash
-NODE_ENV=production npx yarn build
+NODE_ENV=production npm run build
 ```
 
 ### サーバーでビルドできない場合
@@ -384,12 +384,12 @@ NODE_ENV=production npx yarn build
 5. `NODE_ENV=production npx yarn build`  
   * PowerShellでは変数指定がこの方法でできないので、以下のようにする:  
     `$env:NODE_ENV="production"`  
-    `npx yarn build`
+    `npm run build`
 6. 生成されたbuiltフォルダーをサーバーにコピー
 
 ## データベースの初期化
 ```bash
-npx yarn run init
+npm run init
 ```
 
 ## Misskeyを起動する
