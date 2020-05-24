@@ -376,7 +376,7 @@ su - misskey
 ビルドをする。yes we can...
 
 ```bash
-NODE_ENV=production npx yarn build
+NODE_ENV=production npm run build
 ```
 
 ### サーバーでビルドできない場合
@@ -388,12 +388,12 @@ NODE_ENV=production npx yarn build
 2. Git clone、もしくはGitHubからMisskeyのソースをダウンロードする
 3. サーバーと同様の`.config/default.yml`を作成
 4. `npx yarn install`
-5. `NODE_ENV=production npx yarn build`
+5. `NODE_ENV=production npm run build`
 6. 生成されたbuiltフォルダーをサーバーにコピー
 
 ## データベースの初期化
 ```bash
-npx yarn run init
+npm run init
 ```
 
 ## Misskeyを起動する

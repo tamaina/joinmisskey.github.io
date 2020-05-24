@@ -410,10 +410,10 @@ Node.jsなので、Windowsでビルドしたものを適用できる。
 2. Gitでclone（`git clone -b master git://github.com/syuilo/misskey.git`）、もしくはGitHubからMisskeyのソースをダウンロードする
 3. サーバーと同様の`.config/default.yml`を作成
 4. `npx yarn install`
-5. `NODE_ENV=production npx yarn build`  
+5. `NODE_ENV=production npm run build`  
   * PowerShellでは変数指定がこの方法でできないので、以下のようにする:  
     `$env:NODE_ENV="production"`  
-    `npx yarn build`
+    `npm run build`
 6. sftpでコピーする。
 
 builtディレクトリを準備
