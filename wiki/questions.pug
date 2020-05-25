@@ -93,6 +93,36 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
       Nyaizeはサーバーで強制的に行われるため、回避するのは不可能である。
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
+  h3.blogstyle(itemprop="name") アカウントを引っ越ししたい
+  div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
+    :md
+      分散SNSとしての機能として、アカウントの移行が容易になる機能がある。
+
+      #### フォロー等を移行する
+      `アカウント設定` > `インポートとエクスポート`で、フォローおよびリストの移行の操作を行える。
+
+      フォローおよびリストの移行は、専用のcsvファイルをインスタンスごとにインポート・エクスポートする形で行える。
+
+      ##### エクスポート
+      「フォロー」または「リスト」を選択し、「エクスポート」を選択する。
+
+      処理が完了すると、csvファイルが「ドライブ」に追加される。  
+      csvファイルをクリックし、ダウンロードしよう。
+
+      ##### インポート
+      「フォロー」または「リスト」を選択し、「エクスポート」を選択する。  
+      ファイル選択画面が出現するので、エクスポートしたcsvファイルを選択しよう。
+
+      インポート処理には少々時間がかかるが、時間が経てば完了するだろう、
+
+      Mastodonで生成されたフォロー・リストのcsvファイルにも対応している。
+
+      #### Mastodonの「引っ越し」機能について
+      Mastodonの「引っ越し」機能は、引っ越し先を明示し、フォロワーをそのまま移行できるという機能だ。  
+
+      Misskeyはこの機能に現状対応していないため、アカウントの移行は手動でフォロワーに伝達されたい。
+
+section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
   h3.blogstyle(itemprop="name") 動作が怪しい
   div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
