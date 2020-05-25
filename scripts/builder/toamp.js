@@ -64,6 +64,9 @@ module.exports = (htm, urlPrefix) => {
       glog(e)
     }
   })
+  document.querySelectorAll("ins").forEach(el => {
+    el.insertAdjacentHTML("beforebegin", "<amp-ad width=\"100vw\" height=\"320\" type=\"adsense\" data-ad-client=\"ca-pub-1736621122676736\" data-ad-slot=\"6683932152\" data-auto-format=\"rspv\" data-full-width=\"\"><div overflow=\"\"></div></amp-ad>")
+  })
   document.querySelectorAll("ins, script").forEach(el => el.remove())
   return document.body.innerHTML
 }

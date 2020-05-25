@@ -6,7 +6,7 @@ block _mixin
   include ../includes/_mixins.pug
 block preset
 
-html(lang=locale)
+html(lang=locale itemscope=(page.attributes.microdata_pagetype && 'itemscope') itemtype=page.attributes.microdata_pagetype)
   head
     block meta
       block must

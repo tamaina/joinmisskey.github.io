@@ -50,7 +50,7 @@ module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
     insertAdNumber += 1
 
     if ($els.length - (i + 1) >= 6 && insertAdNumber > 17) {
-      if (["h1", "h2", "h3", "h4", "h5", "h6", "hr"].includes(tagName)) {
+      if (["h1", "h2", "h3", "h4", "h5", "h6", "hr", "section"].includes(tagName)) {
         $els.eq(i).before(adTag)
         insertAdNumber = 0
       } else if (["table", "ol", "ul"].includes(tagName)) {
