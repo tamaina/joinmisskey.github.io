@@ -67,7 +67,13 @@ async function getAmpCss() {
 }
 
 function postJson(url, json) {
-  return safePost(url, (json ? { body: JSON.stringify(json), headers: { "Content-Type": "application/json" } } : {}))
+  return safePost(url, (json ? {
+    body: JSON.stringify(json),
+    headers: {
+      "Content-Type": "application/json",
+      "User-Agent": "LuckyBeast"
+    }
+  } : {}))
     .then(res => (!res ? false : res.json()))
     .catch(e => {
       glog.error(url, e)
@@ -108,7 +114,7 @@ async function getVersions(keys) {
       : Array(max - 1).fill()
         .map((v, i) => `https://api.github.com/repos/${repo}/releases?page=${i + 2}`)
         .map(url => fetch(url, { headers })))]
-      .map(resa => resa.then(res => { console.log('hai'); return res.json() }).then(json => json.map(release => {
+      .map(resa => resa.then(res => res.json()).then(json => json.map(release => {
         versions[semver.clean(release.tag_name, { loose: true })] = release.published_at
         return release.tag_name
       })).catch(e => { throw Error(e) })))).flat(1)
