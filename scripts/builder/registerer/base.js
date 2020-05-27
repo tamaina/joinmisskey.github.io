@@ -158,8 +158,7 @@ async function getInstancesInfos(instances, keys) {
 
   const metasPromises = []
   const statsPromises = []
-  const usersChartsPromises = []
-  const notesChartsPromises = []
+  const AUChartsPromises = []
   const instancesInfos = []
 
   const versionsPromise = getVersions(keys)
@@ -169,20 +168,17 @@ async function getInstancesInfos(instances, keys) {
     const instance = instances[t]
     metasPromises.push(postJson(`https://${instance.url}/api/meta`))
     statsPromises.push(postJson(`https://${instance.url}/api/stats`))
-    usersChartsPromises.push(postJson(`https://${instance.url}/api/charts/users`, { span: "day" }))
-    notesChartsPromises.push(postJson(`https://${instance.url}/api/charts/notes`, { span: "day" }))
+    AUChartsPromises.push(postJson(`https://${instance.url}/api/charts/active-users`, { span: "day" }))
   }
   const [
     metas,
     stats,
-    usersCharts,
-    notesCharts,
+    AUCharts,
     versions
   ] = await Promise.all([
     Promise.all(metasPromises),
     Promise.all(statsPromises),
-    Promise.all(usersChartsPromises),
-    Promise.all(notesChartsPromises),
+    Promise.all(AUChartsPromises),
     versionsPromise
   ])
 
@@ -190,28 +186,21 @@ async function getInstancesInfos(instances, keys) {
     const instance = instances[i]
     const meta = metas[i] || false
     const stat = stats[i] || false
-    const usersChart = usersCharts[i] || false
-    const notesChart = notesCharts[i] || false
+    const AUChart = AUCharts[i] || false
     if (meta && stat) {
       delete meta.emojis
 
       /*   インスタンスバリューの算出   */
       let value = 0
-      // 1. セマンティックバージョニングをもとに並び替え
+      // 1. リリース時間をもとに並び替え
       const date = versions[semver.clean(meta.version, { loose: true })] || versions[semver.valid(semver.coerce(meta.version))] || "2000-01-01T00:00:00Z"
       value += ((new Date(date)).getTime() / 1000 - 946684800) / 60 / 2
-      // (セマンティックバージョニングに影響があるかないか程度に色々な値を考慮する)
-      if (usersChart) {
+      // (基準値に影響があるかないか程度に色々な値を考慮する)
+      if (AUChart) {
         // 2.
-        const arr = usersChart.local.total.filter(e => e !== 0)
-        const diff = arr[0] - arr[arr.length - 1]
-        if (diff) value += (diff / arr.length) * 30
-      }
-      if (notesChart) {
-        // 3.
-        const arr = notesChart.local.total.filter(e => e !== 0)
-        const diff = arr[0] - arr[arr.length - 1]
-        if (diff) value += diff / arr.length
+        const arr = AUChart.local.count.filter(e => e !== 0)
+        // eslint-disable-next-line no-mixed-operators
+        if (arr.length > 0) value += arr.reduce((prev, current) => prev + current) / arr.length * 10
       }
 
       // 4.
