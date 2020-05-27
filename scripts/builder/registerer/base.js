@@ -14,7 +14,6 @@ const colors = require("colors")
 const glob = require("glob")
 const path = require("path")
 const AbortController = require("abort-controller").default
-const Queue = require("promise-queue")
 
 const fontawesome = require("@fortawesome/fontawesome-svg-core")
 const downloadTemp = require("../../downloadTemp")
