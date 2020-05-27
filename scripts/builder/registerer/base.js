@@ -67,24 +67,34 @@ async function getAmpCss() {
   return ampcss
 }
 
+let postingNumber = 0
+
 function safePost(url, options) {
-  const controller = new AbortController()
-  const timeout = setTimeout(
-    () => { controller.abort() },
-    60000
-  )
-  glog("POST start", url)
-  return fetch(url, extend(true, options, { method: "POST", signal: controller.signal })).then(
-    res => {
-      glog("POST finish", url)
-      if (res && res.status === 200) return res
-      return false
-    },
-    () => {
-      glog("POST failed", url)
-      return false
-    }
-  ).finally(() => clearTimeout(timeout))
+  return new Promise(resolve => {
+    setTimeout(() => {
+      postingNumber += 1
+      const controller = new AbortController()
+      const timeout = setTimeout(
+        () => { controller.abort() },
+        3000
+      )
+      glog("POST start", url)
+      return fetch(url, extend(true, options, { method: "POST", signal: controller.signal })).then(
+        res => {
+          glog("POST finish", url)
+          if (res && res.status === 200) return resolve(res)
+          return resolve(false)
+        },
+        () => {
+          glog("POST failed", url)
+          return resolve(false)
+        }
+      ).finally(() => {
+        postingNumber -= 1
+        clearTimeout(timeout)
+      })
+    }, 50 * postingNumber)
+  })
 }
 
 function postJson(url, json) {
