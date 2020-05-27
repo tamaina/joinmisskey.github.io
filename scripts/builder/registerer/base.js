@@ -71,7 +71,7 @@ function safePost(url, options) {
   const controller = new AbortController()
   const timeout = setTimeout(
     () => { controller.abort() },
-    120000
+    600000
   )
   glog("POST start", url)
   return fetch(url, extend(true, options, { method: "POST", signal: controller.signal })).then(
@@ -187,7 +187,7 @@ async function getInstancesInfos(instances, keys) {
     const meta = metas[i] || false
     const stat = stats[i] || false
     const AUChart = AUCharts[i] || false
-    if (meta && stat) {
+    if (meta && stat && AUChart) {
       delete meta.emojis
 
       /*   インスタンスバリューの算出   */
