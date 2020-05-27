@@ -14,6 +14,7 @@ const colors = require("colors")
 const glob = require("glob")
 const path = require("path")
 const AbortController = require("abort-controller").default
+const Queue = require("promise-queue")
 
 const fontawesome = require("@fortawesome/fontawesome-svg-core")
 const downloadTemp = require("../../downloadTemp")
@@ -67,44 +68,41 @@ async function getAmpCss() {
   return ampcss
 }
 
-let postingNumber = 0
-
 function safePost(url, options) {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      postingNumber += 1
-      const controller = new AbortController()
-      const timeout = setTimeout(
-        () => { controller.abort() },
-        3000
-      )
-      glog("POST start", url)
-      return fetch(url, extend(true, options, { method: "POST", signal: controller.signal })).then(
-        res => {
-          glog("POST finish", url)
-          if (res && res.status === 200) return resolve(res)
-          return resolve(false)
-        },
-        () => {
-          glog("POST failed", url)
-          return resolve(false)
-        }
-      ).finally(() => {
-        postingNumber -= 1
-        clearTimeout(timeout)
-      })
-    }, 50 * postingNumber)
+  const controller = new AbortController()
+  const timeout = setTimeout(
+    () => { controller.abort() },
+    30000
+  )
+  glog("POST start", url)
+  return fetch(url, extend(true, options, { method: "POST", signal: controller.signal })).then(
+    res => {
+      glog("POST finish", url)
+      if (res && res.status === 200) return res
+      return false
+    },
+    e => {
+      glog("POST failed", url, e.errno, e.type)
+      return false
+    }
+  ).finally(() => {
+    clearTimeout(timeout)
   })
 }
 
-function postJson(url, json) {
+async function postJson(url, json) {
   return safePost(url, (json ? {
     body: JSON.stringify(json),
     headers: {
       "Content-Type": "application/json",
       "User-Agent": "LuckyBeast"
     }
-  } : {}))
+  } : {
+    headers: {
+      "Content-Type": "application/json",
+      "User-Agent": "LuckyBeast"
+    }
+  }))
     .then(res => (!res ? false : res.json()))
     .catch(e => {
       glog.error(url, e)
@@ -166,6 +164,7 @@ async function getInstancesInfos(instances, keys) {
   const instancesInfos = []
 
   const versionsPromise = getVersions(keys)
+  // const queue = new Queue(8)
   // eslint-disable-next-line no-restricted-syntax
   for (let t = 0; t < instances.length; t += 1) {
     const instance = instances[t]
@@ -201,7 +200,7 @@ async function getInstancesInfos(instances, keys) {
       let value = 0
       // 1. セマンティックバージョニングをもとに並び替え
       const date = versions[semver.clean(meta.version, { loose: true })] || versions[semver.valid(semver.coerce(meta.version))] || "2000-01-01T00:00:00Z"
-      value += (new Date(date)).getTime() / 1000 - 946684800
+      value += ((new Date(date)).getTime() / 1000 - 946684800) / 60 / 2
       // (セマンティックバージョニングに影響があるかないか程度に色々な値を考慮する)
       if (usersChart) {
         // 2.
