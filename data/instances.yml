@@ -445,6 +445,8 @@
   langs: ['en']
 - url: ima.cursed.cat
   langs: ['en']
+- url subcon.pub
+  langs: ['en']
 #
 ##
 #########################################
