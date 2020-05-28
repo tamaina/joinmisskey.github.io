@@ -300,6 +300,8 @@
   langs: ['ja']
 - url: m1.cryo.jp
   langs: ['ja']
+- url: m.anirloli.dev
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -444,6 +446,8 @@
 - url: social.ucode.space
   langs: ['en']
 - url: ima.cursed.cat
+  langs: ['en']
+- url: subcon.pub
   langs: ['en']
 #
 ##
