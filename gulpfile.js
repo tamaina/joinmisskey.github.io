@@ -83,6 +83,9 @@ const keys = (() => {
       patreon: {
         campaign: process.env.PATREON_CAMPAIGN,
         bearer: process.env.PATREON_BEARER
+      },
+      github: {
+        bearer: process.env.LB_TOKEN
       }
     }
   } else {

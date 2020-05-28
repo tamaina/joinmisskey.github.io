@@ -39,6 +39,7 @@
     "@types/twemoji": "^12.1.0",
     "@types/ua-parser-js": "^0.7.33",
     "@types/workbox-window": "^4.3.3",
+    "abort-controller": "^3.0.0",
     "autoprefixer": "^9.7.2",
     "bootstrap": "^4.4.1",
     "cafy": "^15.1.1",
