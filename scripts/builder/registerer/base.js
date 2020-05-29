@@ -13,18 +13,20 @@ const glog = require("fancy-log")
 const colors = require("colors")
 const glob = require("glob")
 const path = require("path")
+const AbortController = require("abort-controller").default
 
 const fontawesome = require("@fortawesome/fontawesome-svg-core")
 const downloadTemp = require("../../downloadTemp")
 fontawesome.library.add(require("@fortawesome/free-solid-svg-icons").fas, require("@fortawesome/free-regular-svg-icons").far, require("@fortawesome/free-brands-svg-icons").fab)
 
-async function getContributors() {
+async function getContributors(keys) {
   try {
     const res = await fetch(
       "https://api.github.com/repos/syuilo/misskey/contributors",
       {
         headers: {
-          "User-Agent": "LuckyBeast"
+          "User-Agent": "LuckyBeast",
+          Authorization: `bearer ${keys.github.bearer}`
         }
       }
     )
@@ -65,78 +67,140 @@ async function getAmpCss() {
   return ampcss
 }
 
-function postJson(url, json) {
-  return safePost(url, (json ? { body: JSON.stringify(json), headers: { 'Content-Type': 'application/json' } } : {}))
-    .then(res => !res ? false : res.json())
+function safePost(url, options) {
+  const controller = new AbortController()
+  const timeout = setTimeout(
+    () => { controller.abort() },
+    600000
+  )
+  glog("POST start", url)
+  return fetch(url, extend(true, options, { method: "POST", signal: controller.signal })).then(
+    res => {
+      glog("POST finish", url)
+      if (res && res.status === 200) return res
+      return false
+    },
+    e => {
+      glog("POST failed", url, e.errno, e.type)
+      return false
+    }
+  ).finally(() => {
+    clearTimeout(timeout)
+  })
+}
+
+async function postJson(url, json) {
+  return safePost(url, (json ? {
+    body: JSON.stringify(json),
+    headers: {
+      "Content-Type": "application/json",
+      "User-Agent": "LuckyBeast"
+    }
+  } : {
+    headers: {
+      "Content-Type": "application/json",
+      "User-Agent": "LuckyBeast"
+    }
+  }))
+    .then(res => (!res ? false : res.json()))
     .catch(e => {
       glog.error(url, e)
       return false
     })
 }
 
-function safePost(url, options) {
-  return fetch(url, extend(true, options, { method: 'POST' })).then(
-    res => {
-      if (res && res.status === 200) return res
-      return false
-    }
-  ).catch(() => false)
+async function getVersions(keys) {
+  glog("Getting Misskey Versions")
+  const ghRepos = ["mei23/misskey", "Groundpolis/Groundpolis", "346design/twista.283.cloud", "syuilo/misskey"]
+  const maxRegExp = /<https:\/\/.*?>; rel="next", <https:\/\/.*?\?page=(\d+)>; rel="last"/
+  const versions = {}
+  const headers = {
+    "User-Agent": "LuckyBeast",
+    Authorization: `bearer ${keys.github.bearer}`
+  }
+
+  await Promise.all(ghRepos.map(async repo => {
+    glog(repo, "Start")
+    const res1 = await fetch(`https://api.github.com/repos/${repo}/releases`, { headers })
+    const link = res1.headers.get("link")
+    const max = link && Math.min(Number(maxRegExp.exec(link)[1]), repo === "syuilo/misskey" ? 99999 : 3)
+
+    const resp = (await Promise.all([Promise.resolve(res1), ...(!link ? []
+      : Array(max - 1).fill()
+        .map((v, i) => `https://api.github.com/repos/${repo}/releases?page=${i + 2}`)
+        .map(url => fetch(url, { headers })))]
+      .map(resa => resa.then(
+        res => res.json(),
+        e => {
+          glog(repo, "Error(fetch)", e)
+          Promise.resolve([])
+        }
+      ).then(
+        json => json.map(release => {
+          glog("Misskey Version", release.tag_name)
+          versions[semver.clean(release.tag_name, { loose: true })] = release.published_at
+          return release.tag_name
+        }),
+        e => {
+          glog(repo, "Error(json)", e)
+          Promise.resolve([])
+        }
+      ).catch(e => { throw Error(e) })))).flat(1)
+    glog(repo, "Finish", resp.length)
+  }))
+
+  glog("Got Misskey Versions")
+  return versions
 }
 
-async function getInstancesInfos(instances) {
+async function getInstancesInfos(instances, keys) {
+  glog("Getting Instances' Infos")
+
   const metasPromises = []
   const statsPromises = []
-  const usersChartsPromises = []
-  const notesChartsPromises = []
+  const AUChartsPromises = []
   const instancesInfos = []
+
+  const versionsPromise = getVersions(keys)
+  // const queue = new Queue(8)
   // eslint-disable-next-line no-restricted-syntax
   for (let t = 0; t < instances.length; t += 1) {
     const instance = instances[t]
     metasPromises.push(postJson(`https://${instance.url}/api/meta`))
     statsPromises.push(postJson(`https://${instance.url}/api/stats`))
-    usersChartsPromises.push(postJson(`https://${instance.url}/api/charts/users`, { span: "day" }))
-    notesChartsPromises.push(postJson(`https://${instance.url}/api/charts/notes`, { span: "day" }))
+    AUChartsPromises.push(postJson(`https://${instance.url}/api/charts/active-users`, { span: "day" }))
   }
   const [
     metas,
     stats,
-    usersCharts,
-    notesCharts
+    AUCharts,
+    versions
   ] = await Promise.all([
     Promise.all(metasPromises),
     Promise.all(statsPromises),
-    Promise.all(usersChartsPromises),
-    Promise.all(notesChartsPromises)
+    Promise.all(AUChartsPromises),
+    versionsPromise
   ])
 
   for (let i = 0; i < instances.length; i += 1) {
     const instance = instances[i]
     const meta = metas[i] || false
     const stat = stats[i] || false
-    const usersChart = usersCharts[i] || false
-    const notesChart = notesCharts[i] || false
-    if (meta && stat) {
+    const AUChart = AUCharts[i] || false
+    if (meta && stat && AUChart) {
       delete meta.emojis
 
       /*   インスタンスバリューの算出   */
       let value = 0
-      // 1. セマンティックバージョニングをもとに並び替え (独自拡張の枝番は除去)
-      const v = semver.valid(semver.coerce(meta.version))
-      const varr = v ? v.split(".") : [0, 0, 0]
-      value += (Number(varr[0]) * 16 * 150 + Number(varr[1]) * 16 + Number(varr[0])) * 750
-      if (meta.version && meta.version.split("-").length > 1) value += 5
-      // (セマンティックバージョニングに影響があるかないか程度に色々な値を考慮する)
-      if (usersChart) {
+      // 1. リリース時間をもとに並び替え
+      const date = versions[semver.clean(meta.version, { loose: true })] || versions[semver.valid(semver.coerce(meta.version))] || "2000-01-01T00:00:00Z"
+      value += ((new Date(date)).getTime() / 1000 - 946684800) / 60 / 2
+      // (基準値に影響があるかないか程度に色々な値を考慮する)
+      if (AUChart) {
         // 2.
-        const arr = usersChart.local.total.filter(e => e !== 0)
-        const diff = arr[0] - arr[arr.length - 1]
-        if (diff) value += (diff / arr.length) * 15
-      }
-      if (notesChart) {
-        // 3.
-        const arr = notesChart.local.total.filter(e => e !== 0)
-        const diff = arr[0] - arr[arr.length - 1]
-        if (diff) value += (diff / arr.length) * 0.6
+        const arr = AUChart.local.count.filter(e => e !== 0)
+        // eslint-disable-next-line no-mixed-operators
+        if (arr.length > 0) value += arr.reduce((prev, current) => prev + current) / arr.length * 10
       }
 
       // 4.
@@ -148,15 +212,15 @@ async function getInstancesInfos(instances) {
 
       // 7.
       if (meta.features) {
-        if (meta.features.recaptcha || meta.features.hcaptcha) value += 64
+        if (meta.features.recaptcha || meta.features.hcaptcha) value += 3600
         let v2 = 0
         // eslint-disable-next-line no-restricted-syntax
         for (let t = 0; t < mkConnectServices.length; t += 1) {
           const service = mkConnectServices[t]
-          if (meta.features[service.toLowerCase()]) { v2 += 16 }
+          if (meta.features[service.toLowerCase()]) { v2 += 500 }
         }
-        if (v2 > 0) value += v2 + 16
-        if (meta.features.serviceWorker) value += 16
+        if (v2 > 0) value += v2 + 500
+        if (meta.features.serviceWorker) value += 3600
       }
 
       instancesInfos.push(extend(true, instance, {
@@ -170,6 +234,7 @@ async function getInstancesInfos(instances) {
       instancesInfos.push(extend(true, { isAlive: false, value: 0 }, instance))
     }
   }
+  glog("Got Instances' Infos")
   return instancesInfos.sort((a, b) => {
     if (!a.isAlive && b.isAlive) return 1
     if (a.isAlive && !b.isAlive) return -1
@@ -184,7 +249,7 @@ module.exports = async (site, keys, tempDir, instances) => {
   await mkdirp(`${tempDir}github/`)
 
   /* get contrbutors from GitHub API */
-  const contributors = await getContributors()
+  const contributors = await getContributors(keys)
 
   // eslint-disable-next-line no-restricted-syntax
   for (let t = 0; t < contributors.length; t += 1) {
@@ -265,7 +330,7 @@ module.exports = async (site, keys, tempDir, instances) => {
   }
 
   await mkdirp(`${tempDir}instance-banners/`)
-  const instancesInfos = await getInstancesInfos(instances)
+  const instancesInfos = await getInstancesInfos(instances, keys)
 
   const instancesBannersPromises = instancesInfos
     .filter(instance => instance.isAlive && instance.meta.bannerUrl)

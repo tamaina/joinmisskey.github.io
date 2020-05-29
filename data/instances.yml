@@ -104,8 +104,6 @@
   langs: ['ja']
 - url: emoji.msky.work
   langs: ['ja']
-- url: boonchat.xyz
-  langs: ['ja']
 - url: misskey.rip
   langs: ['ja']
 - url: twista.283.cloud
@@ -262,7 +260,7 @@
   langs: ['ja']
 - url: misskey.open-w.net
   langs: ['ja']
-- url: edge.groundpolis.app
+- url: groundpolis.app
   langs: ['ja']
 - url: miwkey.miwpayou0808.info
   langs: ['ja']
@@ -295,6 +293,14 @@
 - url: mk.iaia.moe
   langs: ['ja']
 - url: mid.cryo.jp
+  langs: ['ja']
+- url: tanukey.work
+  langs: ['ja']
+- url: misskey.endaaman.me
+  langs: ['ja']
+- url: m1.cryo.jp
+  langs: ['ja']
+- url: m.anirloli.dev
   langs: ['ja']
 #
 - url: msky.cafe
@@ -437,6 +443,12 @@
   langs: ['en']
 - url: animeisgay.com
   langs: ['en']
+- url: social.ucode.space
+  langs: ['en']
+- url: ima.cursed.cat
+  langs: ['en']
+- url: subcon.pub
+  langs: ['en']
 #
 ##
 #########################################
@@ -480,6 +492,8 @@
 - url: makoto.yurisora.com
   langs: ['zh', 'en']
 - url: misskey.idollar.moe
+  langs: ['zh', 'en']
+- url: social.qaq.wiki
   langs: ['zh', 'en']
 #
 ##

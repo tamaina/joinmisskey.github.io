@@ -13,11 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [13.x]
+        node-version: [14.x]
     env:
       CI: true
       PATREON_BEARER: ${{ secrets.PATREON_BARER }}
       PATREON_CAMPAIGN: ${{ secrets.PATREON_CAMPAIGN }}
+      LB_TOKEN: ${{ secrets.LB_TOKEN }}
     steps:
     - name: Post Starting
       run: |
