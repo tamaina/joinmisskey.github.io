@@ -91,7 +91,7 @@ https://misskey.example.com/miauth/19bbf45d-5ae7-4c87-b33e-2933b3eec683?name=Mis
 - `user`: ユーザーの情報
 
 ```javascript
-axios.post("https://misskey.example.com/miauth/19bbf45d-5ae7-4c87-b33e-2933b3eec683/check")
+axios.post("https://misskey.example.com/api/miauth/19bbf45d-5ae7-4c87-b33e-2933b3eec683/check")
   .then(({token}) => console.log(token))
 ```
 
