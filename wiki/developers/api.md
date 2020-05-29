@@ -84,7 +84,7 @@ https://misskey.example.com/miauth/19bbf45d-5ae7-4c87-b33e-2933b3eec683?name=Mis
 ```
 
 #### 3: アクセストークンを取得
-ユーザーが連携を許可した後、`/miauth/19bbf45d-5ae7-4c87-b33e-2933b3eec683/check`（`19bbf...`は自分のセッションIDに置き換える）に**POST**すると、レスポンスとしてアクセストークンを含むJSONが返る。
+ユーザーが連携を許可した後、`/api/miauth/19bbf45d-5ae7-4c87-b33e-2933b3eec683/check`（`19bbf...`は自分のセッションIDに置き換える）に**POST**すると、レスポンスとしてアクセストークンを含むJSONが返る。
 
 レスポンスに含まれるプロパティ:
 - `token`: i（アクセストークン）
