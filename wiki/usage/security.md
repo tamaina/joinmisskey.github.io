@@ -4,8 +4,7 @@ description: アカウントのパスワードを変更したり、アカウン�
 layout: wiki
 rank: 12
 prev: /wiki/usage/integration
-next: /wiki/usage/search
-#theme
+next: /wiki/usage/theme
 ---
 `アカウント設定`でセキュリティに関する設定を行える。
 
