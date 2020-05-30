@@ -302,6 +302,8 @@
   langs: ['ja']
 - url: m.anirloli.dev
   langs: ['ja']
+- url: misskey.wcdi.tech
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
