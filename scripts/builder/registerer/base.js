@@ -194,7 +194,7 @@ async function getInstancesInfos(instances, keys) {
       let value = 0
       // 1. リリース時間をもとに並び替え
       const date = versions[semver.clean(meta.version, { loose: true })] || versions[semver.valid(semver.coerce(meta.version))] || "2000-01-01T00:00:00Z"
-      value += ((new Date(date)).getTime() / 1000 - 946684800) / 60 / 2
+      value += ((new Date(date)).getTime() / 1000 - 946684800) / 60 / 10
       // (基準値に影響があるかないか程度に色々な値を考慮する)
       if (AUChart) {
         // 2.
