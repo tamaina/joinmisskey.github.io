@@ -129,16 +129,16 @@ async function getVersions(keys) {
       : Array(max - 1).fill()
         .map((v, i) => `https://api.github.com/repos/${repo}/releases?page=${i + 2}`)
         .map(url => fetch(url, { headers })))]
-      .map(resa => resa.then(
+      .map((resa, i) => resa.then(
         res => res.json(),
         e => {
           glog(repo, "Error(fetch)", e)
           Promise.resolve([])
         }
       ).then(
-        json => json.map(release => {
+        json => json.map((release, j) => {
           glog("Misskey Version", release.tag_name)
-          versions[semver.clean(release.tag_name, { loose: true })] = release.published_at
+          versions[semver.clean(release.tag_name, { loose: true })] = (i - 1) * 30 + j
           return release.tag_name
         }),
         e => {
@@ -192,9 +192,9 @@ async function getInstancesInfos(instances, keys) {
 
       /*   インスタンスバリューの算出   */
       let value = 0
-      // 1. リリース時間をもとに並び替え
-      const date = versions[semver.clean(meta.version, { loose: true })] || versions[semver.valid(semver.coerce(meta.version))] || "2000-01-01T00:00:00Z"
-      value += ((new Date(date)).getTime() / 1000 - 946684800) / 60 / 10
+      // 1. バージョンのリリース順をもとに並び替え
+      const v = versions[semver.clean(meta.version, { loose: true })] || versions[semver.valid(semver.coerce(meta.version))] || 999
+      value += 100000 - v * 7200
       // (基準値に影響があるかないか程度に色々な値を考慮する)
       if (AUChart) {
         // 2.
