@@ -65,10 +65,10 @@ $toppage-scnshts-3-sm: translateX(6vw) translateY(50vh)
       word-break: keep-all
       text-shadow: #f7f7f7 2px 0px, #f7f7f7 -2px 0px, #f7f7f7 0px -2px, #f7f7f7 0px 2px, #f7f7f7 2px 2px , #f7f7f7 -2px 2px, #f7f7f7 2px -2px, #f7f7f7 -2px -2px, #f7f7f7 1px 2px, #f7f7f7 -1px 2px, #f7f7f7 1px -2px, #f7f7f7 -1px -2px, #f7f7f7 2px 1px, #f7f7f7 -2px 1px, #f7f7f7 2px -1px, #f7f7f7 -2px -1px
 
-      @media (max-width: map-get($grid-breakpoints, md))
+      @media (max-width: map-get($grid-breakpoints, md) - .02)
         transform: translateX(6vw) translateY(6vh)
 
-      @media (max-width: map-get($grid-breakpoints, sm))
+      @media (max-width: map-get($grid-breakpoints, sm) - .02)
         max-width: 88vw
         transform: translateX(6vw) translateY(4.5vh)
 
@@ -115,10 +115,10 @@ $toppage-scnshts-3-sm: translateX(6vw) translateY(50vh)
               display: block !important
               animation-name: toppage-scnshts-2
 
-            @media (max-width: map-get($grid-breakpoints, xl))
+            @media (max-width: map-get($grid-breakpoints, xl) - .02)
               width: 80vw
 
-            @media (max-width: map-get($grid-breakpoints, sm))
+            @media (max-width: map-get($grid-breakpoints, sm) - .02)
               width: 120vw
               transform: $toppage-scnshts-2-sm
               &.show
@@ -137,12 +137,12 @@ $toppage-scnshts-3-sm: translateX(6vw) translateY(50vh)
               display: block !important
               animation-name: toppage-scnshts-3
 
-            @media (max-width: map-get($grid-breakpoints, xl))
+            @media (max-width: map-get($grid-breakpoints, xl) - .02)
               transform: $toppage-scnshts-3-xl
               &.show
                 animation-name: toppage-scnshts-3-xl
 
-            @media (max-width: map-get($grid-breakpoints, sm))
+            @media (max-width: map-get($grid-breakpoints, sm) - .02)
               width: 60vw
               transform: $toppage-scnshts-3-sm
               &.show
@@ -158,10 +158,10 @@ $toppage-scnshts-3-sm: translateX(6vw) translateY(50vh)
           z-index: 4
           filter: drop-shadow(0px 0px 1.5px rgba(0,0,0,.25))
 
-          @media (max-width: map-get($grid-breakpoints, md))
+          @media (max-width: map-get($grid-breakpoints, md) - .02)
             right: -20vw
 
-          @media (max-width: map-get($grid-breakpoints, sm))
+          @media (max-width: map-get($grid-breakpoints, sm) - .02)
             height: 60vh
             bottom: 0
 
