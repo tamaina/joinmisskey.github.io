@@ -304,6 +304,8 @@
   langs: ['ja']
 - url: misskey.wcdi.tech
   langs: ['ja']
+- url: misskey.carbontwelve.jp
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -407,8 +409,6 @@
   langs: ['en']
 - url: misskey.junna.moe
   langs: ['en']
-- url: k.kajalinifi.de
-  langs: ['en']
 - url: gensoukyou.jp.net
   langs: ['en']
 - url: ms.neko.bar
@@ -450,6 +450,8 @@
 - url: ima.cursed.cat
   langs: ['en']
 - url: subcon.pub
+  langs: ['en']
+- url: madholi.cc
   langs: ['en']
 #
 ##
@@ -496,6 +498,8 @@
 - url: misskey.idollar.moe
   langs: ['zh', 'en']
 - url: social.qaq.wiki
+  langs: ['zh', 'en']
+- url: qpomelo.cc
   langs: ['zh', 'en']
 #
 ##
