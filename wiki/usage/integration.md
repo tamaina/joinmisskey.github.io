@@ -1,6 +1,6 @@
 ---
-title: 外部サービス連携・Eメール設定
-description: あなたのアカウントと他のサービスのアカウントやEメールアドレスを関連付けできる。
+title: 外部サービス連携
+description: Misskeyアカウントと他のサービスのアカウントとを関連付けできる。
 layout: wiki
 rank: 11
 prev: /wiki/usage/drive
