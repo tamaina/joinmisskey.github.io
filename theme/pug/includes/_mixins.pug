@@ -72,7 +72,7 @@ mixin lis_of_dir(pathf, $option)
     bpages.sort( (a, b) => { return ( a.meta.permalink > b.meta.permalink ) ? 1 : -1 } )
     bpages.sort( (a, b) => a.attributes.rank - b.attributes.rank )
   each rpage in bpages
-    li.mb-1
+    li.mb-2
       a.d-block(href=`${site.url.path}${rpage.meta.permalink}`)
         div=rpage.attributes.title
         div.small.lh-12=rpage.attributes.description
