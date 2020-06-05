@@ -47,7 +47,8 @@ module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
       return
     }
 
-    insertAdNumber += 1
+    if (["section"].includes(tagName)) insertAdNumber += $els.eq(i).children().length
+    else insertAdNumber += 1
 
     if ($els.length - (i + 1) >= 6 && insertAdNumber > 17) {
       if (["h1", "h2", "h3", "h4", "h5", "h6", "hr", "section"].includes(tagName)) {
