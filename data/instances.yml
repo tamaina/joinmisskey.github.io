@@ -15,9 +15,9 @@
   langs: ['ja']
   notSuspended: true
 - url: misskey.dev
-  langs: ['ja', 'en', 'fr', 'ko', 'zh']
+  langs: ['ja', 'en', 'fr', 'ko', 'zh', 'de']
 - url: misskey.xyz
-  langs: ['ja', 'en', 'fr', 'ko', 'zh']
+  langs: ['ja', 'en', 'fr', 'ko', 'zh', 'de']
 - url: yuzulia.xyz
   langs: ['en', 'ja']
 - url: s.alien.moe

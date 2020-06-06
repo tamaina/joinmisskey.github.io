@@ -1,10 +1,11 @@
 {
-    "locales": ["ja", "en", "fr"],
+    "locales": ["ja", "en", "fr", "de"],
     "i18n": {
         "nihongo": {
             "ja": "日本語",
             "en": "English",
-            "fr": "Français"
+            "fr": "Français",
+            "de": "Deutsch"
         },
         "home": {
             "ja": "ホーム",
