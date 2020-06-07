@@ -1,6 +1,6 @@
 ---
 title: Credit
-description: We post people who contributed to Misskey.
+description: We post people who contribute to Misskey.
 styleRequires: ["credit"]
 ---
 -
@@ -11,7 +11,7 @@ styleRequires: ["credit"]
 .bg-white.pt-4.pb-5
   .container-fluid
     h1.text-center.pt-4.pb-2 Credit
-    p.text-center.mb-4 We post people who contributed to Misskey.
+    p.text-center.mb-4 We post people who contribute to Misskey.
 
     h2#collaborators.text-center.py-5 Collaborators
     #collaborators_list.d-flex.flex-wrap.justify-content-center.mb-5
@@ -36,14 +36,14 @@ styleRequires: ["credit"]
       .container.py-5
         hr.my-5.bg-primary
       h2#contributors.text-center.pb-2 Patrons
-      p.text-center.mb-4 People who donates continuously in #[a(href="https://www.patreon.com/syuilo" target="_blank" rel="noopener") Patreon]
+      p.text-center.mb-4 People who continuously donate on #[a(href="https://www.patreon.com/syuilo" target="_blank" rel="noopener") Patreon]
       #patrons_list
           each tier, lv in patrons
             if(tier.members.length > 0)
               div(id=`patrons_list_${patrons.length - 1 - lv}`).patrons-list-tier
                 h3.text-center.pt-5.pb-2
                   =!!tier.titles ? (tier.titles[locale] || tier.titles.ja || tier.title) : tier.title
-                  |  
+                  |
                   span.small.font-weight-light (#{tier.amountCents > 0 ? `$${tier.amountCents / 100} per month, ` : ""}#{tier.members.length} patrons)
                 div.patrons-list-members.d-flex.flex-wrap.justify-content-center
                   each patron in tier.members
