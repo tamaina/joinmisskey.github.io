@@ -157,7 +157,7 @@ styleRequires: ["top"]
               .s2-card-icon.fa-2x: +fa_fw('calculator', 'fas')
               .s2-card-text
                 h4 Widgets
-                p.mb-0 A small widget displays various information. You can arranges the widgets freely.
+                p.mb-0 A small widget displays various information. You can arrange the widgets freely.
             //- img(src="/files/images/imports/2019/03/widgets.svg")
         article.col-12.col-md-6
           .card.scrollts.scrollts-fadeInLeftSmall
@@ -185,7 +185,7 @@ styleRequires: ["top"]
               .s2-card-text
                 h4 Fediverse
                 p.mb-0
-                  | Since Misskey has a server-to-server communication function called ActivityPub,
+                  | Since Misskey uses a server-to-server communication protocol called ActivityPub,
                   | you can follow users from different instances and #[a(href="https://fediverse.gitlab.io/" target="_blank" rel="noopener") other services], where you can see and react to notes.
         article.col-12.col-md-6
           .card.scrollts.scrollts-fadeInLeftSmall
@@ -206,7 +206,7 @@ styleRequires: ["top"]
           +fa_fw('github', 'fab')
           | GitHub
         a(href="https://crowdin.com/project/misskey" target="_blank" rel="noopener").btn.btn-lg.btn-warning.scrollts.scrollts-zoomIn
-          | CrowdIn (to translate)
+          | Crowdin (to translate)
 
       .row.mt-45
         article.col-12.col-md-6
@@ -232,14 +232,14 @@ styleRequires: ["top"]
   section#section_3.bg-dark.text-white: .container
     h2.text-center Getting started
     p.text-center Register your account at any instance that you like!
-    p.text-center You can talk to users in other instances. The instance URL is part of your ID.
+    p.text-center You can talk to users from other instances. The instance URL is part of your ID.
     hr.my-4
     h3#instances List of recommended instances
     +instancesList('selected', ['light', 'white-50', 'dark', 'dark'], 'fadeInUp')
     p.text-center.my-2
       a(href="./wiki/instances/").scrollts-nomargin.btn.btn-primary.btn-sm See more...
 
-    p.text-white-50.pt-2 We always add new instances. If you want us to add any to the list, please send a Note to @joinmisskey@misskey.io.
+    p.text-white-50.pt-2 We are always adding new instances. If you want us to add any to the list, please send a Note to @joinmisskey@misskey.io.
 
   section#section_6.bg-white: .container.text-center.text-dark
     h2 Misskey has been featured in internet news! (in japanese only)
