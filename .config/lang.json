@@ -57,7 +57,7 @@
         },
         "search_placeholder": {
             "ja": "検索語句を入力",
-            "en": "検索語句を入力",
+            "en": "Enter search term",
             "fr": "検索語句を入力",
             "de": "Suchbegriff eingeben"
         },
@@ -69,7 +69,7 @@
         },
         "the_other_backers": {
             "ja": "ティア外",
-            "en": "Out of Tiers",
+            "en": "Others",
             "fr": "Hors normes",
             "de": "Andere"
         },
@@ -87,13 +87,13 @@
         },
         "instance_localTimeLineDisabled": {
             "ja": "ローカルタイムライン無効",
-            "en": "Local time line is disabled.",
+            "en": "Local timeline is disabled.",
             "fr": "Le fil local est désactivé.",
             "de": "Lokale Chronik deaktiviert."
         },
         "instance_localTimeLineEnabled": {
             "ja": "ローカルタイムライン有効",
-            "en": "Local time line is enabled.",
+            "en": "Local timeline is enabled.",
             "fr": "Le fil local est activé.",
             "de": "Lokale Chronik aktiviert."
         },
@@ -123,13 +123,13 @@
         },
         "instance_objectStorageEnabled": {
             "ja": "オブジェクトストレージを利用",
-            "en": "This instance using object storage.",
+            "en": "This instance uses object storage.",
             "fr": "Cette instance utilise le stockage d'objets.",
             "de": "Diese Instanz verwendert Objektspeicher."
         },
         "instance_objectStorageDisabled": {
             "ja": "オブジェクトストレージを不使用",
-            "en": "This instance not using object storage.",
+            "en": "This instance does not use object storage.",
             "fr": "Cette instance n'utilise pas le stockage d'objets.",
             "de": "Diese Instanz verwendert keinen Objektspeicher."
         },
@@ -147,26 +147,26 @@
         },
         "instance_serviceWorkerEnabled": {
             "ja": "通知を常時配信可能",
-            "en": "Service worker is working.",
+            "en": "Service worker is available.",
             "fr": "Le service worker est fonctionnel.",
             "de": "Service worker ist verfügbar."
 
         },
         "instance_serviceWorkerDisabled": {
             "ja": "通知を常時配信不可",
-            "en": "Service worker is not working.",
+            "en": "Service worker is not available.",
             "fr": "Le service worker n'est pas fonctionnel.",
             "de": "Service worker ist nicht verfügbar."
         },
         "instance_users": {
             "ja": "登録アカウント数",
-            "en": "Accounts count",
+            "en": "Total amount of accounts",
             "fr": "Comptes",
             "de": "Gesamtanzahl an Accounts"
         },
         "instance_notes": {
             "ja": "ノートの数",
-            "en": "Notes count",
+            "en": "Total amount of notes",
             "fr": "Notes",
             "de": "Gesamtanzahl an Notizen"
         },
@@ -178,7 +178,7 @@
         },
         "instance_driveCapacityPerLocalUser": {
             "ja": "一人当たりドライブ容量",
-            "en": "Drive capacity per a local user",
+            "en": "Drive capacity per local user",
             "fr": "Capacité du lecteur de stockage par utilisateur local",
             "de": "Maximale Drive-Kapazität pro lokaler Benutzer"
         },
@@ -190,7 +190,7 @@
         },
         "instance_notSuspended": {
             "ja": "※このインスタンスの情報は技術的制約またはその特殊性により取得できません",
-            "en": "* This instance may be alive but cannot be got informations due to technical issues or its specialty.",
+            "en": "* This instance may be alive but cannot be contacted due to technical issues or changes to its functionality.",
             "fr": "* Les détails concernant cette instance ne peuvent être obtenus en raison de limites techniques ou de particularités propres à l'instance",
             "de": "* Diese Instanz ist möglicherweise aktiv, aber kann wegen technischen Schwierigkeiten oder Modifikationen nicht kontaktiert werden."
         },
