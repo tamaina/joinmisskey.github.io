@@ -306,6 +306,8 @@
   langs: ['ja']
 - url: misskey.carbontwelve.jp
   langs: ['ja']
+- url: misskey.osyakasyama.me
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -453,6 +455,14 @@
   langs: ['en']
 - url: madholi.cc
   langs: ['en']
+- url: spam.social
+  langs: ['en']
+- url: mk.freespeech.host
+  langs: ['en']
+- url: m.vpnbanzai.eu.org
+  langs: ['en']
+- url: alpha.cliq.network
+  langs: ['en']
 #
 ##
 #########################################
@@ -501,6 +511,8 @@
   langs: ['zh', 'en']
 - url: qpomelo.cc
   langs: ['zh', 'en']
+- url: nya.one
+  langs: ['zh', 'en']
 #
 ##
 #########################################
@@ -528,3 +540,10 @@
   langs: ['de', 'en']
 - url: misskey.luciferi.st
   langs: ['de', 'en']
+#
+##
+#########################################
+##
+#
+- url: ketr.am
+  langs: ['th', 'en']
