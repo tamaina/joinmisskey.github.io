@@ -1,13 +1,12 @@
 ---
-title: 更新履歴
-description: Misskeyの更新内容をお知らせ
+title: Änderungshistorien
+description: Benachrichtigungen über Misskey Aktualisierungen
 layout: blog-index
 query:
   category: 更新
   root: /blog/
 ---
-人間が記事を作成しているため、不正確な記述あるかもしれません。正確な履歴は[Changelog](https://github.com/syuilo/misskey/blob/develop/CHANGELOG.md)もしくはGitソースコードを直接ご覧ください。  
-基本的に何回かのリリースをまとめて記事にしていますので、速報性はありません。  
-ご了承ください。
+Da diese Artikel per Hand von Menschen geschrieben werden können Ungenauigkeiten auftreten. Exakte Änderungen sind im [Changelog](https://github.com/syuilo/misskey/blob/develop/CHANGELOG.md) einsehbar.
+Im Grunde genommen ist dies eine Ansammlung von mehreren Versionen in einem Artikel, also werden keine dringenden News auftauchen.
 
-[リリース一覧 (GitHub)](https://github.com/syuilo/misskey/releases)
+[Versionsliste (GitHub)](https://github.com/syuilo/misskey/releases)

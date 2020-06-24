@@ -1,39 +1,39 @@
 ---
-title: Misskeyをはじめよう
-description: Misskeyは、いつまでも進化する、洗練されたマイクロブログSNSです。暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。
+title: Lass uns anfangen, Misskey zu verwenden
+description: Misskey ist eine sich kontinuierlich weiterentwickelnde und elegante Microblogging-Platform. Entziehe dich dem Lärm der Großstädte für eine Weile und tauche in dieses neue Netzwerk ein.
 styleRequires: ["top"]
 ---
 #toppage
   section#top.loadts
     .texts
-      .slogan.h4.font-weight-light.loadts.scrollts-fadeInLeftBig.scrollts-e-2.scrollts-u-5.scrollts-nomargin 新しい世界で<wbr>繋がろう
-      h1.font-weight-light.loadts.scrollts-fadeInLeftBig.scrollts-e-2.scrollts-u-5.scrollts-nomargin Misskeyを<wbr>はじめよう
-      p.loadts.scrollts-fadeInLeftBig.scrollts-e-4.scrollts-u-5.scrollts-nomargin いつまでも進化する、<wbr>洗練された<wbr>マイクロブログSNS <wbr>Misskey（ミスキー）
+      .slogan.h4.font-weight-light.loadts.scrollts-fadeInLeftBig.scrollts-e-2.scrollts-u-5.scrollts-nomargin Verbinde dich mit der neuen Welt
+      h1.font-weight-light.loadts.scrollts-fadeInLeftBig.scrollts-e-2.scrollts-u-5.scrollts-nomargin Lass uns anfangen, Misskey zu verwenden
+      p.loadts.scrollts-fadeInLeftBig.scrollts-e-4.scrollts-u-5.scrollts-nomargin Misskey ist eine sich kontinuierlich weiterentwickelnde und elegante Microblogging-Platform.
     .scnshts
       +picture({src:"/files/images/imports/2020/03/desktop-2.png", alt:"Desktop", class:"loadts scrollts-e-1 scrollts-nomargin raise-1", sizes: "(max-width: 575.98px) 120vw, (max-width: 1199.98px) 80vw, 60vw"})
       +picture({src:"/files/images/imports/2020/05/scnsht-mobile-2.png", alt:"Mobile", class:"loadts scrollts-e-1 scrollts-nomargin raise-1", sizes: "(max-width: 575.98px) 60vw, 20vw"})
       img(src="/files/images/imports/2019/03/ai_svg.svg" alt="Ai").loadts.scrollts-fadeIn.scrollts-e-3.scrollts-nomargin
-      div.small.loadts.scrollts-fadeIn.scrollts-e-3.scrollts-nomargin Misskeyマスコット 藍（Ai）
+      div.small.loadts.scrollts-fadeIn.scrollts-e-3.scrollts-nomargin Das Misskey-Maskotchen, Ai
   section#section_1.bg-primary.text-white: .container
-    p.text-center Misskeyを見つけていただき、ありがとうございます。Misskeyは、地球で生まれた#[span.font-weight-bold 分散マイクロブログSNS]です。Fediverse（様々なSNSで構成される宇宙）の中に存在するため、他のSNSと相互に繋がっています。
-    p.text-center 暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。
+    p.text-center Danke, dass du Misskey gefunden hast! Misskey ist eine auf der Erde enstandene #[span.font-weight-bold verteilte Microblogging-Platform]. Durch das Fediverse (ein Universium verschiedener sozialer Netzwerke) kann sich Misskey mit anderen Platformen verbinden.
+    p.text-center Entziehe dich dem Lärm der Großstädte für eine Weile und tauche in dieses neue Netzwerk ein.
     p.mt-1.text-center
-      a(href="#s3anc").btn.btn-lg.btn-light.text-primary.mr-2.scrollts.scrollts-flipInX.scrollts-nomargin はじめる
-      a(href="wiki/questions").btn.btn-lg.btn-outline-light.mr-2.scrollts.scrollts-flipInX.scrollts-nomargin よくある質問
-      a(href="wiki/developers").btn.btn-lg.btn-primary.scrollts.scrollts-flipInX.scrollts-nomargin 運営する
+      a(href="#s3anc").btn.btn-lg.btn-light.text-primary.mr-2.scrollts.scrollts-flipInX.scrollts-nomargin Anfangen
+      a(href="wiki/questions").btn.btn-lg.btn-outline-light.mr-2.scrollts.scrollts-flipInX.scrollts-nomargin Häufig gestellte Fragen
+      a(href="wiki/developers").btn.btn-lg.btn-primary.scrollts.scrollts-flipInX.scrollts-nomargin Betreiben
   .text-center
     +ad({ class: "aitaso", slot: "4149683131", format: "horizontal", allowFullWidth: "true" })
   section#section_2.bg-white: .container
-    h2.text-center.mt-3 Misskeyをはじめる理由
-    p.text-center 普段使いのSNSがMisskeyでなければならない理由は、たくさんあります。
+    h2.text-center.mt-3 Gründe dafür, Misskey zu nutzen
+    p.text-center Es gibt viele Gründe dafür, Misskey als Alltags-Netzwerk zu nutzen.
 
     section.s2-item
-      h3.text-center 多くの機能
-      p.text-center Misskeyでできることはたくさんあります。
+      h3.text-center Viele Funktionen
+      p.text-center Die Fähigkeiten von Misskey
       p.text-center
         a(href="wiki/").btn.btn-lg.btn-primary.scrollts.scrollts-jackInTheBox
           +fa_fw('book')
-          | Wikiで使い方を見る
+          | Nutzungsanleitungen im Wiki
 
       .row.mt-45
         article.col-12.col-md-6.col-xl-4
@@ -41,51 +41,51 @@ styleRequires: ["top"]
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('comment-alt', 'fas')
               .s2-card-text
-                h4 充実した投稿機能
+                h4 Flexibles Schreiben von Beiträgen
                 p.mb-0
                   +fa_fw('i-cursor')
-                  | インスタンスごとに設定された#[b 自由な文字数制限]
+                  | Ein für jede Instanz unabhängiges und #[b frei konfigurierbares Zeichenlimit]
                 p.mb-0
                   +fa_fw('unlock')
-                  |  #[b 公開範囲]を投稿ごとに細かく設定
+                  | Feine Auswahl zur #[b Privatsphäreneinstellung] deiner Beiträge
                 p.mb-0
                   +fa_fw('eye-slash')
-                  |  長い文章や不適切な画像を#[b 隠して公開]
-            a(href="wiki/usage/post").s2-card-link.font-weight-bold ノートの詳細
+                  | Du kannst für die Öffentlichkeit unangebrachte Bilder oder Texte #[b verstecken]
+            a(href="wiki/usage/post").s2-card-link.font-weight-bold Über Notizen
         article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('edit', 'fas')
               .s2-card-text
-                h4 文字装飾
-                p.mb-0 投稿やプロフィールを装飾しよう。装飾構文(Misskey Flavored Markdown)を利用できます。
+                h4 Textformattierung
+                p.mb-0 Lass uns dein Profil und deine Notizen dekorieren! Dies ist mit Hilfe von Misskey Flavored Markdown (MFM) möglich.
             +picture({src: "/files/images/imports/2019/03/mfm.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
-            a(href="wiki/usage/mfm").s2-card-link.font-weight-bold MFM構文一覧
+            a(href="wiki/usage/mfm").s2-card-link.font-weight-bold Über MFM
         article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('surprise', 'far')
               .s2-card-text
-                h4 リアクション
-                p.mb-0 投稿への共感を簡単に表現しよう。絵文字を選んで、投稿にリアクションを送れます。
+                h4 Reaktionen
+                p.mb-0 Drücke deine Gefühle über Notizen einfach aus. Du kannst Emojis auswählen und diese als Reaktion auf eine Notiz schicken.
             +picture({src: "/files/images/imports/2019/03/reaction-2.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
         article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('chart-pie', 'fas')
               .s2-card-text
-                h4 アンケート
-                p.mb-0 みんなに意見を聞いてみよう。10個までの選択肢でアンケートを作成できます。複数回答可や有効期限付きにできます。
+                h4 Umfragen
+                p.mb-0 Frage andere nach ihrer Meinung. Umfragen mit bis zu zehn Auswahlmöglichkeiten sind verfügbar. Mehrfachantworten und Ablaufdatum können auch eingestellt werden.
             +picture({src: "/files/images/imports/2019/03/vote.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
         article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('cloud', 'fas')
               .s2-card-text
-                h4 ドライブ
-                p.mb-0 ファイルを保存して何回も共有しよう。添付したファイルをドライブで管理したり、ドライブにあらかじめファイルをアップロードしたりできます。
+                h4 Drive
+                p.mb-0 Speichere Dateien und teile sie mehrfach. Mit Drive kannst du an Notizen angehängte Dateien verwalten, oder sie vorab hochladen.
             +picture({src: "/files/images/imports/2019/11/drive.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
-            a(href="wiki/usage/drive").s2-card-link.font-weight-bold ドライブの詳細
+            a(href="wiki/usage/drive").s2-card-link.font-weight-bold Über Drive
         //- article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
@@ -102,53 +102,53 @@ styleRequires: ["top"]
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('comments', 'far')
               .s2-card-text
-                h4 チャット
+                h4 Privatnachrichten
                 p.mb-0
-                  | チャットしよう。
+                  | Lass uns gegenseitig Nachrichten schicken.
                   br
-                  | ノートとは別の専用画面で、一対一もしくはグループでチャットができます。
+                  | Du kannst unabhängig von Notizen mit einzelnen Personen oder in Gruppen reden.
             +picture({src: "/files/images/imports/2019/10/talk.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
-            a(href="wiki/usage/messaging").s2-card-link.font-weight-bold チャットの詳細
+            a(href="wiki/usage/messaging").s2-card-link.font-weight-bold Über Privatnachrichten
         article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('sticky-note', 'far')
               .s2-card-text
-                h4 ページ
+                h4 Seiten
                 p.mb-0
-                  | ジェネレーターを作ったり、文章を書いたりしよう。
+                  | Erstelle einen "Generator" oder schreibe einfache Sätze.
                   br
-                  | ページでは、テキストやセクションといったブロックを配置し、簡単なプログラムを組めます。
+                  | In Seiten kannst du Bausteine wie Text oder Sektionen einfügen, um simple Programme zu erstellen.
             +picture({src: "/files/images/imports/2019/10/page.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
-            a(href="wiki/usage/pages").s2-card-link.font-weight-bold ページの詳細
+            a(href="wiki/usage/pages").s2-card-link.font-weight-bold Über Seiten
         article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('satellite')
               .s2-card-text
-                h4 アンテナ
+                h4 Antennen
                 p.mb-0
-                  | エゴサしよう。
+                  | Suche nach Notizen über dich
                   br
-                  | アンテナ機能で設定した条件を含むノートを収集できます。
+                  | Sammle Notizen, die frei konfigurierbare Konditionen erfüllen, durch Antennen
         article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('door-open', 'fas')
               .s2-card-text
-                h4 ルーム
+                h4 Räume
                 p.mb-0
-                  | いろいろな家具を配置して自分の部屋を作ろう。
+                  | Richte einen Raum nach deinem Geschmack ein.
                   br
-                  | 作成したルームはURLでみんなと共有できます。
+                  | Der von dir erstellte Raum kann via URL mit anderen geteilt werden.
             +picture({src: "/files/images/imports/2019/10/room.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
-            a(href="wiki/usage/rooms").s2-card-link.font-weight-bold ルームの詳細
+            a(href="wiki/usage/rooms").s2-card-link.font-weight-bold Über Räume
 
     hr#section_2_b
 
     section.s2-item
-      h3.text-center カスタマイズ性の高い画面
-      p.text-center MisskeyのWebクライアントはあなたの好みで自在に設定できます。
+      h3.text-center Anpassbare Benutzeroberfläche
+      p.text-center Du kannst den Misskey Webclient nach Wunsch anpasen.
 
       .row.mt-45
         article.col-12.col-md-6
@@ -156,26 +156,26 @@ styleRequires: ["top"]
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('calculator', 'fas')
               .s2-card-text
-                h4 ウィジェット
-                p.mb-0 小さなウィジェットは様々な情報を表示します。ウィジェットを自由に選んで並べ替えることができます。
+                h4 Widgets
+                p.mb-0 Diese kleinen Fenster können verschiedene Informationen anzeigen. Du kannst sie wie du möchtest arrangieren.
             //- img(src="/files/images/imports/2019/03/widgets.svg")
         article.col-12.col-md-6
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('palette', 'fas')
               .s2-card-text
-                h4 テーマ
+                h4 Themen
                 p.mb-0
-                  | Misskey Webの背景や文字、枠線などの色を自由に変更できます。
+                  | Du kannst die Hintergrundfarbe, den Text, die Randfarbe, usw. nach deinem Geschmack ändern.
                   br
-                  | 作成したテーマはファイルとして保存・共有できます。
+                  | Erstellte Themas können gespeichert und als Datei geteilt werden.
             a(href="https://assets.msky.cafe/" target="_blank" rel="noopener").s2-card-link.font-weight-bold Assets Store
 
     hr#section_2_a
 
     section.s2-item
-      h3.text-center 独立性と社会性
-      p.text-center あなたの意志で運営者を選択する、もしくはあなた自身でサーバーを運営することもできます。
+      h3.text-center Unabhängigkeit und Sozialität
+      p.text-center Wähle eine Instanz die dir gefällt oder betreibe deine eigene Instanz.
 
       .row.mt-45
         article.col-12.col-md-6
@@ -185,28 +185,28 @@ styleRequires: ["top"]
               .s2-card-text
                 h4 Fediverse
                 p.mb-0
-                  | MisskeyはActivityPubというWeb標準規格のサーバー間通信機能を持っているため、
-                  | 違うインスタンスや#[a(href="https://fediverse.gitlab.io/" target="_blank" rel="noopener") 他のサービス]のユーザーをフォローしたり投稿を見て反応したりできます。
+                  | Misskey nutzt das Kommunikationsprotokol "ActivityPub", weswegen
+                  | du Benutzern von anderen Instanzen oder #[a(href="https://fediverse.gitlab.io/" target="_blank" rel="noopener") anderen Netzwerken] folgen kannst, sodasss es dann möglich ist, ihre Notizen zu lesen oder auf diese zu reagieren.
         article.col-12.col-md-6
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('server', 'fas')
               .s2-card-text
-                h4 簡単なインスタンス構築
-                p.mb-0 Misskeyのインストールは簡単です。自分のSNSを持つことができます。
-            a(href="wiki/developers/").s2-card-link.font-weight-bold インスタンスの構築・管理
+                h4 Einfache Einrichtung von Instanzen
+                p.mb-0 Die Misskey Installation und Einrichtung ist einfach, also ist es möglich, dein eigenes soziales Netzwerk zu betreiben.
+            a(href="wiki/developers/").s2-card-link.font-weight-bold Über Instanzen-Installation und Instandhaltung
 
     hr#section_2_c
 
     section.s2-item.pb-0
-      h3.text-center オープン
-      p.text-center Misskeyはオープンソースソフトウェアです。誰でも開発や翻訳に参加できます。リポジトリをフォークし、独自の拡張を追加することもできます。
+      h3.text-center Open source
+      p.text-center Misskey ist Open-source software. Jeder kann zur Entwicklung oder Übersetzung beitragen. Du kannst die ebenso die GitHub Repository forken und deine eigenen Erweiterungen hinzufügen.
       p.text-center
         a(href="https://github.com/syuilo/misskey" target="_blank" rel="noopener").btn.btn-lg.btn-dark.mr-2.scrollts.scrollts-zoomIn
           +fa_fw('github', 'fab')
           | GitHub
         a(href="https://crowdin.com/project/misskey" target="_blank" rel="noopener").btn.btn-lg.btn-warning.scrollts.scrollts-zoomIn
-          | Crowdin(翻訳)
+          | Crowdin (Übersetzung)
 
       .row.mt-45
         article.col-12.col-md-6
@@ -215,34 +215,34 @@ styleRequires: ["top"]
               .font-size-16: +fa_fw('code', 'fas')
               .s2-card-text
                 h4 API
-                p.mb-0 アプリやクライアントを作って生活に役立てよう。MisskeyのほぼすべてのAPIエンドポイントを外部から利用できます。リバーシBotと対戦し、今聞いている曲をみんなに知らせましょう！
-            a(href="wiki/developers/api").s2-card-link.font-weight-bold APIの使い方
+                p.mb-0 Programmiere deine eigenen Anwendungen, um dein Leben einfacher zu machen. Du kannst in deinen Anwendungen auf fast alle Misskey-Funktionen zugreifen. Spiele gegen den Reversi-Bot und zeige allen, was du dir gerade anhörst!
+            a(href="wiki/developers/api").s2-card-link.font-weight-bold API-Nutzung
         article.col-12.col-md-6
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
               .font-size-16: +fa_fw('balance-scale', 'fas')
               .s2-card-text
                 h4 AGPL v3
-                p.mb-0 MisskeyはGNU Affero General Public License v3.0 (AGPL v3)の下で二次利用できます。
-            a(href="wiki/developers/modifying-code-and-license").s2-card-link.font-weight-bold 改造とライセンス
+                p.mb-0 Misskey ist unter der GNU Affero General Public License v3.0 (AGPL v3) lizensiert.
+            a(href="wiki/developers/modifying-code-and-license").s2-card-link.font-weight-bold Änderungen und Lizenz
 
   .text-center#s3anc
     +ad({ class: "aitaso", slot: "4149683131", format: "horizontal", allowFullWidth: "true" })
 
   section#section_3.bg-dark.text-white: .container
-    h2.text-center さっそくはじめよう
-    p.text-center まずはどこか既存のインスタンスに登録してみてください！
-    p.text-center Misskeyは他のインスタンスのユーザーともフォローや会話ができます。インスタンスのURLはあなたのIDの一部になります。
+    h2.text-center Misskey nutzen
+    p.text-center Erstelle dir ein Benutzerkonto bei einer Instanz deiner Wahl!
+    p.text-center Du kannst auch mit Nutzern anderer Instanzen reden. Die Instanz-URL ist ein Teil deiner Benutzer-ID.
     hr.my-4
-    h3#instances おすすめインスタンス一覧
+    h3#instances Vorgeschlagene Instanzen
     +instancesList('selected', ['light', 'white-50', 'dark', 'dark'])
     p.text-center.my-2
-      a(href="./wiki/instances/").scrollts-nomargin.btn.btn-primary.btn-sm インスタンスをもっと見る
+      a(href="./wiki/instances/").scrollts-nomargin.btn.btn-primary.btn-sm Mehr anzeigen
 
-    p.text-white-50.pt-2.text-center インスタンスは順次掲載します。リストに載せてほしいインスタンスがありましたら、@joinmisskey@misskey.ioまでお知らせください。
+    p.text-white-50.pt-2.text-center Wir fügen immer gerne neue Instanzen hinzu. Falls du eine Instanz der Liste hinzufügen willst, sende bitte eine Notiz an @joinmisskey@misskey.io.
 
   section#section_6.bg-white: .container.text-center.text-dark
-    h2 記事になりました
+    h2 Über Misskey wurde in Online-Nachrichten berichtet! (nur auf japanisch)
     p.m-0.text-center
       a(href="http://www.itmedia.co.jp/news/articles/1804/17/news124.html" target="_blank" rel="noopener" title="ActivityPub対応国産SNS「Misskey」、LTLも実装 ―― ITmedia NEWS").p-1.mr-2
         img(src="/files/images/imports/2018/07/ITmediaNEWS.png" style="height: 33px" alt="ITmedia NEWS" loading="lazy")
@@ -250,46 +250,46 @@ styleRequires: ["top"]
         img(src="/files/images/imports/2018/07/MOONGIFT.png" style="height: 33px" alt="MOONGIFT" loading="lazy")
 
   section#section_6_1.bg-white: .container.text-center.text-dark
-    h2 統計
+    h2 Statistiken
     .row.justify-content-center
       .col-md-4.mt-2
-        .font-weight-bold 総ユーザー数
+        .font-weight-bold Gesamtanzahl an Nutzern
         .h1=numeral(stats.usersCount).format('0,0')
       .col-md-4.mt-2
-        .font-weight-bold 総ノート数
+        .font-weight-bold Gesamtanzahl an Notizen
         .h1=numeral(stats.notesCount).format('0,0')
       .col-md-4.mt-2
-        .font-weight-bold 稼働インスタンス数
+        .font-weight-bold Gesamtanzahl an Instanzen
         .h1=numeral(stats.instancesCount).format('0,0')
-    p.mb-0.mt-3.text-muted.small #{updateMoment.tz('Asia/Tokyo').format('lll z')} 頃に各インスタンスから取得した統計を合算した数値です。
+    p.mb-0.mt-3.text-muted.small Es handelt sich um die Summe der Werte aller Instanzen zum folgenden Datum: #{updateMoment.tz('Europe/Berlin').format('lll z')}
 
   section#section_7: .container
-    h2.text-center 支援
+    h2.text-center Unterstützer
     p.text-center
       a(href="credit#patrons").btn.btn-lg.btn-light.text-primary.mr-2
-        | 協賛者一覧
+        | Sponsorenliste
       a(href="https://github.com/syuilo/misskey/blob/master/docs/DONATORS.md" target="_blank" rel="noopener").btn.btn-lg.btn-light.text-primary
-        | 寄付者一覧
+        | Spenderliste
 
     hr.my-4
-    h3.text-center Misskeyを支援する
+    h3.text-center Misskey unterstützen
     p.text-center
-      | Misskeyがお気に入りですか？Misskeyは自由でオープンソースです。
+      | Gefällt dir Misskey? Misskey wird von Einzelpersonen als kostenlose open-source Software entwickelt.
       br
-      | ユーザーの操作を邪魔しないようにMisskeyには広告が付けられていませんが、開発のために少なくない支出が発生しています。
+      | Misskey zeigt keine für die Benutzerfahrung störende Werbung, jedoch existieren trotzdem bemerkenswerte Entwicklungskosten.
       br
-      | ぜひMisskeyの開発にご支援ください。
+      | Bitte unterstütze die Entwicklung von Misskey.
     a(href="https://www.patreon.com/syuilo" target="_blank" rel="noopener").btn.btn-block.btn-lg.btn-outline-primary.mb-2
       +fa_fw('patreon', 'fab')
-      | syuiloのパトロンになる
+      | Werde ein Patron von syuilo auf Patreon
     a(href="http://amzn.asia/7O1LEI5" target="_blank" rel="noopener").btn.btn-block.btn-lg.btn-outline-primary.mb-2
       +fa_fw('amazon', 'fab')
-      | ほしいものリスト
+      | Wunschliste
     a(href="https://www.bountysource.com/teams/misskey" target="_blank" rel="noopener").btn.btn-block.btn-lg.btn-outline-primary.mb-2
       | Bountysource
-    p.text-center または#[a(href="https://misskey.io/@syuilo" target="_blank" rel="noopener") syuiloに問い合わせる]
+    p.text-center ... oder #[a(href="https://misskey.io/@syuilo" target="_blank" rel="noopener") kontaktiere den Entwickler, syuilo]
     p.text-center
-      a(href="wiki/about-jm").btn.btn-primary.btn-lg joinmisskeyを支援する
+      a(href="wiki/about-jm").btn.btn-primary.btn-lg joinmisskey unterstützen
 
   section#section_4.bg-success: .container.text-white
     .row
@@ -297,11 +297,11 @@ styleRequires: ["top"]
         .py-3
           a(href="blog/").btn.btn-lg.btn-outline-light
             +fa("broadcast-tower")
-            |  ブログ
-          p.mt-1.mb-0.p-0 更新の内容などを随時お知らせします。
+            |  Blog
+          p.mt-1.mb-0.p-0 Benachrichtigungen über neue Misskey Versionen
       .col-12.col-md-6.scrollts-e-1
         .py-3
           a(href="credit").btn.btn-lg.btn-outline-light
             +fa("users")
-            |  クレジット
-          p.mt-1.mb-0.p-0 Misskeyの開発に関わってくださった方々です。
+            |  Anerkennungen
+          p.mt-1.mb-0.p-0 Personen, die zu Misskey's Entwicklung beitragen

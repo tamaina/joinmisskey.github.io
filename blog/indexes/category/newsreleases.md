@@ -1,6 +1,6 @@
 ---
-title: ニュースリリース
-description: Misskeyに関するニュース
+title: Liste von News
+description: News über Misskey
 layout: blog-index
 query:
   category: ニュースリリース

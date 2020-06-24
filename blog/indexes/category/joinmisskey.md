@@ -1,6 +1,6 @@
 ---
 title: joinmisskey
-description: joinmisskeyに関するお知らせ
+description: Ankündigungen bezüglich joinmisskey
 layout: blog-index
 query:
   category: joinmisskey

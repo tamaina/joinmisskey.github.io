@@ -1,6 +1,6 @@
 ---
-title: クレジット
-description: Misskeyに貢献してくださった方を掲載しています。
+title: Anerkennungen
+description: Personen, die zu Misskey beigetragen haben, werden hier aufgelistet
 styleRequires: ["credit"]
 ---
 -
@@ -10,11 +10,11 @@ styleRequires: ["credit"]
 
 .bg-white.pt-4.pb-5
   .container-fluid
-    h1.text-center.pt-4.pb-2 クレジット
-    p.text-center.mb-4 Misskeyに貢献してくださった方を掲載しています。(敬称略)
+    h1.text-center.pt-4.pb-2 Anerkennungen
+    p.text-center.mb-4 Personen, die zu Misskey beigetragen haben, werden hier aufgelistet
 
-    h2#collaborators.text-center.pt-5.pb-2 共同制作者
-    p.text-center.pb-2 Misskey開発陣
+    h2#collaborators.text-center.pt-5.pb-2 Co-Authoren
+    p.text-center.pb-2 Misskey Entwicklerteam
     #collaborators_list.d-flex.flex-wrap.justify-content-center.mb-5
       if(contributors)
         each contributor in contributors
@@ -22,8 +22,8 @@ styleRequires: ["credit"]
             a(href=contributor.html_url target="_blank" rel="noopener" title=contributor.login).person
               img(src=`/files/images/credit/github/${contributor.id}.png?${qqq}`)
               p=contributor.login
-    h2#contributors.text-center.py-2 コントリビューター
-    p.text-center.pb-2 #[a(href="https://github.com/syuilo/misskey" target="_blank" rel="noopener") GitHub]でMisskeyの開発に関わってくださった方々
+    h2#contributors.text-center.py-2 Mitwirkende
+    p.text-center.pb-2 Personen, die auf #[a(href="https://github.com/syuilo/misskey" target="_blank" rel="noopener") GitHub] zur Entwicklung von Misskey beigetragen haben
     #contributors_list.d-flex.flex-wrap.justify-content-center
       if(contributors)
         each contributor in contributors
@@ -37,16 +37,16 @@ styleRequires: ["credit"]
     if(patrons && patrons.length != 0)
       .container.py-5
         hr.my-5.bg-primary
-      h2#contributors.text-center.pb-2 パトロン
-      p.text-center.mb-4 #[a(href="https://www.patreon.com/syuilo" target="_blank" rel="noopener") Patreon]でパトロンとして継続的に寄付してくださっている方々
+      h2#contributors.text-center.pb-2 Spender
+      p.text-center.mb-4 Personen, die kontinuierlich als Patron auf #[a(href="https://www.patreon.com/syuilo" target="_blank" rel="noopener") Patreon] spenden
       #patrons_list
           each tier, lv in patrons
             if(tier.members.length > 0)
               div(id=`patrons_list_${patrons.length - 1 - lv}`).patrons-list-tier
                 h3.text-center.pt-5.pb-2
                   =!!tier.titles ? (tier.titles[locale] || tier.titles.ja || tier.title) : tier.title
-                  |  
-                  span.small.font-weight-light (#{tier.amountCents > 0 ? `$${tier.amountCents / 100}/月, ` : ""}#{tier.members.length}人)
+                  |
+                  span.small.font-weight-light (#{tier.amountCents > 0 ? `$${tier.amountCents / 100} pro Monat, ` : ""}#{tier.members.length} Personen)
                 div.patrons-list-members.d-flex.flex-wrap.justify-content-center
                   each patron in tier.members
                     a(href=patron.attributes.url target="_blank" rel="noopener" title=patron.attributes.full_name).person
