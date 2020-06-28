@@ -1,6 +1,6 @@
 {
   "name": "join.misskey.page",
-  "version": "1.0.70",
+  "version": "1.0.71",
   "main": "docs/index.html",
   "description": "join.misskey.page",
   "scripts": {
@@ -111,7 +111,7 @@
     "sitemap": "^6.1.0",
     "temp": "^0.9.0",
     "terser": "^4.4.0",
-    "terser-webpack-plugin": "^2.2.1",
+    "terser-webpack-plugin": "^3.0.3",
     "ts-loader": "^7.0.2",
     "typescript": "^3.5.3",
     "typescript-require": "^0.2.10",
