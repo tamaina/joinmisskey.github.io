@@ -7,4 +7,8 @@ cd ../fr
 git pull origin pages/fr
 git pull origin pages/ja
 git push origin pages/fr
+cd ../de
+git pull origin pages/de
+git pull origin pages/ja
+git push origin pages/de
 cd ../..
