@@ -308,6 +308,24 @@
   langs: ['ja']
 - url: misskey.osyakasyama.me
   langs: ['ja']
+- url: lapuacase.info
+  langs: ['ja']
+- url: misskey.wine
+  langs: ['ja']
+- url: m.fedyya.net
+  langs: ['ja']
+- url: dev.mei.b-shock.org
+  langs: ['ja']
+- url: m11.t8n.dev
+  langs: ['ja']
+- url: misskey-deck.noellabo.jp
+  langs: ['ja']
+- url: smzk.usuwotech.page
+  langs: ['ja']
+- url: nyon.marimo-net.com
+  langs: ['ja']
+- url: social.7ed.net
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -463,6 +481,8 @@
   langs: ['en']
 - url: alpha.cliq.network
   langs: ['en']
+- url: is-a.owo.monster
+  langs: ['en']
 #
 ##
 #########################################
@@ -512,6 +532,12 @@
 - url: qpomelo.cc
   langs: ['zh', 'en']
 - url: nya.one
+  langs: ['zh', 'en']
+- url: m.dogcraft.top
+  langs: ['zh', 'en']
+- url: suisuinian.herokuapp.com
+  langs: ['zh', 'en']
+- url: ryuryu.tw
   langs: ['zh', 'en']
 #
 ##
