@@ -326,6 +326,16 @@
   langs: ['ja']
 - url: social.7ed.net
   langs: ['ja']
+- url: mi.escapism.work
+  langs: ['ja']
+- url: misskey.raclett3.com
+  langs: ['ja']
+- url: xn--w8jxa7b7es3a.xn--eckxc4c0a9di.games
+  langs: ['ja']
+- url: mk.kaguratech.tk
+  langs: ['ja']
+- url: m12.t8n.dev
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -480,6 +490,10 @@
 - url: m.vpnbanzai.eu.org
   langs: ['en']
 - url: alpha.cliq.network
+  langs: ['en']
+- url: is-a.owo.monster
+  langs: ['en']
+- url: deck.slippy.xyz
   langs: ['en']
 - url: is-a.owo.monster
   langs: ['en']
