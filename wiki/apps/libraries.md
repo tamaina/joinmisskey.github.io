@@ -12,6 +12,10 @@ rank: 3
 #### Misskey.py
 **pip(3): Misskey.py** ･ **[YuzuRyo61/Misskey.py on GitHub](https://github.com/YuzuRyo61/Misskey.py)**
 
+### Rust
+#### misskey-rs
+**Cargo: misskey** ･ **[coord-e/misskey-rs on GitHub](https://github.com/coord-e/misskey-rs)**
+
 ### .NET
 #### Misq
 **nuget: Misq** ･ **[syuilo/Misq on GitHub](https://github.com/syuilo/Misq)**
