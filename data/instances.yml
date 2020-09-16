@@ -336,6 +336,14 @@
   langs: ['ja']
 - url: m12.t8n.dev
   langs: ['ja']
+- url: misskey.zirconsoft.net
+  langs: ['ja']
+- url: bouvardia.icu
+  langs: ['ja']
+- url: msk.mozcmozc.club
+  langs: ['ja']
+- url: gp.tsukimi.club
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -497,6 +505,12 @@
   langs: ['en']
 - url: is-a.owo.monster
   langs: ['en']
+- url: islostinouter.space
+  langs: ['en']
+- url: misskey.test.wlw.pw
+  langs: ['en']
+- url: dev.nya.social
+  langs: ['en']
 #
 ##
 #########################################
@@ -552,6 +566,10 @@
 - url: suisuinian.herokuapp.com
   langs: ['zh', 'en']
 - url: ryuryu.tw
+  langs: ['zh', 'en']
+- url: m.dogcraft.cn
+  langs: ['zh', 'en']
+- url: misskey.kaixinguo.site
   langs: ['zh', 'en']
 #
 ##
