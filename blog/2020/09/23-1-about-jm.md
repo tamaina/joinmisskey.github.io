@@ -11,7 +11,7 @@ author:
 category: joinmisskey
 amp: true
 ---
-joinmisskeyによるWordPressサイト「**[Misskey Site!](https://misskey-site.com)**」を開設しました。  
+joinmisskeyによるWordPressサイト「[**Misskey Site!**](https://misskey-site.com)」を開設しました。  
 
 今後はこのMisskey Site!にてMisskeyの更新情報を発信します。  
 また、Misskeyの操作方法やMisskeyまわりのニュースについて、よりフランクに発信していきます。
