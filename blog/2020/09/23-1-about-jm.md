@@ -2,7 +2,7 @@
 title: 新ブログ「Misskey Site!」を立ち上げました
 description: いわゆる「アフィブログ」風のブログサイトを開設し、joinmisskeyと分離します。
 layout: blog
-date: 2020-04-04T01:00:00+09:00
+date: 2020-09-16T22:00:00+09:00
 thumbnail: /files/images/imports/2020/09/mk-site-starts.jpg
 author:
   name: aqz
