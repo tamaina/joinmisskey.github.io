@@ -10,7 +10,8 @@ styleRequires: ["top"]
       h1.font-weight-light.loadts.scrollts-fadeInLeftBig.scrollts-e-2.scrollts-u-5.scrollts-nomargin Lass uns anfangen, Misskey zu verwenden
       p.loadts.scrollts-fadeInLeftBig.scrollts-e-4.scrollts-u-5.scrollts-nomargin Misskey ist eine sich kontinuierlich weiterentwickelnde und elegante Microblogging-Platform.
     .scnshts
-      +picture({src:"/files/images/imports/2020/03/desktop-2.png", alt:"Desktop", class:"loadts scrollts-e-1 scrollts-nomargin raise-1", sizes: "(max-width: 575.98px) 120vw, (max-width: 1199.98px) 80vw, 60vw"})
+      +picture({src:"/files/images/imports/2020/09/deck-n.png", alt:"Deck", class:"loadts scrollts-e-1 scrollts-nomargin raise-1", sizes: "90vw"})
+      +picture({src:"/files/images/imports/2020/09/home-n.png", alt:"Desktop", class:"loadts scrollts-e-1 scrollts-nomargin raise-1", sizes: "(max-width: 575.98px) 120vw, (max-width: 1199.98px) 80vw, 60vw"})
       +picture({src:"/files/images/imports/2020/05/scnsht-mobile-2.png", alt:"Mobile", class:"loadts scrollts-e-1 scrollts-nomargin raise-1", sizes: "(max-width: 575.98px) 60vw, 20vw"})
       img(src="/files/images/imports/2019/03/ai_svg.svg" alt="Ai").loadts.scrollts-fadeIn.scrollts-e-3.scrollts-nomargin
       div.small.loadts.scrollts-fadeIn.scrollts-e-3.scrollts-nomargin Das Misskey-Maskotchen, Ai
@@ -21,8 +22,6 @@ styleRequires: ["top"]
       a(href="#s3anc").btn.btn-lg.btn-light.text-primary.mr-2.scrollts.scrollts-flipInX.scrollts-nomargin Anfangen
       a(href="wiki/questions").btn.btn-lg.btn-outline-light.mr-2.scrollts.scrollts-flipInX.scrollts-nomargin Häufig gestellte Fragen
       a(href="wiki/developers").btn.btn-lg.btn-primary.scrollts.scrollts-flipInX.scrollts-nomargin Betreiben
-  .text-center
-    +ad({ class: "aitaso", slot: "4149683131", format: "horizontal", allowFullWidth: "true" })
   section#section_2.bg-white: .container
     h2.text-center.mt-3 Gründe dafür, Misskey zu nutzen
     p.text-center Es gibt viele Gründe dafür, Misskey als Alltags-Netzwerk zu nutzen.
@@ -69,6 +68,14 @@ styleRequires: ["top"]
                 h4 Reaktionen
                 p.mb-0 Drücke deine Gefühle über Notizen einfach aus. Du kannst Emojis auswählen und diese als Reaktion auf eine Notiz schicken.
             +picture({src: "/files/images/imports/2019/03/reaction-2.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
+        article.col-12.col-md-6.col-xl-4
+          .card.scrollts.scrollts-fadeInLeftSmall
+            .s2-card-grid
+              .s2-card-icon.fa-2x: +fa_fw('columns', 'fas')
+              .s2-card-text
+                h4 デッキ
+                p.mb-0 自由に画面を作ろう。Misskeyのデッキは、タイムラインを縦に並べることもできます。
+            +picture({src: "/files/images/imports/2020/09/deck-n.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
         article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
@@ -124,16 +131,6 @@ styleRequires: ["top"]
         article.col-12.col-md-6.col-xl-4
           .card.scrollts.scrollts-fadeInLeftSmall
             .s2-card-grid
-              .s2-card-icon.fa-2x: +fa_fw('satellite')
-              .s2-card-text
-                h4 Antennen
-                p.mb-0
-                  | Suche nach Notizen über dich
-                  br
-                  | Sammle Notizen, die frei konfigurierbare Konditionen erfüllen, durch Antennen
-        article.col-12.col-md-6.col-xl-4
-          .card.scrollts.scrollts-fadeInLeftSmall
-            .s2-card-grid
               .s2-card-icon.fa-2x: +fa_fw('door-open', 'fas')
               .s2-card-text
                 h4 Räume
@@ -143,6 +140,26 @@ styleRequires: ["top"]
                   | Der von dir erstellte Raum kann via URL mit anderen geteilt werden.
             +picture({src: "/files/images/imports/2019/10/room.png", loading: "lazy", sizes: "calc(100vw - 1rem), (min-width: 576px) 524px, (min-width: 768px) 344px, (min-width: 992px) 464px, (min-width: 1200px) 364px"})
             a(href="wiki/usage/rooms").s2-card-link.font-weight-bold Über Räume
+        article.col-12.col-md-6.col-xl-6
+          .card.scrollts.scrollts-fadeInLeftSmall
+            .s2-card-grid
+              .s2-card-icon.fa-2x: +fa_fw('satellite')
+              .s2-card-text
+                h4 Antennen
+                p.mb-0
+                  | Suche nach Notizen über dich
+                  br
+                  | Sammle Notizen, die frei konfigurierbare Konditionen erfüllen, durch Antennen
+        article.col-12.col-md-6.col-xl-6
+          .card.scrollts.scrollts-fadeInLeftSmall
+            .s2-card-grid
+              .s2-card-icon.fa-2x: +fa_fw('satellite-dish', 'fas')
+              .s2-card-text
+                h4 チャンネル
+                p.mb-0
+                  | 集まる場所ができました。
+                  br
+                  | 様々な話題について、チャンネルを作って会話することができます。
 
     hr#section_2_b
 
