@@ -19,18 +19,17 @@ akihiro氏は、かつて人気を博したTwitterクライアント『TheWorld�
 ### MissCat
 [wada](https://misskey.io/@wada)氏が開発している無料のiPhone・iPad向けMisskeyクライアント。2020年4月3日にβ版がリリースされた[*](https://misskey.io/notes/85nl8qgjsf)。
 
-**[MissCatをApp Storeでインストール](https://apps.apple.com/app/id1505059993)**
+**[MissCatをAppStoreでインストール](https://apps.apple.com/app/id1505059993)**
 
 **[MissCat公式サイト](https://yuiga.dev/misscat/)**  
 [YuigaWada/MissCat on GitHub](https://github.com/YuigaWada/MissCat)
 
 ## Android
 ### MilkTea
-[パン太](https://misskey.io/@Panta)氏が開発している無料のAndroid向けMisskeyクライアント。2020年3月27日にα版がリリースされた[*](https://github.com/Kinoshita0623/MisskeyAndroidClient/releases/tag/v1.0.0-alpha1)。
+[パン太](https://misskey.io/@Panta)氏が開発している無料のAndroid向けMisskeyクライアント。
 
-現在はβ版でストアにはリリースされていないため、インストール方法としてはGitHubからapkをダウンロードする形となる。
+**[MilkTeaをPlayStoreでインストール](https://play.google.com/store/apps/details?id=jp.panta.misskeyandroidclient)**
 
-[MilkTeaをダウンロード](https://github.com/Kinoshita0623/MisskeyAndroidClient/releases)  
 [Kinoshita0623/MisskeyAndroidClient on GitHub](https://github.com/Kinoshita0623/MisskeyAndroidClient)
 
 ### Subway Tooter
