@@ -1,6 +1,6 @@
 ---
-title: ブログのインデックスの一覧
-title-breadcrumb: インデックス
-description: インデックスの一覧です。
+title: List of blog indexes
+title-breadcrumb: Index
+description: A list of indexes.
 layout: index
 ---
