@@ -2,28 +2,42 @@
 @import "../../../node_modules/bootstrap/scss/functions"
 @import "../../../node_modules/bootstrap/scss/variables"
 
-$toppage-scnshts-2: translateX(5vw) translateY(33vh)
-@keyframes toppage-scnshts-2
+$toppage-scnshts-1: translateX(5vw) translateY(30vh)
+@keyframes toppage-scnshts-1
   from
     transform: translateX(5vw) translateY(95vh)
   to
-    transform: $toppage-scnshts-2
+    transform: $toppage-scnshts-1
 
-$toppage-scnshts-2-sm: translateX(3vw) translateY(40vh)
-@keyframes toppage-scnshts-2-sm
+$toppage-scnshts-1-sm: translateX(3vw) translateY(40vh)
+@keyframes toppage-scnshts-1-sm
   from
     transform: translateX(3vw) translateY(105vh)
   to
+    transform: $toppage-scnshts-1-sm
+
+$toppage-scnshts-2: translateX(30vw) translateY(40vh)
+@keyframes toppage-scnshts-2
+  from
+    transform: translateX(30vw) translateY(105vh)
+  to
+    transform: $toppage-scnshts-2
+
+$toppage-scnshts-2-sm: translateX(40vw) translateY(45vh)
+@keyframes toppage-scnshts-2-sm
+  from
+    transform: translateX(40vw) translateY(105vh)
+  to
     transform: $toppage-scnshts-2-sm
 
-$toppage-scnshts-3: translateX(55vw) translateY(45vh)
+$toppage-scnshts-3: translateX(55vw) translateY(48vh)
 @keyframes toppage-scnshts-3
   from
     transform: translateX(55vw) translateY(105vh)
   to
     transform: $toppage-scnshts-3
 
-$toppage-scnshts-3-xl: translateX(20vw) translateY(45vh)
+$toppage-scnshts-3-xl: translateX(20vw) translateY(48vh)
 @keyframes toppage-scnshts-3-xl
   from
     transform: translateX(20vw) translateY(105vh)
@@ -102,8 +116,26 @@ $toppage-scnshts-3-sm: translateX(6vw) translateY(50vh)
         position: absolute
         color: rgba(0,0,0,0)
 
-        // Home
+        // Deck
         &:nth-child(1)
+          z-index: 1
+          img
+            width: 80vw
+            transform: $toppage-scnshts-1
+            background-color: #ececec
+            display: none
+            z-index: 1
+            &.show
+              display: block !important
+              animation-name: toppage-scnshts-1
+
+            @media (max-width: map-get($grid-breakpoints, sm) - .02)
+              transform: $toppage-scnshts-1-sm
+              &.show
+                animation-name: toppage-scnshts-1-sm
+
+        // Home
+        &:nth-child(2)
           z-index: 1
           img
             width: 60vw
@@ -125,7 +157,7 @@ $toppage-scnshts-3-sm: translateX(6vw) translateY(50vh)
                 animation-name: toppage-scnshts-2-sm
 
         // Mobile
-        &:nth-child(2)
+        &:nth-child(3)
           z-index: 3
           img
             width: 20vw
@@ -149,7 +181,7 @@ $toppage-scnshts-3-sm: translateX(6vw) translateY(50vh)
                 animation-name: toppage-scnshts-3-sm
 
         // Ai
-        &:nth-child(3)
+        &:nth-child(4)
           height: 80vh
           max-height: 45rem
           right: -4vw
