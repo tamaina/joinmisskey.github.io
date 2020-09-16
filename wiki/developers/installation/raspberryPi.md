@@ -59,13 +59,10 @@ adduser --disabled-password --disabled-login misskey
 ### Node.js
 Node.jsは、サーバーサイドJavaScript環境であり、Misskeyの基本的な実行環境である。
 
-ここでは、Node.jsのバージョン管理に[**n**](https://github.com/tj/n)を使用する。
-
 ```bash
-apt update
-apt install -y nodejs npm
-npm i -g n
-n latest
+apt install -y curl
+curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+apt install -y nodejs
 ```
 
 Node.jsがインストールされたので、バージョンを確認する。
@@ -74,7 +71,7 @@ Node.jsがインストールされたので、バージョンを確認する。
 node -v
 ```
 
-`v13.3.0`などと表示されればOK。`v8.x.x`のように表示された場合は、サーバーを再起動してもう一度確認してみてほしい。
+`v14.x.x`などと表示されればOK。`v8.x.x`のように表示された場合は、正しくインストールが行えていないため、サーバーを再起動するなどしてみよう。
 
 ### PostgreSQL
 PostgreSQLは、オブジェクト関係データベース管理システムであり、Misskeyが種々のデータを保存するために必要不可欠なソフトだ。
