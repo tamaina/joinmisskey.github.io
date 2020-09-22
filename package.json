@@ -117,7 +117,7 @@
     "typescript-require": "^0.3.0",
     "ua-parser-js": "^0.7.20",
     "webpack": "^4.37.0",
-    "webpack-stream": "^5.2.1",
+    "webpack-stream": "^6.1.0",
     "workbox-window": "^5.0.0"
   }
 }
