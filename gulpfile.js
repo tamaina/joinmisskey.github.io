@@ -215,8 +215,12 @@ gulp.task("credit-icons", async cb => {
     })
   })
 
-  await processIcon("github")
-  await processIcon("patreon")
+  try {
+    await processIcon("github")
+    await processIcon("patreon")
+  } catch (e) {
+    glog.error(e)
+  }
   return cb()
 })
 
