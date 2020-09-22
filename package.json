@@ -80,7 +80,7 @@
     "gulp-watch": "^5.0.1",
     "html-minifier": "^4.0.0",
     "html-to-text": "^5.1.1",
-    "image-size": "^0.8.2",
+    "image-size": "^0.9.1",
     "inquirer": "7",
     "jquery": "^3.5.0",
     "js-yaml": "^3.13.1",
