@@ -64,7 +64,7 @@ function existFileSync(file) {
   }
 }
 
-// グローバル気味変数
+// 設定とか
 const packageJson = require("./package.json")
 const messages = require("./.config/messages.json")
 const site = require("./scripts/site")
@@ -229,7 +229,10 @@ gulp.task("instance-banners", cb => {
     .filter(e => e && e.status !== "unchanged")
     .map(v => `${tempDir}instance-banners/${v.name}.${v.ext}`)
   if (globs.length === 0) return cb()
-  return new Promise((res, rej) => {
+
+  try {
+
+  new Promise((res, rej) => {
     pump([
       gulp.src(globs),
       $.responsive({
@@ -257,6 +260,10 @@ gulp.task("instance-banners", cb => {
       res()
     })
   })
+
+  } catch (e) {
+    glog.error(e)
+  }
 })
 
 const cssDestpath = `${dests.root}/assets/styles`
