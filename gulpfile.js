@@ -224,7 +224,7 @@ gulp.task("credit-icons", async cb => {
   return cb()
 })
 
-gulp.task("instance-banners", cb => {
+gulp.task("instance-banners", async cb => {
   const globs = base.instancesBanners
     .filter(e => e && e.status !== "unchanged")
     .map(v => `${tempDir}instance-banners/${v.name}.${v.ext}`)
