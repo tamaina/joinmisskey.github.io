@@ -232,7 +232,7 @@ gulp.task("instance-banners", cb => {
 
   try {
 
-  new Promise((res, rej) => {
+  await new Promise((res, rej) => {
     pump([
       gulp.src(globs),
       $.responsive({
@@ -264,6 +264,8 @@ gulp.task("instance-banners", cb => {
   } catch (e) {
     glog.error(e)
   }
+
+  return;
 })
 
 const cssDestpath = `${dests.root}/assets/styles`
