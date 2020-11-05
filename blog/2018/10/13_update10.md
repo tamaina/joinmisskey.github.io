@@ -32,7 +32,7 @@ Misskeyの通信のすべてを1つのストリームに纏めたことで、通
 - お気に入りの解除ができるように
 
 ## インスタンス運営者に知ってほしい機能
-メジャーバージョンアップ前にはとにかく[CHANGELOG](https://github.com/syuilo/misskey/blob/develop/CHANGELOG.md)を読んでMigrationを確認しましょう。
+メジャーバージョンアップ前にはとにかく[CHANGELOG](https://https://github.com/syuilo/misskey/blob/59cb7992e2d68529fcc4cc921e69349bad758594/CHANGELOG.md)を読んでMigrationを確認しましょう。
 
 ### 外部のおすすめユーザーエンジン
 外部のおすすめユーザーエンジンを読み込めます。  
