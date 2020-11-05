@@ -344,6 +344,28 @@
   langs: ['ja']
 - url: gp.tsukimi.club
   langs: ['ja']
+- url: msk.mozcmozc.club
+  langs: ['ja']
+- url: gp.tsukimi.club
+  langs: ['ja']
+- url: misskey.mametsuko.net
+  langs: ['ja']
+- url: witchcraft.0j0.jp
+  langs: ['ja']
+- url: mi.nafuchoco.page
+  langs: ['ja']
+- url: mk.lei202.com
+  langs: ['ja']
+- url: wndp.cloud
+  langs: ['ja']
+- url: msky-5g.h3z.jp
+  langs: ['ja']
+- url: ne.akarinext.org
+  langs: ['ja']
+- url: mi.maikaze.moe
+  langs: ['ja']
+- url: drdr.club
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -511,6 +533,16 @@
   langs: ['en']
 - url: dev.nya.social
   langs: ['en']
+- url: buzz.casually.cat
+  langs: ['en']
+- url: gorf.space
+  langs: ['en']
+- url: panoptic.onl
+  langs: ['en']
+- url: quietplace.xyz
+  langs: ['en']
+- url: reconnected.cat6.network
+  langs: ['en']
 #
 ##
 #########################################
@@ -571,6 +603,10 @@
   langs: ['zh', 'en']
 - url: misskey.kaixinguo.site
   langs: ['zh', 'en']
+- url: yuan.dudu.best
+  langs: ['zh', 'en']
+- url: lolita.social
+  langs: ['zh', 'en']
 #
 ##
 #########################################
@@ -589,6 +625,8 @@
 #
 - url: miss.waytt.cf
   langs: ['ru', 'en']
+- url: nyan.nekoea.red
+  langs: ['ru', 'en']
 #
 ##
 #########################################
@@ -598,6 +636,10 @@
   langs: ['de', 'en']
 - url: misskey.luciferi.st
   langs: ['de', 'en']
+- url: misskey.de
+  langs: ['de', 'en']
+- url: fabis.cafe
+  langs: ['de', 'en']
 #
 ##
 #########################################
@@ -605,3 +647,10 @@
 #
 - url: ketr.am
   langs: ['th', 'en']
+#
+##
+#########################################
+##
+#
+- url: nya.fai.su
+  langs: ['es', en]
