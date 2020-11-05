@@ -28,4 +28,4 @@ amp: true
 - 埋め込みプレイヤーを閉じることができるように
 - MFMでURLを明示する構文の追加
 
-など。[チェンジログ](https://github.com/syuilo/misskey/blob/develop/CHANGELOG.md)も参照。
+など。[チェンジログ](https://https://github.com/syuilo/misskey/blob/59cb7992e2d68529fcc4cc921e69349bad758594/CHANGELOG.md)も参照。

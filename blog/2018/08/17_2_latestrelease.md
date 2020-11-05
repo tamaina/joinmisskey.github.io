@@ -16,7 +16,7 @@ amp: true
 ### 【管理者向け】Migration
 オブジェクトストレージを使用している場合、設定ファイルの`drive.config.secure`を`drive.config.useSSL`にリネームしてください。
 
-[Migration](https://github.com/syuilo/misskey/blob/master/CHANGELOG.md#600)
+[Migration](https://https://github.com/syuilo/misskey/blob/59cb7992e2d68529fcc4cc921e69349bad758594/CHANGELOG.md#600)
 
 ### リアクションを付けやすく
 他の人がつけたリアクションをクリックすると自分もそのリアクションを付けられるようになりました。
