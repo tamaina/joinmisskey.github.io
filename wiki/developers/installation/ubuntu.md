@@ -19,7 +19,7 @@ OSの違い、Misskey本体や依存するソフトウェアのバージョン�
 わからない単語については、[『「分かりそう」で「分からない」でも「分かった」気になれるIT用語辞典』](https://wa3.i-3-i.info/)で調べて分かった気になってほしい。
 
 ## 環境と条件
-- OSは**Ubuntu 18.04.1 LTS**を利用する。
+- OSは**Ubuntu 20.04.1 LTS**を利用する。
 - ハードウェア要件としては、CPUは最近のものなら最小限で動く。アーキテクチャは**amd64**として解説を進める。  
   メモリは1GB程度あればよい。
 - 独自のドメインを購入し、CloudFlareを使用する。
@@ -69,7 +69,7 @@ Node.jsがインストールされたので、バージョンを確認する。
 node -v
 ```
 
-`v14.x.x`などと表示されればOK。`v8.x.x`のように表示された場合は、正しくインストールが行えていないため、サーバーを再起動するなどしてみよう。
+`v15.x.x`などと表示されればOK。`v8.x.x`のように低いバージョンが表示された場合は、正しくインストールが行えていないため、サーバーを再起動してもう一度インストールし直すなどしてみよう。
 
 ### PostgreSQL
 PostgreSQLは、オブジェクト関係データベース管理システムであり、Misskeyが種々のデータを保存するために必要不可欠なソフトだ。
@@ -79,7 +79,7 @@ PostgreSQLは、オブジェクト関係データベース管理システムで�
 
 ```bash
 wget https://salsa.debian.org/postgresql/postgresql-common/raw/master/pgdg/apt.postgresql.org.sh
-sh apt.postgresql.org.sh -i -v 12
+sh apt.postgresql.org.sh -i -v 13
 ```
 
 systemctlでデーモンの状態を確認。
