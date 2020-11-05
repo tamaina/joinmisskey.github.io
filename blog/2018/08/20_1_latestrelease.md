@@ -12,7 +12,7 @@ category: 更新
 amp: true
 ---
 ## 【管理者向け】Migration
-[CHANGELOG](https://github.com/syuilo/misskey/blob/master/CHANGELOG.md#700)に従いMigrationを実行してください。
+[CHANGELOG](https://https://github.com/syuilo/misskey/blob/59cb7992e2d68529fcc4cc921e69349bad758594/CHANGELOG.md#700)に従いMigrationを実行してください。
 
 ## 更新
 ### 関西弁
