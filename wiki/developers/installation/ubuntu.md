@@ -155,6 +155,10 @@ systemctl enable nginx
 
 http://localhost にアクセスし、**Welcome to nginx!**と表示されればOK。
 
+```bash
+curl http://localhost
+```
+
 <small>https://nginx.org/en/linux_packages.html#Ubuntu</small>
 
 ### その他
@@ -362,6 +366,7 @@ su - misskey
 ビルドをする。yes we can...
 
 ```bash
+cd misskey
 NODE_ENV=production npm run build
 ```
 
@@ -387,7 +392,7 @@ npm run init
 
 ## Misskeyを起動する
 ```bash
-NODE_ENV=production yarn start
+NODE_ENV=production npx yarn start
 ```
 
 **Now listening on port 3000 on http://example.tld** と表示されたら、設定したURLにアクセスする。
