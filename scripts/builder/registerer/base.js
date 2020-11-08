@@ -230,6 +230,16 @@ async function getInstancesInfos(instances, keys) {
         description: meta.description ? htmlToText.fromString(meta.description).replace(/\n/g, "<br>") : (instance.description || null),
         isAlive: true
       }))
+
+      if (instance.url === 'cliq.social') {
+        console.log(extend(true, instance, {
+          value,
+          meta,
+          stats: stat,
+          description: meta.description ? htmlToText.fromString(meta.description).replace(/\n/g, "<br>") : (instance.description || null),
+          isAlive: true
+        }))
+      }
     } else {
       instancesInfos.push(extend(true, { isAlive: false, value: 0 }, instance))
     }
