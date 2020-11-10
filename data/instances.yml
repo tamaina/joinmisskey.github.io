@@ -344,10 +344,6 @@
   langs: ['ja']
 - url: gp.tsukimi.club
   langs: ['ja']
-- url: msk.mozcmozc.club
-  langs: ['ja']
-- url: gp.tsukimi.club
-  langs: ['ja']
 - url: misskey.mametsuko.net
   langs: ['ja']
 - url: witchcraft.0j0.jp
@@ -367,6 +363,10 @@
 - url: drdr.club
   langs: ['ja']
 - url: norimono.moe
+  langs: ['ja']
+- url: ms.kvche.ch
+  langs: ['ja']
+- url: misskey.johndoe.gq
   langs: ['ja']
 #
 - url: msky.cafe
@@ -527,8 +527,6 @@
   langs: ['en']
 - url: deck.slippy.xyz
   langs: ['en']
-- url: is-a.owo.monster
-  langs: ['en']
 - url: islostinouter.space
   langs: ['en']
 - url: misskey.test.wlw.pw
@@ -544,6 +542,10 @@
 - url: quietplace.xyz
   langs: ['en']
 - url: reconnected.cat6.network
+  langs: ['en']
+- url: the9thcircle.club
+  langs: ['en']
+- url: seaside.cafe
   langs: ['en']
 #
 ##
@@ -608,6 +610,8 @@
 - url: yuan.dudu.best
   langs: ['zh', 'en']
 - url: lolita.social
+  langs: ['zh', 'en']
+- url: rosehip.moe
   langs: ['zh', 'en']
 #
 ##
