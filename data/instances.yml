@@ -368,6 +368,8 @@
   langs: ['ja']
 - url: misskey.johndoe.gq
   langs: ['ja']
+- url: friendsyu.me
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
