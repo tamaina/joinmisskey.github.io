@@ -87,7 +87,7 @@ systemctlでデーモンの状態を確認。
 systemctl status postgresql
 ```
 
-activeならOK。そうでなければ次のコマンドを実行。
+activeならOK。<kbd>q</kdb>を押して抜けよう。そうでなければ次のコマンドを実行。
 
 ```bash
 systemctl start postgresql
@@ -112,6 +112,8 @@ alter role postgres with password 'hoge';
 ```sql
 create database mk1;
 ```
+
+`\q`でpsqlを抜ける。
 
 ### Redis
 Redisは、NoSQLのインメモリデータベースソフトであり、MisskeyのAPIや連合との通信等を管理するために利用する。
