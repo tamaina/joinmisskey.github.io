@@ -365,6 +365,7 @@ misskeyユーザーにログインし直す。
 
 ```bash
 su - misskey
+cd misskey
 ```
 
 ビルドをする。yes we can...
