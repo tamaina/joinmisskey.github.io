@@ -323,12 +323,7 @@ nginxの設定を行う。
 ルート権限で行う。
 
 ```bash
-# いったん作業用ユーザーに切り替え
-su - user
-# パスワードを求められる
-
-sudo su -
-# パスワードを求められる
+exit
 ```
 
 Misskey付属の設定ファイル[`docs/examples/misskey.nginx`](https://github.com/syuilo/misskey/blob/master/docs/examples/misskey.nginx)を`/etc/nginx/sites-available/misskey.conf`として保存し、nanoで開く。
