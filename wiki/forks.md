@@ -5,7 +5,7 @@ layout: wiki
 has_child: false
 rank: 3.1
 ---
-Misskey's source code is licensed under AGPL3.0 and published as well as maintained on GitHub, so derivative software (in Git terminology, a "fork") is easy to create. On this page,we will introduce you to current major forks.
+Misskey's source code is licensed under AGPL3.0 and published as well as maintained on GitHub, so derivative software (in Git terminology, a "fork") is easy to create. On this page, we will introduce you to current major forks.
 
 ## フォーク一覧
 ### v12ベース
