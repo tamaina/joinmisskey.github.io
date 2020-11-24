@@ -1,6 +1,6 @@
 ---
-title: よくある質問
-description: Misskeyに関するよくある疑問・質問まとめ。
+title: Häufig gestellte Fragen
+description: Auf Misskey bezogene häufig gestellte Fragen
 layout: wiki
 has_child: false
 rank: 1
@@ -10,11 +10,11 @@ improve: true
 microdata_pagetype: https://schema.org/FAQPage
 ---
 :md
-  Misskeyに関するよくある疑問・質問をまとめた。  
-  [用語の解説はこちら](first)  
-  [**困ったときは**](troubles)
+  Eine Zusammenfassung an auf Misskey bezogene häufig gestellte Fragen.
+  [Klicke hier für ein Glossar](first)
+  [**Klicke hier für Fehlerbehandlung**](troubles)
 
-h2.blogstyle よくある質問
+h2.blogstyle Häufig gestellte Fragen
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
   h3.blogstyle(itemprop="name") ホーム、ローカル、ソーシャル、グローバル タイムラインの違いは？
   div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
@@ -28,14 +28,14 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
       | **ソーシャル** | ホーム ∪ ローカル |
       | **グローバル** | リモートも含め、インスタンスに認識されているすべてのユーザー |
 
-      また、[公開範囲](usage/post#公開範囲を設定する)も影響する。  
+      また、[公開範囲](usage/post#公開範囲を設定する)も影響する。
       [**→ 使い方: タイムライン**](usage/timelines)
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
   h3.blogstyle(itemprop="name") 重い
   div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
-      Misskey Webではアニメーションを多用しているが、これはそこそこのスペックがないと快適に動作しなかったり長時間タブを開いているとフリーズしたりすることが報告されている。  
+      Misskey Webではアニメーションを多用しているが、これはそこそこのスペックがないと快適に動作しなかったり長時間タブを開いているとフリーズしたりすることが報告されている。
       クライアント設定の「UIの動きを減らす」を有効にするとそのような重いアニメーションが削減されるので、使ってみてほしい。
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
@@ -44,8 +44,8 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
     :md
       misskey.ioに関しては、開発者である[しゅいろ](culture/users/syuilo)が管理し、サーバーは北海道の[村上さん](culture/users/AureoleArk)が提供している。
 
-      Misskeyはオープンソースであるため、十分な能力や資産があればすべての人や企業がインスタンスを運営できる。  
-      各インスタンスごとに規約も違うが、少なくとも各国の法規に基づいた運用がされているはずである。  
+      Misskeyはオープンソースであるため、十分な能力や資産があればすべての人や企業がインスタンスを運営できる。
+      各インスタンスごとに規約も違うが、少なくとも各国の法規に基づいた運用がされているはずである。
 
       あなたが利用しているインスタンスの管理者のアカウントには、青い#{+fa_fw('bookmark', 'fas')}が付いている。
 
@@ -62,10 +62,10 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
   h3.blogstyle(itemprop="name") MisskeyはMastodonと連携できるの？
   div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
-      連携とは少し違う。  
+      連携とは少し違う。
       MastodonとMisskeyとで、相互にユーザーをフォローしたり、ノートやトゥートを送受信したりできる。
 
-      MisskeyからMastodonのユーザーをフォローできるし、逆にMastodonからMisskeyユーザーもフォローできる。  
+      MisskeyからMastodonのユーザーをフォローできるし、逆にMastodonからMisskeyユーザーもフォローできる。
       また、ノートにリアクションを付けたりリノート（=ブースト）も行える。
 
       MisskeyやMastodonは、別のソフトウェアの他のインスタンスのユーザーと同士で、同じサービスであるかのように交流できる。
@@ -74,7 +74,7 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
   h3.blogstyle(itemprop="name") 自分に関係のない通知が届く
   div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
-      「ノートの自動ウォッチ」機能が有効になっているかもしれない。  
+      「ノートの自動ウォッチ」機能が有効になっているかもしれない。
       不要であれば、`アカウント設定` > `全般` から`ノートの自動ウォッチ`をオフにしよう。
       [**→ 使い方: 投稿のウォッチ機能**](usage/watch)
 
@@ -82,14 +82,14 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
   h3.blogstyle(itemprop="name") ノート内の太字などの文字装飾、検索窓やアニメーションはどうやるのか？
   div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
-      Misskey独自の構文「Misskey Flavored Markdown (MFM)」を使うことで表現できる。  
+      Misskey独自の構文「Misskey Flavored Markdown (MFM)」を使うことで表現できる。
       [**→ 使い方: 文字装飾 (MFM)**](usage/mfm)
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
   h3.blogstyle(itemprop="name") 猫耳生えて「にゃ」って言ってるけどにゃに？ Catって？
   div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
-      **Cat**はMisskeyの謎機能のひとつである。  
+      **Cat**はMisskeyの謎機能のひとつである。
       アイコンに猫耳が生え、*な*が*にゃ*に変換される（この変換は"Nyaize"と呼ばれる）。
 
       Catはアカウント設定から設定でき、リモートのMisskeyインスタンスにも反映される。
@@ -110,11 +110,11 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
       ##### エクスポート
       「フォロー」または「リスト」を選択し、「エクスポート」を選択する。
 
-      処理が完了すると、csvファイルが「ドライブ」に追加される。  
+      処理が完了すると、csvファイルが「ドライブ」に追加される。
       csvファイルをクリックし、ダウンロードしよう。
 
       ##### インポート
-      「フォロー」または「リスト」を選択し、「エクスポート」を選択する。  
+      「フォロー」または「リスト」を選択し、「エクスポート」を選択する。
       ファイル選択画面が出現するので、エクスポートしたcsvファイルを選択しよう。
 
       インポート処理には少々時間がかかるが、時間が経てば完了するだろう、
@@ -122,7 +122,7 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
       Mastodonで生成されたフォロー・リストのcsvファイルにも対応している。
 
       #### Mastodonの「引っ越し」機能について
-      Mastodonの「引っ越し」機能は、引っ越し先を明示し、フォロワーをそのまま移行できるという機能だ。  
+      Mastodonの「引っ越し」機能は、引っ越し先を明示し、フォロワーをそのまま移行できるという機能だ。
 
       Misskeyはこの機能に現状対応していないため、アカウントの移行は手動でフォロワーに伝達されたい。
 
@@ -142,7 +142,7 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
   h3.blogstyle(itemprop="name") 不具合を見つけた。こんな機能がほしい。
   div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
-      **GitHub**を使ったことがある方は*その内容のIssueが立っていないか確認してから*[Issue](https://github.com/syuilo/misskey/issues/new/choose)で報告をお願いしたい。  
+      **GitHub**を使ったことがある方は*その内容のIssueが立っていないか確認してから*[Issue](https://github.com/syuilo/misskey/issues/new/choose)で報告をお願いしたい。
       PullRequestももちろん歓迎している。
 
       英語が苦手だったりGitHubがよくわからなかったりする方は、`@joinmisskey@misskey.io`にリプライを送ってほしい。
@@ -151,7 +151,7 @@ section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
   h3.blogstyle(itemprop="name") Misskeyに寄付したい。
   div(itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"): div(itemprop="text")
     :md
-      Patreon（パトロンサービス）やAmazonほしいものリストのリンクがあるため、そこから支援していただけると嬉しい。  
+      Patreon（パトロンサービス）やAmazonほしいものリストのリンクがあるため、そこから支援していただけると嬉しい。
       各種リンクについては**[こちら（トップページの下の方のセクション）](../#section_7)**を参照されたい。
 
 section(itemscope itemprop="mainEntity" itemtype="https://schema.org/Question")
