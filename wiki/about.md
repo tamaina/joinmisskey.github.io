@@ -1,29 +1,29 @@
 ---
-title: Misskeyについて
-description: Misskeyは、syuiloが現在も開発を継続しているActivityPubでの連合に対応した分散マイクロブログソフトウェアである。
+title: Über Misskey
+description: Misskey ist eine ActivityPub-kompatible verteilte Microblogging-Platform, die kontinuierlich von syuilo weiterentwickelt wird
 layout: wiki
 has_child: false
 rank: 0
 next: /wiki/first
 ---
-Misskeyは、[syuilo](culture/users/syuilo)が現在も開発を継続している分散マイクロブログソフトウェアである。  
-2018年4月8日にサーバー間[ActivityPub](culture/words/activitypub)連合規格に対応し、Mastodonなどと同じ分散SNSになった。
+Misskey ist eine verteilte Microblogging-Platform, die kontinuierlich von [syuilo](culture/users/syuilo) weiterentwickelt wird.
+Seit dem 8. April 2018 unterstützt sie das Server-zu-Server Kommunikationsprotokol [ActivityPub](culture/words/activitypub), und wurde somit mit Mastodon und weiteren verteilten SNS kompatibel.
 
-まずはどこかのインスタンスに登録し、始めてみよう。  
-**[インスタンスを探す](instances/)**
+Als erstes, lass uns mit der Registration auf einer Instanz beginnen.
+**[Finde eine Instanz](instances/)**
 
-Misskeyはオープンソースソフトウェアで、[ソースコード](https://github.com/syuilo/misskey)は[AGPLv3ライセンスの下でほぼ自由に利用](developers/modifying-code-and-license)できる。  
-そのため、自分でインスタンスを建てて運営することができる。
+Misskey ist Open-Source-Software und der [Quellcode](https://github.com/syuilo/misskey) ist [unter AGPLv3 lizensiert fast vollständig frei veränderbar](developers/modifying-code-and-license).
+Somit ist es auch einfach eine eigene Instanz zu eröffnen.
 
-Misskeyという名前はMay'nの楽曲「Brain Diver」の歌詞から採られている（syuiloが名前を考えていたときにたまたま聴いていた）。
+Der Name "Misskey" kommt von einem Lied von May'n namens "Brain Diver" (Überhört, als syuilo sich einen Namen ausdachte).
 
-バグ報告や機能追加要望等は[GitHubリポジトリのIssueとして投稿](https://github.com/syuilo/misskey/issues/new/choose)してほしい。GitHubアカウントを持っていない方は、Misskey内で`@joinmisskey@misskey.io`にリプライを送ってほしい。  
-PullRequestも歓迎している。
+Falls du einen Bug findest oder um eine neue Funktionalität bitten möchtest, [erstelle bitte ein Issue auf GitHub](https://github.com/syuilo/misskey/issues/new/choose). Falls du kein GitHub Benutzerkonto besitzt, kontaktiere bitte `@joinmisskey@misskey.io` innerhalb Misskey selbst.
+Pull Requests sind ebenfalls willkommen.
 
-## Misskey 資源セット
+## Misskey Pressekit
 ![Misskey Logo](/files/images/title.light.svg)
 
-Misskeyのロゴや配色は[こちらからダウンロード](https://github.com/joinmisskey/mk-assets/releases)できる。  
-プレスキット、メディアキットとも呼ばれる。
+Misskey's Logo sowie Farbschema kann [hier heruntergerladen werden](https://github.com/joinmisskey/mk-assets/releases).
+Auch genannt Mediakit.
 
-[**資源セットをダウンロード** (joinmisskey/mk-assets releases)](https://github.com/joinmisskey/mk-assets/releases)
+[**Pressekit Herunterladen** (joinmisskey/mk-assets releases)](https://github.com/joinmisskey/mk-assets/releases)
