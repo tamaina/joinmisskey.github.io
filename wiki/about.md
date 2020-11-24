@@ -6,7 +6,7 @@ has_child: false
 rank: 0
 next: /wiki/first
 ---
-Misskey is a distributed microblogging service using ActivityPub that is being continuously developed by [syuilo](culture/users/syuilo).
+Misskey is a distributed microblogging service that is being continuously developed by [syuilo](culture/users/syuilo).
 On April 4th of 2018, it started supporting the server-to-server communication protocol [ActivityPub](culture/words/activitypub), making it compatible with Mastodon and other similar distributed SNS.
 
 For starters, let's begin with registering at an instance.
