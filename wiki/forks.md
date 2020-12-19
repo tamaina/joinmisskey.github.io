@@ -1,11 +1,11 @@
 ---
-title: 主要なフォークの一覧
-description: Misskeyのソースコードは、ライセンスがAGPLv3.0で、GitHubで公開・管理されているため、フォークも容易だ。主要なフォークを紹介する。
+title: Liste der Hauptforks
+description: Misskey's Quellcode ist nter AGPLv3.0 lizensiert und auf GitHub veröffentlicht sowie weiterentwickelt, was das erstellen von Forks einfach macht.
 layout: wiki
 has_child: false
 rank: 3.1
 ---
-Misskeyのソースコードは、ライセンスがAGPLv3.0で、GitHubで公開・管理されているため、派生ソフトウェアの作成（Git用語で「フォーク」と呼ぶ）も容易だ。ここでは主要なフォークを紹介する。
+Misskey's Quellcode ist nter AGPLv3.0 lizensiert und auf GitHub veröffentlicht sowie weiterentwickelt, was das erstellen von Derivativsoftware (in Git-Kontext als "Fork" bekannt) einfach macht. Auf dieser Seite werden wir die größten solcher Forks vorstellen.
 
 ## フォーク一覧
 ### v12ベース

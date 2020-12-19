@@ -1,24 +1,25 @@
 ---
-title: joinmisskeyについて
-description: Wikiを含めたjoinmisskeyの編集方法や、支援方法について。
+title: Über joinmisskey
+description: Bearbeitung von joinmisskey, inklusive Wiki, und wie du helfen kannst
 layout: wiki
 has_child: false
 rank: 199
 ---
-## joinmisskeyの製作・管理について
+## Über die Entwicklung und Instandhaltung von joinmisskey
 Misskeyは[しゅいろ](culture/users/syuilo)が中心となり製作しているが、joinmisskeyの製作・編集は[aqz](culture/users/aqz)が行っている。
+Misskey wird größtenteils von [syuilo](culture/users/syuilo) entwickelt und instandgehalten, aber joinmisskey wird größtenteils von [aqz](culture/users/aqz) entwickelt und instandgehalten.
 
-## joinmisskeyを支援する
-もしこのサイトの情報が役に立ったならば、ぜひ支援をお願いしたい。
+## joinmisskey unterstützen
+Falls du die Informationen auf dieser Webseite als nützlich empfindest, bitte unterstütze sie.
 
-*寄付についての詳細は[**tamaina.github.io(aqzの個人サイト)**](https://tamaina.github.io/)の方で確認願いたい。*
+*Für Informationen bezüglich Spenden, informiere dich bitte auf [**tamaina.github.io(aqz's persönliche Webseite)**](https://tamaina.github.io/).*
 
-## joinmisskeyの編集方法
-1. GitHubにアカウントを作る
-2. [joinmisskeyのリポジトリ](https://github.com/joinmisskey/joinmisskey.github.io)をForkする
-3. `pages/(言語)`内の該当するファイルを編集する
-  * 文書ファイルはMarkdown(`.md`)かPug(`.pug`)で書かれている
-  * 各ファイルには先頭の`--- ~ ---`でYAML FrontMatterが設定されている
-4. 編集が終わったらプルリクエストを出す
-5. aqzが精査し、OKであればマージする
-6. GitHub Actionsでビルド後、変更が反映される
+## Bearbeitung von joinmisskey
+1. Erstelle ein Benutzerkonto auf GitHub
+2. Forke die [joinmisskey Repository](https://github.com/joinmisskey/joinmisskey.github.io)
+3. Bearbeite die entsprechenden Dateien in `pages/(Sprache)`
+  * Die Dateien sind im Markdown(`.md`) bzw. Pug(`.pug`) format geschrieben
+  * Am Anfang jeder Datei steht ein YAML FrontMatter header (`--- ~ ---`)
+4. Sobald du fertig bist, erstelle einen Pull Request
+5. Nachdem aqz deine Änderungen überprüft hat und als OK empfindet, werden sie gemerged.
+6. Sobald der GitHub Actions Build fertiggestellt ist, sind die Änderungen auf der Seite sichtbar

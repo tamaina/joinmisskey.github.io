@@ -1,13 +1,13 @@
 ---
-title: 歴史
-description: Misskeyの歴史を記録するページです。
+title: Geschichte
+description: Eine Seite, die die Geschichte von Misskey festhält.
 layout: wiki
 has_child: false
 rank: 4
 ---
-Misskeyの歴史について簡単に紹介する。
+Eine einfache Darstellung von Misskey's Geschichte.
 
-その歴史は、数多の機能や技術を取り入れ、また数多の失敗を繰り返しであった。
+Es ist eine Geschichte von vielen neuen Funktionalitäten und Technologien, aber auch eine von wiederholten Fehlschlägen.
 
 ## nighthike以前
 

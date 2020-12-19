@@ -1,9 +1,9 @@
 ---
 title: Wiki
 title-breadcrumb: Wiki
-description: Misskeyに関連した種々の情報をまとめている。
+description: Verschiedene Informationen über Misskey werden hier gesammelt.
 layout: index
 has_child: true
 ---
-Misskeyに関連した種々の情報をまとめている。  
-Misskeyについてあまりよく知らないという方は、上から順番通りに読んでほしい。
+Verschiedene Informationen über Misskey werden hier gesammelt.
+Falls du noch nicht viel über Misskey weißt, lies die Artikel von oben nach unten.
