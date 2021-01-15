@@ -87,7 +87,7 @@ systemctlでデーモンの状態を確認。
 systemctl status postgresql
 ```
 
-activeならOK。そうでなければ次のコマンドを実行。
+activeならOK。<kbd>q</kdb>を押して抜けよう。そうでなければ次のコマンドを実行。
 
 ```bash
 systemctl start postgresql
@@ -112,6 +112,8 @@ alter role postgres with password 'hoge';
 ```sql
 create database mk1;
 ```
+
+`\q`でpsqlを抜ける。
 
 ### Redis
 Redisは、NoSQLのインメモリデータベースソフトであり、MisskeyのAPIや連合との通信等を管理するために利用する。
@@ -321,12 +323,7 @@ nginxの設定を行う。
 ルート権限で行う。
 
 ```bash
-# いったん作業用ユーザーに切り替え
-su - user
-# パスワードを求められる
-
-sudo su -
-# パスワードを求められる
+exit
 ```
 
 Misskey付属の設定ファイル[`docs/examples/misskey.nginx`](https://github.com/syuilo/misskey/blob/master/docs/examples/misskey.nginx)を`/etc/nginx/sites-available/misskey.conf`として保存し、nanoで開く。
@@ -368,6 +365,7 @@ misskeyユーザーにログインし直す。
 
 ```bash
 su - misskey
+cd misskey
 ```
 
 ビルドをする。yes we can...
@@ -395,7 +393,7 @@ npm run init
 
 ## Misskeyを起動する
 ```bash
-NODE_ENV=production yarn start
+NODE_ENV=production npm start
 ```
 
 **Now listening on port 3000 on http://example.tld** と表示されたら、設定したURLにアクセスする。
