@@ -1,11 +1,12 @@
 #!/bin/sh
 git fetch
 cd docs
+git filter-branch -f --index-filter "git rm -rf --ignore-unmatch ./ --cached" --prune-empty
 git add --all
 git commit -a -m "auto-built from $GITHUB_SHA"
-git push --force-with-lease origin master
+git push --force origin master
 cd ../dist
 git add --all
 git commit -a -m "auto-built from $GITHUB_SHA"
-git push --force-with-lease origin dist
+git push --force origin dist
 cd ..
