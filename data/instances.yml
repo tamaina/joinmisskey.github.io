@@ -370,6 +370,34 @@
   langs: ['ja']
 - url: friendsyu.me
   langs: ['ja']
+- url: virtual-kaf.fun
+  langs: ['ja']
+- url: cocoronavi.com
+  langs: ['ja']
+- url: ti.akirin.xyz
+  lagns: ['ja']
+- url: misskey.haibala.com
+  langs: ['ja']
+- url: misskey.xn--tmp-qb4b9c2eyc.tokyo
+  langs: ['ja']
+- url: chuo.educity.asia
+  langs: ['ja']
+- url: misskey.goochiegoo.net
+  langs: ['ja']
+- url: reco.shrieker.net
+  langs: ['ja']
+- url: mk.mozcmozc.club
+  langs: ['ja']
+- url: msk.ruste.red
+  langs: ['ja']
+- url: kr.akirin.xyz
+  langs: ['ja']
+- url: mi.les-requin.net
+  langs: ['ja']
+- url: misskey.oyster.red
+  langs: ['ja']
+- url: misskey.levome-dol.com
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -549,6 +577,20 @@
   langs: ['en']
 - url: seaside.cafe
   langs: ['en']
+- url: fedi.mint.lgbt
+  langs: ['en']
+- url: jumanji.co
+  langs: ['en']
+- url: mkii.amplifie.red
+  langs: ['en']
+- url: social.k1ppl.com
+  langs: ['en']
+- url: nya.catgirl.icu
+  langs: ['en']
+- url: social.ctrlaltdog.xyz
+  langs: ['en']
+- url: fed.nanao.moe
+  langs: ['en']
 #
 ##
 #########################################
@@ -571,6 +613,10 @@
 - url: purr.drycat.fr
   langs: ['fr']
 - url: social.darks.fr
+  langs: ['fr']
+- url: misskey.fr
+  langs: ['fr']
+- url: microblog.getcyca.com
   langs: ['fr']
 #
 ##
@@ -615,6 +661,18 @@
   langs: ['zh', 'en']
 - url: rosehip.moe
   langs: ['zh', 'en']
+- url: misskey.yys.ink
+  langs: ['zh', 'en']
+- url: misskey.xiling.site
+  langs: ['zh', 'en']
+- url: f.jymuoyu.com
+  langs: ['zh', 'en']
+- url: b612.moe
+  langs: ['zh', 'en']
+- url: nightis.land
+  langs: ['zh', 'en']
+- url: nyan.live
+  langs: ['zh', 'en']
 #
 ##
 #########################################
@@ -635,6 +693,8 @@
   langs: ['ru', 'en']
 - url: nyan.nekoea.red
   langs: ['ru', 'en']
+- url: lagemeet.duckdns.org
+  langs: ['ru', 'en']
 #
 ##
 #########################################
@@ -647,6 +707,8 @@
 - url: misskey.de
   langs: ['de', 'en']
 - url: fabis.cafe
+  langs: ['de', 'en']
+- url: misskey.bocc.de
   langs: ['de', 'en']
 #
 ##
