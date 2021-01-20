@@ -83,7 +83,7 @@
     "image-size": "^0.9.1",
     "inquirer": "7",
     "jquery": "^3.5.0",
-    "js-yaml": "^3.13.1",
+    "js-yaml": "4",
     "jsdom": "^16.0.1",
     "jstransformer-clean-css": "^2.1.0",
     "jstransformer-highlight": "^2.0.0",
@@ -118,6 +118,6 @@
     "ua-parser-js": "^0.7.20",
     "webpack": "^5.1.0",
     "webpack-stream": "^6.1.0",
-    "workbox-window": "^5.0.0"
+    "workbox-window": "6"
   }
 }

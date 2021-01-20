@@ -1,4 +1,4 @@
-const readyaml = require("js-yaml").safeLoad
+const readyaml = require("js-yaml").load
 const fs = require("fs")
 
 module.exports = filepath => readyaml(fs.readFileSync(filepath))
