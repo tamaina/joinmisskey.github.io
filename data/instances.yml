@@ -398,6 +398,10 @@
   langs: ['ja']
 - url: misskey.levome-dol.com
   langs: ['ja']
+- url: mk.aqr.af
+  langs: ['ja']
+- url: misky.rikunagiweb.jp
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -590,6 +594,8 @@
 - url: social.ctrlaltdog.xyz
   langs: ['en']
 - url: fed.nanao.moe
+  langs: ['en']
+- url: social.mitaka.nl
   langs: ['en']
 #
 ##
