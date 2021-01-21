@@ -101,7 +101,7 @@
     "popper.js": "^1.15.0",
     "postcss-sorting": "^5.0.1",
     "prismjs": "^1.21.0",
-    "promise.allsettled": "^1.0.1",
+    "promise.allsettled": "^1.0.4",
     "pug": "3",
     "pump": "^3.0.0",
     "punycode": "^2.1.1",
