@@ -54,7 +54,7 @@ module.exports = async (name, url, tempDir, alwaysReturn) => {
     await writeFile(`${tempDir}${name}.${ext}`, data)
     return { name, ext, status: "created" }
   }).catch(reason => {
-    glog(`Cannot get the image: ${reason}`)
+    glog(`Cannot get the image: ${name}`, reason)
     return false
   })
 }
