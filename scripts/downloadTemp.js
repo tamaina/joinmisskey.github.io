@@ -27,7 +27,7 @@ module.exports = async (name, url, tempDir, alwaysReturn) => {
   const files = glob.sync(`${tempDir}${name}.{png,jpg,jpeg,gif,webp}`)
   if (files.length > 0) {
     // glog("Getting image: " + url)
-    const remote = await download(url).catch(() => false)
+    const remote = await download(url,　{ encoding: null }).catch(() => false)
     if (!remote) return false
     let { ext } = await fileType.fromBuffer(remote)
     const local = await readFile(`${tempDir}${name}.${ext}`).catch(() => false)

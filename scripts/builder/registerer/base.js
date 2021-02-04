@@ -76,12 +76,12 @@ function safePost(url, options) {
   glog("POST start", url)
   return fetch(url, extend(true, options, { method: "POST", signal: controller.signal })).then(
     res => {
-      glog("POST finish", url)
+      // glog("POST finish", url)
       if (res && res.status === 200) return res
       return false
     },
     e => {
-      glog("POST failed", url, e.errno, e.type)
+      // glog("POST failed", url, e.errno, e.type)
       return false
     }
   ).finally(() => {
@@ -137,7 +137,7 @@ async function getVersions(keys) {
         }
       ).then(
         json => json.map((release, j) => {
-          glog("Misskey Version", release.tag_name)
+          // glog("Misskey Version", release.tag_name)
           versions[semver.clean(release.tag_name, { loose: true })] = (i - 1) * 30 + j
           return release.tag_name
         }),
