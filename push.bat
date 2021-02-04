@@ -2,7 +2,7 @@ git fetch
 cd dist
 git add --all
 git commit -a -m %1
-git pull
+git pull --allow-unrelated-histories
 git push origin dist
 cd ..
 git add --all

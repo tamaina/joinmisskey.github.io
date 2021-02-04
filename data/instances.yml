@@ -402,6 +402,12 @@
   langs: ['ja']
 - url: misky.rikunagiweb.jp
   langs: ['ja']
+- url: waruikoto.sima.su
+  langs: ['ja']
+- url: misskey.alpinehut.xyz
+  langs: ['ja']
+- url: www.i-kaohsiung.com
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -624,6 +630,8 @@
   langs: ['fr']
 - url: microblog.getcyca.com
   langs: ['fr']
+- url: microblog.richard-dern.fr
+  langs: ['fr']
 #
 ##
 #########################################
@@ -678,6 +686,10 @@
 - url: nightis.land
   langs: ['zh', 'en']
 - url: nyan.live
+  langs: ['zh', 'en']
+- url: x61.uk
+  langs: ['zh', 'en']
+- url: smp.chaoswork.cn
   langs: ['zh', 'en']
 #
 ##
