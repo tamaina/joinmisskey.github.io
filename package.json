@@ -89,7 +89,7 @@
     "jstransformer-sass": "^1.0.0",
     "jstransformer-uglify-js": "^1.2.0",
     "load-gulp-tasks": "^0.1.0",
-    "marked": "1",
+    "marked": "2",
     "minimist": "^1.2.0",
     "mkdirp": "^1.0.3",
     "moment": "^2.24.0",
