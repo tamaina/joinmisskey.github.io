@@ -408,6 +408,10 @@
   langs: ['ja']
 - url: www.i-kaohsiung.com
   langs: ['ja']
+- url: misskey.traction.jp
+  langs: ['ja']
+- url: sushi.ski
+  langs: ['ja']
 #
 - url: msky.cafe
   langs: ['ja']
@@ -603,6 +607,8 @@
   langs: ['en']
 - url: social.mitaka.nl
   langs: ['en']
+- url: gitmo.life
+  langs: ['en']
 #
 ##
 #########################################
@@ -690,6 +696,8 @@
 - url: x61.uk
   langs: ['zh', 'en']
 - url: smp.chaoswork.cn
+  langs: ['zh', 'en']
+- url: misskey.addesp.com
   langs: ['zh', 'en']
 #
 ##
