@@ -20,7 +20,6 @@ Misskeyをはじめ連合リレーに対応するインスタンスのソフト�
 ## 主要な連合リレーサーバー（日本語話者向け）
 - [YUKIMOCHI Toot Relay Service](https://relay.toot.yukimochi.jp/)
 - [Enjoy Fediverse](https://relay.mstdn-jp.site/ui/)
-- [h3zjp ActivityPub Relay Server](https://pub-relay.hama3.net/)
 - [taruntarun relay](https://relay.taruntarun.net/)
 - [Fedibird Relay Service](https://relay.fedibird.com/)
 
