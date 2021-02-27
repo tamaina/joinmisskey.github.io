@@ -22,12 +22,11 @@ module.exports = async (name, url, tempDir, alwaysReturn) => {
     ]
   )
 
-
   mkdirp.sync(tempDir)
   const files = glob.sync(`${tempDir}${name}.{png,jpg,jpeg,gif,webp}`)
   if (files.length > 0) {
     // glog("Getting image: " + url)
-    const request = await fetch(url,　{ encoding: null }).catch(() => false)
+    const request = await fetch(url, { encoding: null }).catch(() => false)
     const remote = await request.buffer()
     if (!remote) return false
     let { ext } = await fileType.fromBuffer(remote)
