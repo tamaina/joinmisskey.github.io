@@ -44,7 +44,7 @@ module.exports = async (name, url, tempDir, alwaysReturn) => {
     return false
   }
   glog(`Getting new image: ${url}`)
-  return fetch(url,　{ encoding: null }).then(request => request.buffer()).then(async data => {
+  return fetch(url, { encoding: null }).then(request => request.buffer()).then(async data => {
     let { ext } = await fileType.fromBuffer(data)
     if (["png", "jpg", "jpeg", "webp"].indexOf(ext) === -1) {
       await toPng(data, ext)

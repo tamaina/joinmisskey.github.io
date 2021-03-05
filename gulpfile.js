@@ -166,7 +166,6 @@ gulp.task("register", async cb => {
   cb()
 })
 
-
 gulp.task("config", () => {
   mkdirp.sync(path.parse(dests.info).dir)
   return writeFile(dests.info, JSON.stringify({ options: "", timestamp: new Date(), pages }))
@@ -231,41 +230,37 @@ gulp.task("instance-banners", async cb => {
   if (globs.length === 0) return cb()
 
   try {
-
-  await new Promise((res, rej) => {
-    pump([
-      gulp.src(globs),
-      $.responsive({
-        "**": {
-          width: 1024,
-          withoutEnlargement: true,
-          sharpen: "0.5x0.5+0.5+0.008",
-          // format: "jpeg",
-          rename: {
-            extname: ".jpeg"
+    await new Promise((res, rej) => {
+      pump([
+        gulp.src(globs),
+        $.responsive({
+          "**": {
+            width: 1024,
+            withoutEnlargement: true,
+            sharpen: "0.5x0.5+0.5+0.008",
+            // format: "jpeg",
+            rename: {
+              extname: ".jpeg"
+            }
           }
-        }
-      }, site.images.files.all.responsive),
-      $.image({
-        jpegRecompress: false,
-        mozjpeg: ["-optimize", "-progressive"],
-        guetzli: false,
-        concurrent: 16
-      }),
-      gulp.dest("dist/files/images/instance-banners"),
-      gulp.dest("dist/docs/files/images/instance-banners")
-    ], async e => {
-      if (e) rej(e)
-      else glog(colors.green("✔ Instance Banners"))
-      res()
+        }, site.images.files.all.responsive),
+        $.image({
+          jpegRecompress: false,
+          mozjpeg: ["-optimize", "-progressive"],
+          guetzli: false,
+          concurrent: 16
+        }),
+        gulp.dest("dist/files/images/instance-banners"),
+        gulp.dest("dist/docs/files/images/instance-banners")
+      ], async e => {
+        if (e) rej(e)
+        else glog(colors.green("✔ Instance Banners"))
+        res()
+      })
     })
-  })
-
   } catch (e) {
     glog.error(e)
   }
-
-  return;
 })
 
 const cssDestpath = `${dests.root}/assets/styles`
@@ -555,7 +550,7 @@ gulp.task("make-manifest", () => writeFile("dist/docs/manifest.json", JSON.strin
 
 gulp.task("make-instances-json", () => writeFile("dist/docs/instances.json", JSON.stringify({
   timestamp: new Date(),
-  instances: base.instancesInfos.filter((e) => e.isAlive || e.notSuspended).map((e) => {
+  instances: base.instancesInfos.filter(e => e.isAlive || e.notSuspended).map(e => {
     delete e.isAlive
     return e
   })
@@ -605,9 +600,7 @@ gulp.task("make-browserconfig", cb => {
   })
 })
 
-
 gulp.task("make-sitemap", async cb => {
-
   const stream = new SitemapStream({
     hostname: urlPrefix
   })
@@ -751,7 +744,6 @@ gulp.task("local-server",
     gulp.parallel("connect", "watch"),
     cb => { cb() }
   ))
-
 
 /*
   IMAGE IMPORTING & CONVERTING TASKS
