@@ -187,7 +187,7 @@ async function getInstancesInfos(instances, keys) {
     const meta = metas[i] || false
     const stat = stats[i] || false
     const AUChart = AUCharts[i] || false
-    if (meta && stat && AUChart) {
+    if (meta && stat && AUChart && Array.isArray(AUChart)) {
       delete meta.emojis
 
       /*   インスタンスバリューの算出   */
