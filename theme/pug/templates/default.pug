@@ -34,7 +34,7 @@ html(lang=locale itemscope=(page.attributes.microdata_pagetype && 'itemscope') i
       block seo
         meta(name="author" content=site.author)
         meta(name="generator" content="maqz")
-        if(page.attributes.noindex)
+        if(page.attributes.noindex || page.meta.permalink.includes("wiki"))
           meta(name="robots" content="noindex,follow")
 
       block description
