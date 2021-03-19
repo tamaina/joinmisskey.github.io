@@ -102,7 +102,7 @@ async function postJson(url, json) {
       "User-Agent": "LuckyBeast"
     }
   }))
-    .then(res => (!res ? false : res.json()))
+    .then(res => ((res && res.ok)? res.json() : false))
     .catch(e => {
       glog.error(url, e)
       return false
