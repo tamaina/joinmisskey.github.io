@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id/>
+    <title>Misskeyをはじめよう</title>
+    <updated>2021-03-24T03:02:58.844Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://join.misskey.page"/>
+    <link rel="self" href="https://join.misskey.page/feed.atom"/>
+    <subtitle>いつまでも進化する、洗練されたマイクロブログSNS Misskey（ミスキー）</subtitle>
+    <icon>https://join.misskey.page/favicon.ico</icon>
+    <rights>© Misskey</rights>
+    <entry>
+        <title type="html"><![CDATA[新ブログ「Misskey Site!」を立ち上げました]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/09/23-1-about-jm</id>
+        <link href="https://join.misskey.page/ja/blog/2020/09/23-1-about-jm?rel=rss"/>
+        <updated>2020-09-16T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[いわゆる「アフィブログ」風のブログサイトを開設し、joinmisskeyと分離します。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 12.39.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/06/05-1-changes-12391</id>
+        <link href="https://join.misskey.page/ja/blog/2020/06/05-1-changes-12391?rel=rss"/>
+        <updated>2020-05-18T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[自動でもっと見る、ローカルのみボタンを公開範囲ピッカーに統合 など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 12.38.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/05/18-1-changes-12380</id>
+        <link href="https://join.misskey.page/ja/blog/2020/05/18-1-changes-12380?rel=rss"/>
+        <updated>2020-05-18T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[特に大きな変更はありません]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 12.37.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/05/12-1-changes-12370</id>
+        <link href="https://join.misskey.page/ja/blog/2020/05/12-1-changes-12370?rel=rss"/>
+        <updated>2020-05-12T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Pub-Relay実装、Rooms復活 など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～12.36.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/04/26-1-changes-12361</id>
+        <link href="https://join.misskey.page/ja/blog/2020/04/26-1-changes-12361?rel=rss"/>
+        <updated>2020-04-26T06:15:00.000Z</updated>
+        <summary type="html"><![CDATA[AiScript、リモートのカスタム絵文字リアクションを表示できるように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[joinmisskeyのアップデート]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/04/23-1-about-jm</id>
+        <link href="https://join.misskey.page/ja/blog/2020/04/23-1-about-jm?rel=rss"/>
+        <updated>2020-04-03T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[インスタンス情報をまとめたjsonを提供するように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 12.28.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/04/04-1-changes-12280</id>
+        <link href="https://join.misskey.page/ja/blog/2020/04/04-1-changes-12280?rel=rss"/>
+        <updated>2020-04-03T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[api/meta.features.miauthを追加 など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～12.27.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/03/29-1-changes-122701</id>
+        <link href="https://join.misskey.page/ja/blog/2020/03/29-1-changes-122701?rel=rss"/>
+        <updated>2020-03-28T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[MiAuth など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～12.21.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/02/26-1-changes-122100</id>
+        <link href="https://join.misskey.page/ja/blog/2020/02/26-1-changes-122100?rel=rss"/>
+        <updated>2020-02-26T09:00:00.000Z</updated>
+        <summary type="html"><![CDATA[チュートリアルを実装、アカウント設定とクライアント設定を分離、効果音を実装 など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 [indigo] ～12.1.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/02/06-1-changes-120100</id>
+        <link href="https://join.misskey.page/ja/blog/2020/02/06-1-changes-120100?rel=rss"/>
+        <updated>2020-02-06T10:15:00.000Z</updated>
+        <summary type="html"><![CDATA[v12[indigo]がリリースされました！！]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[v12の進捗状況]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/01/20-1-v12</id>
+        <link href="https://join.misskey.page/ja/blog/2020/01/20-1-v12?rel=rss"/>
+        <updated>2020-01-20T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[v12の進捗をお伝えします。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MisskeyHost by 村上さん クローズドベータテスト]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/01/11-3-misskey-host-by-aureoleark</id>
+        <link href="https://join.misskey.page/ja/blog/2020/01/11-3-misskey-host-by-aureoleark?rel=rss"/>
+        <updated>2020-01-11T14:02:00.000Z</updated>
+        <summary type="html"><![CDATA[MisskeyHostのクローズドベータテストが開始され、Dolphinインスタンスの稼働が始まっています。Misskeyのインスタンスの提供もまもなくです。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[v12が出るかもしれない]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/01/11-2-misskeyv12</id>
+        <link href="https://join.misskey.page/ja/blog/2020/01/11-2-misskeyv12?rel=rss"/>
+        <updated>2020-01-11T14:01:00.000Z</updated>
+        <summary type="html"><![CDATA[しゅいろがMisskeyのメジャーバージョンを12に上げるかもしれないと発表しました。本当に出すことができれば、クライアントが一新されます。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～11.37.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2020/01/11-1-changes-113701</id>
+        <link href="https://join.misskey.page/ja/blog/2020/01/11-1-changes-113701?rel=rss"/>
+        <updated>2020-01-11T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[寒中お見舞い申し上げます。Mastodon（フォーク）の引用を解釈するように、チャットの既読の連合 など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[joinmisskeyのアップデート]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/11/23-1-about-jm</id>
+        <link href="https://join.misskey.page/ja/blog/2019/11/23-1-about-jm?rel=rss"/>
+        <updated>2019-11-22T23:05:00.000Z</updated>
+        <summary type="html"><![CDATA[joinmisskeyを断続的にアップデートし、改良を加えました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～11.35.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/11/01-1-changes-113500</id>
+        <link href="https://join.misskey.page/ja/blog/2019/11/01-1-changes-113500?rel=rss"/>
+        <updated>2019-11-01T06:45:00.000Z</updated>
+        <summary type="html"><![CDATA[一対一でのチャットを連合するように、カスタム絵文字をカテゴリ分け出来るように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～11.34.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/10/19-2-changes-113400</id>
+        <link href="https://join.misskey.page/ja/blog/2019/10/19-2-changes-113400?rel=rss"/>
+        <updated>2019-10-19T11:00:01.000Z</updated>
+        <summary type="html"><![CDATA[広告ブロッカーの警告を削除、リアクションピッカーをカスタマイズできるように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[join.misskey.pageへ移転]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/10/19-1-about-jm</id>
+        <link href="https://join.misskey.page/ja/blog/2019/10/19-1-about-jm?rel=rss"/>
+        <updated>2019-10-19T11:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ドメイン「misskey.page」を取得し、URLをjoin.misskey.pageとしました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～11.31.4]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/09/03-1-changes-113104</id>
+        <link href="https://join.misskey.page/ja/blog/2019/09/03-1-changes-113104?rel=rss"/>
+        <updated>2019-09-03T06:30:00.000Z</updated>
+        <summary type="html"><![CDATA[誰がリアクションしたかわかるように、メモウィジェットの内容が保存されるように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～11.29.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/08/20-1-changes-112900</id>
+        <link href="https://join.misskey.page/ja/blog/2019/08/20-1-changes-112900?rel=rss"/>
+        <updated>2019-08-20T05:40:00.000Z</updated>
+        <summary type="html"><![CDATA[ルームの追加など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～11.27.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/08/17-1-changes-112701</id>
+        <link href="https://join.misskey.page/ja/blog/2019/08/17-1-changes-112701?rel=rss"/>
+        <updated>2019-08-16T15:30:00.000Z</updated>
+        <summary type="html"><![CDATA[WebAuthnサポート、削除して編集、通知のフィルタリングの追加など。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～11.20.3]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/06/11-1-changes-112003</id>
+        <link href="https://join.misskey.page/ja/blog/2019/06/11-1-changes-112003?rel=rss"/>
+        <updated>2019-06-10T15:30:00.000Z</updated>
+        <summary type="html"><![CDATA[セキュリティアップデートが含まれます。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey Wiki開設]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/06/06-new-wiki</id>
+        <link href="https://join.misskey.page/ja/blog/2019/06/06-new-wiki?rel=rss"/>
+        <updated>2019-06-05T22:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Misskey Wikiが開設されました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～11.20.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/05/27-1-changes-112000</id>
+        <link href="https://join.misskey.page/ja/blog/2019/05/27-1-changes-112000?rel=rss"/>
+        <updated>2019-05-27T11:00:00.000Z</updated>
+        <summary type="html"><![CDATA[新機能「グループ」、投稿のURLをペーストすると引用できるように ほか]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ステッカー再販]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/05/12-0-sticker-saihan</id>
+        <link href="https://join.misskey.page/ja/blog/2019/05/12-0-sticker-saihan?rel=rss"/>
+        <updated>2019-05-12T04:40:00.000Z</updated>
+        <summary type="html"><![CDATA[Misskeyロゴステッカーが再販されます！]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～11.12.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/05/12-1-changes-111200</id>
+        <link href="https://join.misskey.page/ja/blog/2019/05/12-1-changes-111200?rel=rss"/>
+        <updated>2019-05-12T04:39:00.000Z</updated>
+        <summary type="html"><![CDATA[公式アカウントフラグの廃止とおすすめアカウント機能の追加 / Misskey Pagesの改良 ほか]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～11.7.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/05/01-0-changes-110700</id>
+        <link href="https://join.misskey.page/ja/blog/2019/05/01-0-changes-110700?rel=rss"/>
+        <updated>2019-04-30T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[祝 令和改元 新天皇即位 / ページ（Misskey Pages）追加ほか]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[公式インスタンスがmisskey.ioになります]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/04/15-1-misskey-io-move</id>
+        <link href="https://join.misskey.page/ja/blog/2019/04/15-1-misskey-io-move?rel=rss"/>
+        <updated>2019-04-14T18:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Misskey史上初の公式インスタンス移転です。Misskey v11リリースに伴い、misskey.xyzからmisskey.ioに引っ越しとなります。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey <<daybreak>> v11.0.0 Released!!]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/04/14-1-misskey-daybreak-12</id>
+        <link href="https://join.misskey.page/ja/blog/2019/04/14-1-misskey-daybreak-12?rel=rss"/>
+        <updated>2019-04-14T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Misskeyの新しいバージョン「daybreak」がリリースされました。データベースソフトウェアをPostgreSQLに変更しました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.100.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/04/14-0-changes</id>
+        <link href="https://join.misskey.page/ja/blog/2019/04/14-0-changes?rel=rss"/>
+        <updated>2019-04-14T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ドライブのファイル表示の改善など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 11? ――Postgre SQL化]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/03/20-1-misskey-11-postgre</id>
+        <link href="https://join.misskey.page/ja/blog/2019/03/20-1-misskey-11-postgre?rel=rss"/>
+        <updated>2019-03-19T17:30:00.000Z</updated>
+        <summary type="html"><![CDATA[MisskeyのデータベースをPostgreSQLに対応させるプロジェクトが進行中です。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～v10.97.2 リアクション自由化など]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/03/18-1-changes-customreaction</id>
+        <link href="https://join.misskey.page/ja/blog/2019/03/18-1-changes-customreaction?rel=rss"/>
+        <updated>2019-03-17T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[リアクションが自由に、ほか。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[misskey.ioの直近の変化についてまとめ]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/03/08-3-misskey-xyz-disable-localTL</id>
+        <link href="https://join.misskey.page/ja/blog/2019/03/08-3-misskey-xyz-disable-localTL?rel=rss"/>
+        <updated>2019-03-08T02:47:00.000Z</updated>
+        <summary type="html"><![CDATA[misskey.ioはMisskeyの公式インスタンスですが、ローカルタイムラインが無効になるなど変化がありました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[joinmisskeyブログの更新についてのおしらせ]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/03/08-2-about-jm</id>
+        <link href="https://join.misskey.page/ja/blog/2019/03/08-2-about-jm?rel=rss"/>
+        <updated>2019-03-08T02:46:00.000Z</updated>
+        <summary type="html"><![CDATA[各バージョンの詳細についてはリリースノートをご覧いただくようお願いします。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の機能追加 - Recently Added & Updated Features]]></title>
+        <id>https://join.misskey.page/ja/blog/2019/03/08-1-changes</id>
+        <link href="https://join.misskey.page/ja/blog/2019/03/08-1-changes?rel=rss"/>
+        <updated>2019-03-08T02:45:00.000Z</updated>
+        <summary type="html"><![CDATA[ここ2か月間のアップデートの情報を一挙に抜粋してご紹介します！]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.73.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/31_update10730</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/31_update10730?rel=rss"/>
+        <updated>2018-12-30T22:45:00.000Z</updated>
+        <summary type="html"><![CDATA[多くのUIの改良が行われました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.69.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/28_update10690</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/28_update10690?rel=rss"/>
+        <updated>2018-12-28T08:15:00.000Z</updated>
+        <summary type="html"><![CDATA[多くのUIの改良が行われました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[joinmisskeyのRSSのURLが変更になりました]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/23_jmupdate</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/23_jmupdate?rel=rss"/>
+        <updated>2018-12-22T16:45:00.000Z</updated>
+        <summary type="html"><![CDATA[RSS2, JSON1, Atom1に対応。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.66.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/22_update10661</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/22_update10661?rel=rss"/>
+        <updated>2018-12-22T11:45:00.000Z</updated>
+        <summary type="html"><![CDATA[ユーザーのRSSフィードを取得できるように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 10.65.0(正)(続)]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/202_update10650r</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/202_update10650r?rel=rss"/>
+        <updated>2018-12-20T10:45:00.000Z</updated>
+        <summary type="html"><![CDATA[前回の記事の続きですので、前回の記事も合わせてご覧ください。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.65.0(仮)]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/20_update106500</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/20_update106500?rel=rss"/>
+        <updated>2018-12-19T15:20:00.000Z</updated>
+        <summary type="html"><![CDATA[リリースはまだですが、次期バージョンの内容をひとあし先にお伝えします。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 10.64.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/172_update10641</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/172_update10641?rel=rss"/>
+        <updated>2018-12-17T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[notes/deleteにレートリミットが付き、リアクションのアニメーションが追加された]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 10.64.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/17_update10640</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/17_update10640?rel=rss"/>
+        <updated>2018-12-16T15:06:00.000Z</updated>
+        <summary type="html"><![CDATA[検索窓にユーザー名(@username)を入力するとそのユーザーのページに移動するように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 10.63.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/13_update10631</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/13_update10631?rel=rss"/>
+        <updated>2018-12-13T05:45:00.000Z</updated>
+        <summary type="html"><![CDATA[バグ修正が中心]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.63.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/11_update10630</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/11_update10630?rel=rss"/>
+        <updated>2018-12-11T14:30:00.000Z</updated>
+        <summary type="html"><![CDATA[タグ設定の改良、404エラーページの追加、多くのリファクタリング ほか]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 10.62.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/06_update10620</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/06_update10620?rel=rss"/>
+        <updated>2018-12-06T10:40:00.000Z</updated>
+        <summary type="html"><![CDATA[MFM斜体・小さい文字構文追加、デッキのカラムの幅を変えられるように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 10.61.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/04_update10610</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/04_update10610?rel=rss"/>
+        <updated>2018-12-03T17:00:00.000Z</updated>
+        <summary type="html"><![CDATA[MFM 打消し線構文追加]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.60.4]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/03_update10604</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/03_update10604?rel=rss"/>
+        <updated>2018-12-03T14:30:00.000Z</updated>
+        <summary type="html"><![CDATA[特に驚くような機能はありません。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.60.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/024_update10600</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/024_update10600?rel=rss"/>
+        <updated>2018-12-02T07:40:00.000Z</updated>
+        <summary type="html"><![CDATA[MFM中央揃え構文の追加やサーバーで表示に最適な画像を生成するように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskeyロゴステッカー(第一弾)販売開始]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/023_sticker</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/023_sticker?rel=rss"/>
+        <updated>2018-12-02T07:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Misskey Cafe Storeより、Misskeyロゴステッカーが販売開始されます]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[joinmisskey更新]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/022_jmupdate</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/022_jmupdate?rel=rss"/>
+        <updated>2018-12-01T18:55:00.000Z</updated>
+        <summary type="html"><![CDATA[スクリプトの改良]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.59.3]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/12/02_update10593</id>
+        <link href="https://join.misskey.page/ja/blog/2018/12/02_update10593?rel=rss"/>
+        <updated>2018-12-01T18:55:00.000Z</updated>
+        <summary type="html"><![CDATA[MFM中央揃え構文の追加やサーバーで表示に最適な画像を生成するように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.57.2]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/25_update1057</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/25_update1057?rel=rss"/>
+        <updated>2018-11-24T12:03:00.000Z</updated>
+        <summary type="html"><![CDATA[GitHub NotifierがMisskeyリポジトリから分離される など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 10.57.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/24_update1057</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/24_update1057?rel=rss"/>
+        <updated>2018-11-23T17:10:00.000Z</updated>
+        <summary type="html"><![CDATA[リモートにも引用が伝達されるように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.56.2]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/22_update10562</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/22_update10562?rel=rss"/>
+        <updated>2018-11-21T16:20:00.000Z</updated>
+        <summary type="html"><![CDATA[入れ子のMFMも認識するように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.55.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/20_update10550</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/20_update10550?rel=rss"/>
+        <updated>2018-11-19T15:30:00.000Z</updated>
+        <summary type="html"><![CDATA[モデレーターやDiscord連携の追加 など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.49.6]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/14_update10494</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/14_update10494?rel=rss"/>
+        <updated>2018-11-14T14:25:00.000Z</updated>
+        <summary type="html"><![CDATA[ワードミュートや絵文字ピッカーの追加 など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[joinmisskey更新]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/10_2_jmupdate</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/10_2_jmupdate?rel=rss"/>
+        <updated>2018-11-10T08:07:00.000Z</updated>
+        <summary type="html"><![CDATA[インスタンスリストの並べ替えを計算で行うように]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.46.2]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/10_update10462</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/10_update10462?rel=rss"/>
+        <updated>2018-11-09T18:10:00.000Z</updated>
+        <summary type="html"><![CDATA[モバイルで画像をダイアログで表示するように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.39.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/05_3_update10390</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/05_3_update10390?rel=rss"/>
+        <updated>2018-11-05T13:20:00.000Z</updated>
+        <summary type="html"><![CDATA[投稿本文がTwEmojiで表示されるように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.38.6]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/05_2_update10386</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/05_2_update10386?rel=rss"/>
+        <updated>2018-11-04T17:15:00.000Z</updated>
+        <summary type="html"><![CDATA[絵文字登録フォームに便利情報を表示 など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.38.5]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/05_update10385</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/05_update10385?rel=rss"/>
+        <updated>2018-11-04T15:55:00.000Z</updated>
+        <summary type="html"><![CDATA[GitHubと連携できるようになった など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.38.3]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/04_3_update10383</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/04_3_update10383?rel=rss"/>
+        <updated>2018-11-04T07:45:00.000Z</updated>
+        <summary type="html"><![CDATA[スマホ/タブレットからでも管理者ページを使えるように など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[蛇足]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/04_2_jm</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/04_2_jm?rel=rss"/>
+        <updated>2018-11-03T21:12:00.000Z</updated>
+        <summary type="html"><![CDATA[push通知のテストがてら何か書きます]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.38.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/04_update10380</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/04_update10380?rel=rss"/>
+        <updated>2018-11-03T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[カスタム絵文字がリモートと共有されるようになったり、管理画面がリニューアルされたりなど]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.37.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/11/01_update10370</id>
+        <link href="https://join.misskey.page/ja/blog/2018/11/01_update10370?rel=rss"/>
+        <updated>2018-11-01T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[カスタム絵文字機能追加]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey 10.34.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/10/29_update103400</id>
+        <link href="https://join.misskey.page/ja/blog/2018/10/29_update103400?rel=rss"/>
+        <updated>2018-10-29T14:15:00.000Z</updated>
+        <summary type="html"><![CDATA[ユーザーブロック機能追加]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[joinmisskey更新]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/10/28_jmupdate</id>
+        <link href="https://join.misskey.page/ja/blog/2018/10/28_jmupdate?rel=rss"/>
+        <updated>2018-10-28T13:45:00.000Z</updated>
+        <summary type="html"><![CDATA[見た目を新しいMisskeyと同じにしたり、RSSフィードを設置したりしました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.33.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/10/27_update103</id>
+        <link href="https://join.misskey.page/ja/blog/2018/10/27_update103?rel=rss"/>
+        <updated>2018-10-26T22:00:00.000Z</updated>
+        <summary type="html"><![CDATA[デッキ及び統計を中心に、様々な機能追加と不具合修正が行われました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～10.11.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/10/13_update10</id>
+        <link href="https://join.misskey.page/ja/blog/2018/10/13_update10?rel=rss"/>
+        <updated>2018-10-12T18:00:00.000Z</updated>
+        <summary type="html"><![CDATA[パフォーマンスの向上やサーバー設定の改良がメインです。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskey Assets Store公開]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/10/05_mias</id>
+        <link href="https://join.misskey.page/ja/blog/2018/10/05_mias?rel=rss"/>
+        <updated>2018-10-05T11:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Arksoftより、Misskeyテーマを手軽に共有できるサービスが公開されました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～8.63.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/09/29_update8630</id>
+        <link href="https://join.misskey.page/ja/blog/2018/09/29_update8630?rel=rss"/>
+        <updated>2018-09-28T21:30:00.000Z</updated>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～8.33.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/09/09_update8311</id>
+        <link href="https://join.misskey.page/ja/blog/2018/09/09_update8311?rel=rss"/>
+        <updated>2018-09-09T14:59:00.000Z</updated>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[joinmisskey更新]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/09/02b_jmupdate</id>
+        <link href="https://join.misskey.page/ja/blog/2018/09/02b_jmupdate?rel=rss"/>
+        <updated>2018-09-02T07:45:01.000Z</updated>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～8.21.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/09/02a_update8211</id>
+        <link href="https://join.misskey.page/ja/blog/2018/09/02a_update8211?rel=rss"/>
+        <updated>2018-09-02T07:45:00.000Z</updated>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～8.14.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/26_update8-14-0</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/26_update8-14-0?rel=rss"/>
+        <updated>2018-08-26T02:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Pleromaに繋がらない問題の修正、他バグ修正など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～8.5.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/24b_update8-5-0</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/24b_update8-5-0?rel=rss"/>
+        <updated>2018-08-23T22:30:00.000Z</updated>
+        <summary type="html"><![CDATA[特に目立った変更はないです]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[joinmisskey更新]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/24a_jmupdate</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/24a_jmupdate?rel=rss"/>
+        <updated>2018-08-23T22:00:01.000Z</updated>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～8.3.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/24_update8-3-1</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/24_update8-3-1?rel=rss"/>
+        <updated>2018-08-23T22:00:00.000Z</updated>
+        <summary type="html"><![CDATA[特に目立った変更はないです]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～7.3.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/22_update7-3-0</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/22_update7-3-0?rel=rss"/>
+        <updated>2018-08-22T02:00:01.000Z</updated>
+        <summary type="html"><![CDATA[Catがリモートに伝播したりなど]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[18/8/20 misskey.xyzサービス停止について]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/20_2_ddos</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/20_2_ddos?rel=rss"/>
+        <updated>2018-08-20T04:00:01.000Z</updated>
+        <summary type="html"><![CDATA[DDoS攻撃によるサービス停止と新環境について]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～7.1.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/20_1_latestrelease</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/20_1_latestrelease?rel=rss"/>
+        <updated>2018-08-20T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[バグ修正など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～6.4.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/18_latestrelease</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/18_latestrelease?rel=rss"/>
+        <updated>2018-08-17T02:30:00.000Z</updated>
+        <summary type="html"><![CDATA[バグ修正など]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 ～6.2.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/17_2_latestrelease</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/17_2_latestrelease?rel=rss"/>
+        <updated>2018-08-17T00:00:01.000Z</updated>
+        <summary type="html"><![CDATA[いろいろ更新しました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[🤜MISSKEY IS NOT MASTODON🤛]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/17_1_misskeyisnotmastodon</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/17_1_misskeyisnotmastodon?rel=rss"/>
+        <updated>2018-08-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[MisskeyはMastodonではありません。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Misskeyの無料ホスティング(β)]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/12_3_hostdon</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/12_3_hostdon?rel=rss"/>
+        <updated>2018-08-12T00:00:02.000Z</updated>
+        <summary type="html"><![CDATA[MastodonホスティングサービスのHostodonが、Hostdon Beta Program 第一弾として、Misskeyの無料ホスティングを始めます。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[joinmisskeyを改良しました]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/12_2_joinmisskey_update</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/12_2_joinmisskey_update?rel=rss"/>
+        <updated>2018-08-12T00:00:01.000Z</updated>
+        <summary type="html"><![CDATA[このサイトをもう少しいい感じにしました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新😇 (H30/8/12) ～5.22.1]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/08/12_1_latestrelease</id>
+        <link href="https://join.misskey.page/ja/blog/2018/08/12_1_latestrelease?rel=rss"/>
+        <updated>2018-08-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[misskey.io内ではコミケの話はほとんどないので、Misskeyの薄い本は当分の間出版されないかもしれません。最近の更新をお知らせします。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 (H30/7/29)]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/07/29_latestrelease</id>
+        <link href="https://join.misskey.page/ja/blog/2018/07/29_latestrelease?rel=rss"/>
+        <updated>2018-07-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[異例の台風に襲われています。Misskeyの直近の更新をお知らせします。ソーシャルタイムライン、サーバーの管理・導入性の向上など。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近の更新 (H30/7/10)]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/07/10_latestrelease</id>
+        <link href="https://join.misskey.page/ja/blog/2018/07/10_latestrelease?rel=rss"/>
+        <updated>2018-07-09T16:00:01.000Z</updated>
+        <summary type="html"><![CDATA[暑くなってきました……。Misskeyの直近の更新をお知らせします。検索機能が充実しました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Misskeyをはじめよう」公開！]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/07/10_hello</id>
+        <link href="https://join.misskey.page/ja/blog/2018/07/10_hello?rel=rss"/>
+        <updated>2018-07-09T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[joinmastodonなどに倣って、joinmisskeyにあたるものを公開しました。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog ～2.26.2]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/06/06</id>
+        <link href="https://join.misskey.page/ja/blog/2018/06/06?rel=rss"/>
+        <updated>2018-06-06T00:21:44.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog ～2.18.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/05/27</id>
+        <link href="https://join.misskey.page/ja/blog/2018/05/27?rel=rss"/>
+        <updated>2018-05-26T16:03:26.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog ～2.15.0]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/05/21</id>
+        <link href="https://join.misskey.page/ja/blog/2018/05/21?rel=rss"/>
+        <updated>2018-05-21T10:17:04.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog ～0.0.5089]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/04/22</id>
+        <link href="https://join.misskey.page/ja/blog/2018/04/22?rel=rss"/>
+        <updated>2018-04-22T09:53:05.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog ～0.0.5064]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/04/21</id>
+        <link href="https://join.misskey.page/ja/blog/2018/04/21?rel=rss"/>
+        <updated>2018-04-20T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog: nighthike]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/04/16</id>
+        <link href="https://join.misskey.page/ja/blog/2018/04/16?rel=rss"/>
+        <updated>2018-04-15T15:14:55.000Z</updated>
+        <summary type="html"><![CDATA[nighthike初の更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[nighthikeにむけて]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/03/28_2_nighthike</id>
+        <link href="https://join.misskey.page/ja/blog/2018/03/28_2_nighthike?rel=rss"/>
+        <updated>2018-03-28T10:28:54.000Z</updated>
+        <summary type="html"><![CDATA[Misskeyは次期バージョン「nighthike」に移行します。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/03/28_1</id>
+        <link href="https://join.misskey.page/ja/blog/2018/03/28_1?rel=rss"/>
+        <updated>2018-03-28T10:28:03.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog]]></title>
+        <id>https://join.misskey.page/ja/blog/2018/03/16</id>
+        <link href="https://join.misskey.page/ja/blog/2018/03/16?rel=rss"/>
+        <updated>2018-03-16T10:24:26.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog]]></title>
+        <id>https://join.misskey.page/ja/blog/2017/12/16</id>
+        <link href="https://join.misskey.page/ja/blog/2017/12/16?rel=rss"/>
+        <updated>2017-12-16T11:51:14.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog]]></title>
+        <id>https://join.misskey.page/ja/blog/2017/11/08</id>
+        <link href="https://join.misskey.page/ja/blog/2017/11/08?rel=rss"/>
+        <updated>2017-11-18T09:18:16.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog]]></title>
+        <id>https://join.misskey.page/ja/blog/2017/09/08</id>
+        <link href="https://join.misskey.page/ja/blog/2017/09/08?rel=rss"/>
+        <updated>2017-09-08T12:08:12.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog]]></title>
+        <id>https://join.misskey.page/ja/blog/2017/08/30</id>
+        <link href="https://join.misskey.page/ja/blog/2017/08/30?rel=rss"/>
+        <updated>2017-08-29T16:57:11.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog]]></title>
+        <id>https://join.misskey.page/ja/blog/2017/08/29</id>
+        <link href="https://join.misskey.page/ja/blog/2017/08/29?rel=rss"/>
+        <updated>2017-08-29T14:06:27.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog]]></title>
+        <id>https://join.misskey.page/ja/blog/2017/08/24</id>
+        <link href="https://join.misskey.page/ja/blog/2017/08/24?rel=rss"/>
+        <updated>2017-08-24T12:28:52.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog]]></title>
+        <id>https://join.misskey.page/ja/blog/2017/08/12</id>
+        <link href="https://join.misskey.page/ja/blog/2017/08/12?rel=rss"/>
+        <updated>2017-08-11T19:56:06.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChangeLog]]></title>
+        <id>https://join.misskey.page/ja/blog/2017/08/11</id>
+        <link href="https://join.misskey.page/ja/blog/2017/08/11?rel=rss"/>
+        <updated>2017-08-10T19:01:12.000Z</updated>
+        <summary type="html"><![CDATA[更新情報]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+</feed>
